@@ -8,14 +8,14 @@ import MenuItem from '@mui/material/MenuItem';
 import SelectBox from '@mui/material/Box';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
-import { chainConfig } from '@configs';
+import chainConfigFile from '@/chain.json';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import FormHelperText from '@mui/material/FormHelperText';
 import { Alert, AlertTitle } from '@mui/material';
-import LoadingButton from '@mui/lab/LoadingButton';
+import LoadingButton from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import RefreshIcon from '@mui/icons-material/Refresh';
-import { TRANSACTION_DETAILS } from '@utils/go_to_page';
+import { TRANSACTION_DETAILS } from '@/utils/go_to_page';
 import Link from 'next/link';
 import { getMiddleEllipsis } from '@/utils/get_middle_ellipsis';
 import Box from '@/components/box';
@@ -28,8 +28,10 @@ import { readKeplrWallet } from '@/recoil/tryout/keplrWallet';
 
 const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
   const { classes, theme } = useStyles();
-  const { t, lang } = useAppTranslation('tryouts');
-  ///// recoil //////
+  const { t, i18n } = useAppTranslation('tryouts');
+  const lang = i18n.language;
+  const chainConfig = JSON.parse(chainConfigFile.keplr);
+  console.log('chainConfig :>> ', chainConfig);
   const walletState = useRecoilValue(readWalletSelection);
   const faucetOneState = useRecoilValue(readFaucetOne);
   const faucetTwoState = useRecoilValue(readFaucetTwo);
@@ -484,10 +486,10 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
                 error={validateDenom}
               >
                 <MenuItem value={chainConfig.primaryTokenUnit}>
-                  {chainConfig.primaryTokenUnit.toUpperCase()}
+                  {chainConfig?.primaryTokenUnit?.toUpperCase()}
                 </MenuItem>
                 <MenuItem value={chainConfig.votingPowerTokenUnit}>
-                  {chainConfig.votingPowerTokenUnit.toUpperCase()}
+                  {chainConfig?.votingPowerTokenUnit?.toUpperCase()}
                 </MenuItem>
               </Select>
               {validateDenom ? (

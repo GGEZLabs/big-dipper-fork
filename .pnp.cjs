@@ -228,6 +228,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@changesets/changelog-github", "npm:0.4.8"],\
           ["@changesets/cli", "npm:2.26.1"],\
+          ["@cosmjs/proto-signing", "npm:0.31.1"],\
           ["@cosmjs/stargate", "npm:0.31.1"],\
           ["@mui/lab", "virtual:680b866b1f607595b2b59758405cb64dff07d461aebb031486e5900d3b742457da054ab889d192b9338afd7b8895fdd9016de2dbb9d2a9b7e5b890949f153324#npm:5.0.0-alpha.170"],\
           ["@next/eslint-plugin-next", "npm:13.4.1"],\
@@ -3385,6 +3386,17 @@ const RAW_RUNTIME_STATE =
           ["@cosmjs/utils", "npm:0.31.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:0.32.3", {\
+        "packageLocation": "./.yarn/cache/@cosmjs-amino-npm-0.32.3-29ab9e1312-669d4d6c93.zip/node_modules/@cosmjs/amino/",\
+        "packageDependencies": [\
+          ["@cosmjs/amino", "npm:0.32.3"],\
+          ["@cosmjs/crypto", "npm:0.32.3"],\
+          ["@cosmjs/encoding", "npm:0.32.3"],\
+          ["@cosmjs/math", "npm:0.32.3"],\
+          ["@cosmjs/utils", "npm:0.32.3"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@cosmjs/crypto", [\
@@ -3432,6 +3444,20 @@ const RAW_RUNTIME_STATE =
           ["libsodium-wrappers-sumo", "npm:0.7.13"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:0.32.3", {\
+        "packageLocation": "./.yarn/cache/@cosmjs-crypto-npm-0.32.3-a3a7be3f18-c545c1aa8a.zip/node_modules/@cosmjs/crypto/",\
+        "packageDependencies": [\
+          ["@cosmjs/crypto", "npm:0.32.3"],\
+          ["@cosmjs/encoding", "npm:0.32.3"],\
+          ["@cosmjs/math", "npm:0.32.3"],\
+          ["@cosmjs/utils", "npm:0.32.3"],\
+          ["@noble/hashes", "npm:1.3.0"],\
+          ["bn.js", "npm:5.2.1"],\
+          ["elliptic", "npm:6.5.4"],\
+          ["libsodium-wrappers-sumo", "npm:0.7.13"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@cosmjs/encoding", [\
@@ -3469,6 +3495,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@cosmjs-encoding-npm-0.31.3-9ea274071a-a1b768597e.zip/node_modules/@cosmjs/encoding/",\
         "packageDependencies": [\
           ["@cosmjs/encoding", "npm:0.31.3"],\
+          ["base64-js", "npm:1.5.1"],\
+          ["bech32", "npm:1.1.4"],\
+          ["readonly-date", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.32.3", {\
+        "packageLocation": "./.yarn/cache/@cosmjs-encoding-npm-0.32.3-6c646fc3a7-b83ba95496.zip/node_modules/@cosmjs/encoding/",\
+        "packageDependencies": [\
+          ["@cosmjs/encoding", "npm:0.32.3"],\
           ["base64-js", "npm:1.5.1"],\
           ["bech32", "npm:1.1.4"],\
           ["readonly-date", "npm:1.0.0"]\
@@ -3536,6 +3572,14 @@ const RAW_RUNTIME_STATE =
           ["bn.js", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:0.32.3", {\
+        "packageLocation": "./.yarn/cache/@cosmjs-math-npm-0.32.3-79c9913033-7bd48d19bd.zip/node_modules/@cosmjs/math/",\
+        "packageDependencies": [\
+          ["@cosmjs/math", "npm:0.32.3"],\
+          ["bn.js", "npm:5.2.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@cosmjs/proto-signing", [\
@@ -3553,6 +3597,20 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+      ["npm:0.31.1", {\
+        "packageLocation": "./.yarn/cache/@cosmjs-proto-signing-npm-0.31.1-ea29f9029b-e7be26d28f.zip/node_modules/@cosmjs/proto-signing/",\
+        "packageDependencies": [\
+          ["@cosmjs/proto-signing", "npm:0.31.1"],\
+          ["@cosmjs/amino", "npm:0.31.3"],\
+          ["@cosmjs/crypto", "npm:0.31.3"],\
+          ["@cosmjs/encoding", "npm:0.31.3"],\
+          ["@cosmjs/math", "npm:0.31.3"],\
+          ["@cosmjs/utils", "npm:0.31.3"],\
+          ["cosmjs-types", "npm:0.8.0"],\
+          ["long", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:0.31.3", {\
         "packageLocation": "./.yarn/cache/@cosmjs-proto-signing-npm-0.31.3-d41b530306-5baccd335a.zip/node_modules/@cosmjs/proto-signing/",\
         "packageDependencies": [\
@@ -3564,6 +3622,19 @@ const RAW_RUNTIME_STATE =
           ["@cosmjs/utils", "npm:0.31.3"],\
           ["cosmjs-types", "npm:0.8.0"],\
           ["long", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.32.3", {\
+        "packageLocation": "./.yarn/cache/@cosmjs-proto-signing-npm-0.32.3-43ed340bc2-8b4d9d167f.zip/node_modules/@cosmjs/proto-signing/",\
+        "packageDependencies": [\
+          ["@cosmjs/proto-signing", "npm:0.32.3"],\
+          ["@cosmjs/amino", "npm:0.32.3"],\
+          ["@cosmjs/crypto", "npm:0.32.3"],\
+          ["@cosmjs/encoding", "npm:0.32.3"],\
+          ["@cosmjs/math", "npm:0.32.3"],\
+          ["@cosmjs/utils", "npm:0.32.3"],\
+          ["cosmjs-types", "npm:0.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3705,6 +3776,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@cosmjs-utils-npm-0.31.3-a6bf4e25fb-2ff2b27095.zip/node_modules/@cosmjs/utils/",\
         "packageDependencies": [\
           ["@cosmjs/utils", "npm:0.31.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.32.3", {\
+        "packageLocation": "./.yarn/cache/@cosmjs-utils-npm-0.32.3-145322eaf1-ef2c101f18.zip/node_modules/@cosmjs/utils/",\
+        "packageDependencies": [\
+          ["@cosmjs/utils", "npm:0.32.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9926,6 +10004,7 @@ const RAW_RUNTIME_STATE =
           ["big-dipper-2.0-cosmos", "workspace:."],\
           ["@changesets/changelog-github", "npm:0.4.8"],\
           ["@changesets/cli", "npm:2.26.1"],\
+          ["@cosmjs/proto-signing", "npm:0.31.1"],\
           ["@cosmjs/stargate", "npm:0.31.1"],\
           ["@mui/lab", "virtual:680b866b1f607595b2b59758405cb64dff07d461aebb031486e5900d3b742457da054ab889d192b9338afd7b8895fdd9016de2dbb9d2a9b7e5b890949f153324#npm:5.0.0-alpha.170"],\
           ["@next/eslint-plugin-next", "npm:13.4.1"],\
@@ -10962,6 +11041,13 @@ const RAW_RUNTIME_STATE =
           ["cosmjs-types", "npm:0.8.0"],\
           ["long", "npm:4.0.0"],\
           ["protobufjs", "npm:6.11.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.9.0", {\
+        "packageLocation": "./.yarn/cache/cosmjs-types-npm-0.9.0-e5d36a4ae5-c61137bf0a.zip/node_modules/cosmjs-types/",\
+        "packageDependencies": [\
+          ["cosmjs-types", "npm:0.9.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21088,6 +21174,7 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:9dce388d82c018b4a7af5edc7243e51f7023d1ab93a923b3959d0066ac6881c93b965a0932486426cbefa96c9c8e47849d5ff541d2404b8aca246480fa32f0d2#npm:3.7.14"],\
           ["@cosmjs/encoding", "npm:0.30.1"],\
           ["@cosmjs/launchpad", "npm:0.27.1"],\
+          ["@cosmjs/proto-signing", "npm:0.32.3"],\
           ["@cosmjs/stargate", "npm:0.29.5"],\
           ["@emotion/cache", "npm:11.11.0"],\
           ["@emotion/jest", "virtual:9dce388d82c018b4a7af5edc7243e51f7023d1ab93a923b3959d0066ac6881c93b965a0932486426cbefa96c9c8e47849d5ff541d2404b8aca246480fa32f0d2#npm:11.11.0"],\

@@ -37,7 +37,8 @@ const KeplrCom: React.FC<
   } & ComponentDefault
 > = ({ className }) => {
   const { classes, cx } = useStyles();
-  const { t, lang } = useAppTranslation('tryouts');
+  const { t, i18n } = useAppTranslation('tryouts');
+  const lang = i18n.language;
   const { open, handleClose, handleOpen, handleCopyToClipboard } = useOverview(t);
   const { connectKeplr, disconnectKeplr, keplrWallet, setKeplrWallet } =
     useTryoutKeplrAccountRecoil();
@@ -186,10 +187,10 @@ const KeplrCom: React.FC<
               </Typography>
               <CloudDoneOutlinedIcon
                 sx={{
-                  fontSize: lang == 'ar' ? 37 : 30,
+                  fontSize: lang === 'ar' ? 37 : 30,
                   color: 'green',
-                  marginLeft: lang == 'ar' ? 0 : 2,
-                  paddingRight: lang == 'ar' ? 1 : 0,
+                  marginLeft: lang === 'ar' ? 0 : 2,
+                  paddingRight: lang === 'ar' ? 1 : 0,
                 }}
               />
             </div>
@@ -197,7 +198,7 @@ const KeplrCom: React.FC<
             <Button
               style={{ width: '25%', marginRight: 2 }}
               variant="contained"
-              onClick={(e) => DisconnectWithKeplr()}
+              onClick={() => DisconnectWithKeplr()}
               color="error"
             >
               {t('disconnect')}

@@ -15,7 +15,7 @@
     "esModuleInterop": true,
     "module": "esnext",
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "outDir": "dist"
   }
 }

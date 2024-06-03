@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { chainConfig } from '@configs';
 import { Coin, StargateClient } from '@cosmjs/stargate';
 import { writeFaucetOne } from '@/recoil/tryout/faucetOne';
 import { AtomFaucetOneState } from '@/recoil/tryout/faucetOne/types';

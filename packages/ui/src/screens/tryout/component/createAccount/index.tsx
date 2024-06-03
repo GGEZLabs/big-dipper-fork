@@ -56,8 +56,8 @@ const CreateAccount: React.FC<{
     AtomCreateAccountState,
     SetterOrUpdater<AtomCreateAccountState>,
   ];
-  const { t, lang } = useAppTranslation('tryouts');
-
+  const { t, i18n } = useAppTranslation('tryouts');
+  const lang = i18n.language;
   const { open, handleClose, handleOpen, handleCopyToClipboard } = useOverview(t);
   const [loading, setLoading] = useState(false);
 
