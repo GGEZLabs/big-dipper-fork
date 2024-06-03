@@ -40,6 +40,7 @@ const useStyles = makeStyles<{ percentage: number | string }>()((theme, { percen
     },
   },
   item: {
+    color: 'red',
     '&:not(:last-child)': {
       marginBottom: theme.spacing(2),
     },

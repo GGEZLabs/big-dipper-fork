@@ -25,6 +25,7 @@ export {
   TRANSACTION_DETAILS,
   VALIDATORS,
   VALIDATOR_DETAILS,
+  TRYOUT,
 } from '@/utils/go_to_page';
 export { hexToBech32 } from '@/utils/hex_to_bech32';
 export { DATE_KEY, getItem, setItem, THEME_KEY, TX_KEY } from '@/utils/localstorage';

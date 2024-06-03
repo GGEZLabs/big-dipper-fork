@@ -23,6 +23,7 @@
   "blocks": "Blocks",
   "validators": "Validators",
   "transactions": "Transactions",
+  "tryout": "Try Out",
   "proposals": "Proposals",
   "searchBarPlaceholder": "Search for validator / tx hash / block height / address",
   "searchBarPlaceholderDtag": "Search for validator / tx hash / block height / address / @dtag",

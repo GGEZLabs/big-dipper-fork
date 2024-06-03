@@ -4,6 +4,7 @@ const { prefix } = chainConfig();
 
 export const HOME = '/';
 export const BLOCKS = '/blocks';
+export const TRYOUT = '/tryout';
 export const BLOCK_DETAILS = (slot: string | number): string => `/blocks/${slot}`;
 export const VALIDATOR_DETAILS = (address: string): string => `/validators/${address}`;
 export const VALIDATORS = '/validators';

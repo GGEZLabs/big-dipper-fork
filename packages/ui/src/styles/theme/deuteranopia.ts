@@ -24,10 +24,18 @@ export const deuteranopiaThemeOverride: DeepPartial<ThemeOptions> = {
       },
     },
   },
+  props: {
+    MuiSvgIcon: {
+      htmlColor: icon, // same as custom /general /icons
+    },
+  },
   palette: {
-    mode: 'dark',
+    type: 'dark',
+    general: {
+      icon,
+    },
     primary: {
-      main: '#FFDC3D',
+      main: '#8400CD',
       contrastText: '#000000',
     },
     background: {
@@ -44,14 +52,12 @@ export const deuteranopiaThemeOverride: DeepPartial<ThemeOptions> = {
         background: backgroundDefault, // same as background default
         surfaceOne, // same as background paper
         surfaceTwo, // striped tables
-        icon,
       },
       fonts: {
         fontOne,
         fontTwo,
         fontThree,
         fontFour: '#9F9F9F',
-        fontFive: '#FFFFFF',
         highlight: '#FFAC3B', // links
       },
       primaryData: {
@@ -108,38 +114,29 @@ export const deuteranopiaThemeOverride: DeepPartial<ThemeOptions> = {
       },
     },
   },
-  components: {
-    MuiSvgIcon: {
-      defaultProps: {
-        htmlColor: icon, // same as custom /general /icons
-      },
-    },
+  overrides: {
     MuiTableBody: {
-      styleOverrides: {
-        root: {
-          '& .MuiTableRow-root': {
-            '&:nth-of-type(odd)': {
-              backgroundColor: surfaceTwo, // surface two
-            },
+      root: {
+        '& .MuiTableRow-root': {
+          '&:nth-child(odd)': {
+            backgroundColor: surfaceTwo, // surface two
           },
-          '& .MuiTableCell-root': {
-            color: fontTwo, // font two
-          },
+        },
+        '& .MuiTableCell-root': {
+          color: fontTwo, // font two
         },
       },
     },
     MuiTabs: {
-      styleOverrides: {
-        root: {
-          '& .MuiTab-textColorInherit': {
-            color: fontThree, // font three
-          },
-          '& .MuiTab-textColorInherit.Mui-selected': {
-            color: fontOne, // font one
-          },
-          '& .MuiTabs-indicator': {
-            backgroundColor: fontOne, // font one (?)
-          },
+      root: {
+        '& .MuiTab-textColorInherit': {
+          color: fontThree, // font three
+        },
+        '& .MuiTab-textColorInherit.Mui-selected': {
+          color: fontOne, // font one
+        },
+        '& .MuiTabs-indicator': {
+          backgroundColor: fontOne, // font one (?)
         },
       },
     },

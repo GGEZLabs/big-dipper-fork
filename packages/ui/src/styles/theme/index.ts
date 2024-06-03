@@ -44,7 +44,16 @@ export const common = (theme: ThemeOptions) =>
         },
       },
     },
+    props: {
+      MuiSvgIcon: {
+        htmlColor: '#999999', // same as custom /general /icons
+      },
+      MuiButton: {
+        disableElevation: true,
+      },
+    },
     typography: {
+      fontFamily: '"Hind Madurai", sans-serif',
       h1: {
         fontSize: '2rem',
         letterSpacing: 0.25,
@@ -93,48 +102,7 @@ export const common = (theme: ThemeOptions) =>
     palette: {
       custom: {
         general: {
-          background: '#E6E6E6',
-          surfaceOne: '#818181',
-          surfaceTwo: '#818181',
           icon: '#999999',
-        },
-        fonts: {
-          fontOne: '#E6E6E6',
-          fontTwo: '#C4C4C4',
-          fontThree: '#818181',
-          fontFour: '#999999',
-          fontFive: '#FFFFFF',
-          highlight: '#FFFFFF',
-        },
-        primaryData: {
-          one: '#F87255',
-          two: '#FA9147',
-          three: '#43BE7C',
-          four: '#43A1BE',
-        },
-        results: {
-          pass: '#1EC490',
-          fail: '#FD3B4C',
-        },
-        tokenomics: {
-          zero: '',
-          one: "#43A1BE'",
-          two: "#E3BB55'",
-          three: '#20D292',
-        },
-        condition: {
-          zero: '#E6E6E6',
-          one: '#1EC490',
-          two: '#FF9338',
-          three: '#FF608A',
-        },
-        charts: {
-          zero: '#E6E6E6',
-          one: '#43BE7C',
-          two: '#43BE7C',
-          three: '#F44747',
-          four: '#FA9147',
-          five: '#C25396',
         },
         tags: {
           zero: '#E8E8E8',
@@ -159,114 +127,62 @@ export const common = (theme: ThemeOptions) =>
           nineteen: '#D37763',
           twenty: '#D9C788',
         },
-        wallet: {
-          background: '#5E5E5E',
-          backgroundTwo: '#212123',
-          surfaceOne: '#5E5C5C',
-          surfaceTwo: '#D9D9D9',
-          surfaceThree: '#4D4D4D',
-          surfaceFour: '#414141',
-          surfaceFive: '#777777',
-          divider: '#34383E',
-          textPrimary: '#000000',
-          textSecondary: '#DDDDDD',
-          active: '#29CC6A',
-          inactive: '#CC3929',
+        fonts: {
+          fontFive: '#FFFFFF',
+          highlight: '#1D86FF', // links
+          // highlight: '#56B4E9', // links
+        },
+        condition: {
+          zero: '#E8E8E8',
+          one: '#1EC490',
+          two: '#FF961B',
+          three: '#FC6A8A',
+        },
+        tokenomics: {
+          one: '#1EC490',
+          two: '#497BFF',
+          three: '#9F46EC',
+        },
+        charts: {
+          zero: '#E8E8E8',
+          one: '#EB3AA4',
+          two: '#497BFF',
+          three: '#FF961B',
+          four: '#1EC490',
+          five: '#9F46EC',
         },
       },
     },
-    components: {
-      MuiPaper: {
-        styleOverrides: {
-          root: {
-            '&': {
-              backgroundImage: 'none',
-            },
-          },
-        },
-      },
-      MuiSvgIcon: {
-        defaultProps: {
-          htmlColor: theme.palette?.custom?.general?.icon ?? '#999999', // same as custom /general /icons
-        },
-      },
-      MuiButton: {
-        defaultProps: {
-          disableElevation: true,
-        },
-      },
+    overrides: {
       MuiTableHead: {
-        styleOverrides: {
-          root: {
-            '&': {
-              backgroundColor: 'initial',
-            },
-          },
-        },
-      },
-      MuiTextField: {
-        styleOverrides: {
-          root: {
-            borderRadius: '12px',
-          },
-        },
-      },
-      MuiInputBase: {
-        styleOverrides: {
-          root: {
-            '&': {
-              borderRadius: '12px',
-            },
-          },
-          input: {
-            '&': {
-              padding: '8px 12px',
-            },
-          },
+        root: {
+          backgroundColor: 'initial',
         },
       },
       MuiTooltip: {
-        styleOverrides: {
-          popper: {
-            pointerEvents: 'none',
-          },
-          tooltip: {
-            pointerEvents: 'auto',
-            background: theme.palette?.background?.paper,
-            color: theme.palette?.text?.primary,
-            padding: 4,
-            borderRadius: 4,
-          },
-          arrow: {
-            color: theme.palette?.divider,
-          },
+        tooltip: {
+          backgroundColor: 'transparent',
         },
       },
       MuiTableCell: {
-        styleOverrides: {
-          root: {
-            '&': {
-              borderBottom: 'none',
-              padding: '0 16px',
-              height: '50px',
-              fontSize: '1rem',
-            },
-          },
+        root: {
+          borderBottom: 'none',
+          padding: '0 16px',
+          height: '50px',
+          fontSize: '1rem',
         },
       },
       MuiTabs: {
-        styleOverrides: {
-          root: {
-            // '& .MuiTabs-fixed': {
-            //   overflow: 'auto',
-            // },
-            '&.MuiTabs-root, & .MuiTab-root': {
-              minHeight: '40px',
-            },
-            '& .MuiTab-textColorInherit': {
-              opacity: 1,
-              fontSize: '1rem',
-            },
+        root: {
+          // '& .MuiTabs-fixed': {
+          //   overflow: 'auto',
+          // },
+          '&.MuiTabs-root, & .MuiTab-root': {
+            minHeight: '40px',
+          },
+          '& .MuiTab-textColorInherit': {
+            opacity: 1,
+            fontSize: '1rem',
           },
         },
       },

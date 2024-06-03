@@ -13,17 +13,18 @@ const useStyles = makeStyles()((theme) => ({
       gridTemplateColumns: 'repeat(4, 1fr)',
     },
   },
+
   blockHeight: {
-    background: theme.palette.custom.primaryData.one,
+    background: '#0055AB', // theme.palette.custom.primaryData.five,
   },
   blockTime: {
-    background: theme.palette.custom.primaryData.two,
+    background: '#0079F2', // theme.palette.custom.primaryData.two,
   },
   price: {
-    background: theme.palette.custom.primaryData.three,
+    background: '#2994FF', // theme.palette.custom.primaryData.three,
   },
   validators: {
-    background: theme.palette.custom.primaryData.four,
+    background: '#71B8FF', // theme.palette.custom.primaryData.four,
   },
 }));
 
