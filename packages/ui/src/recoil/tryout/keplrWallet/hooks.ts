@@ -20,9 +20,9 @@ export const useTryoutKeplrAccountRecoil = () => {
 
   const connectKeplr = async () => {
     const { keplr } = window;
-    console.log('keplr :>> ', keplr);
 
     if (!keplr) {
+      console.log('keplr :>> ', keplr);
       setKeplrWallet({
         keplerAdderss: '',
         balanceGGEZOneKeplr: '',
@@ -35,7 +35,6 @@ export const useTryoutKeplrAccountRecoil = () => {
       });
     } else {
       try {
-        console.log('sadadsadsadsadsasadsadsadsdasadsdafirst');
         await keplr.experimentalSuggestChain(getTestnetChainInfo());
         // Create the signing client
         const offlineSigner: OfflineSigner = window.getOfflineSigner!('ggezchain');
@@ -43,16 +42,12 @@ export const useTryoutKeplrAccountRecoil = () => {
           process.env.NEXT_PUBLIC_RPC_URL,
           offlineSigner
         );
-        console.log('signingClient :>> ', signingClient);
         const nameAccount = (await keplr.getKey('ggezchain')).name;
-        console.log('nameAccount :>> ', nameAccount);
 
         // Get the address and balance of your user
 
         const account: AccountData = (await offlineSigner.getAccounts())[0];
-        console.log('account :>> ', account);
         const accountAddress = account.address;
-        console.log('accountAddress :>> ', accountAddress);
         const ggezAccountBalance = (
           await signingClient.getBalance(accountAddress, chainConfig.primaryTokenUnit)
         ).amount;

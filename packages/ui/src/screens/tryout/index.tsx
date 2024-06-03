@@ -3,7 +3,7 @@ import useAppTranslation from '@/hooks/useAppTranslation';
 import Layout from '@/components/layout';
 import useStyles from '@/screens/tryout/styles';
 import React from 'react';
-import { Faucet, KeplrCom } from './component';
+import { Faucet, KeplrCom, CreateAccount } from './component';
 // import { Faucet } from './component';
 
 const Tryout = () => {
@@ -18,6 +18,7 @@ const Tryout = () => {
         <Faucet className={classes.faucetOne} title={t('faucetAccountOne')} />
         <Faucet className={classes.faucetTwo} title={t('faucetAccountTwo')} />
         <KeplrCom className={classes.kepler} />
+        <CreateAccount className={classes.createAccount} />
       </Layout>
     </>
   );

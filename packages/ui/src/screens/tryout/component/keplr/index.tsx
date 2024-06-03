@@ -30,12 +30,6 @@ import QRCode from 'qrcode.react';
 import CloudDoneOutlinedIcon from '@mui/icons-material/CloudDoneOutlined';
 import { toast } from 'react-toastify';
 import { useWindowOrigin } from '@/hooks/use_window';
-// import  { Window as KeplrWindow } from '@keplr-wallet/types';
-
-// declare global {
-//   // eslint-disable-next-line @typescript-eslint/no-empty-interface
-//   interface Window extends KeplrWindow {}
-// }
 
 const KeplrCom: React.FC<
   {
@@ -49,37 +43,36 @@ const KeplrCom: React.FC<
     useTryoutKeplrAccountRecoil();
   const [connect, setConnect] = useState(false);
   const { location } = useWindowOrigin();
+  const [keplr, setKeplr] = useState(null);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setKeplr(window?.keplr);
+    }
+  }, []);
   const connectWithKeplr = () => {
     connectKeplr();
-    console.log('keplrWallet :>> ', keplrWallet);
-    // if (!keplr) {
-    //   toast(
-    //     <div>
-    //       {t("PleaseInstallKeplr")}{" "}
-    //       <a target="_blank" href="https://www.keplr.app/download ">
-    //         {" "}
-    //         {t("clickHereToDownload")}
-    //       </a>{" "}
-    //     </div>
-    //   );
-    // } else if (
-    //   !keplrWallet.installKeplrError &&
-    //   !keplrWallet.addAccountKeplrError
-    // ) {
-    //   keplrWallet.balanceGGEZKeplr !== ""
-    //     ? setConnect(true)
-    //     : setConnect(false);
-    // }
+    if (!keplr && typeof window !== 'undefined') {
+      toast(
+        <div>
+          {t('PleaseInstallKeplr')}{' '}
+          <a target="_blank" href="https://www.keplr.app/download ">
+            {' '}
+            {t('clickHereToDownload')}
+          </a>{' '}
+        </div>
+      );
+    } else if (!keplrWallet.installKeplrError && !keplrWallet.addAccountKeplrError) {
+      keplrWallet.balanceGGEZKeplr !== '' ? setConnect(true) : setConnect(false);
+    }
   };
   useEffect(() => {
-    if (keplrWallet.addAccountKeplrError) {
+    if (keplrWallet.addAccountKeplrError && typeof window !== 'undefined') {
       toast(
         <div>
           {t('pleaseCreateKeplrAccount')}
           <br />
           <br />
           <a target="_blank" href="https://help.keplr.app/">
-            {' '}
             {t('clickHereCreatekeplrAccount')}
           </a>
         </div>
@@ -97,6 +90,7 @@ const KeplrCom: React.FC<
       });
     }
   }, [keplrWallet.addAccountKeplrError]);
+
   useEffect(() => {
     if (
       !keplrWallet.installKeplrError &&
@@ -129,6 +123,10 @@ const KeplrCom: React.FC<
       ggezOneDenom: keplrWallet.GGEZOneDenom?.toUpperCase(),
     },
   ];
+  useEffect(() => {
+    console.log('Client keplerAdderss:', keplrWallet.keplerAdderss);
+  }, [keplrWallet.keplerAdderss]);
+
   return (
     <>
       <Dialog maxWidth="xl" onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
@@ -254,7 +252,7 @@ const KeplrCom: React.FC<
                     </Typography>
                   </Link>
                 ) : (
-                  <Typography variant="body1" className="address" component="a">
+                  <Typography variant="body1" className="address" component="span">
                     {getMiddleEllipsis(t('pleaseConnectWithKeplr'), {
                       beginning: 30,
                       ending: 2,

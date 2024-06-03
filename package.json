@@ -64,6 +64,7 @@
     "*.{js,jsx,ts,tsx,mjs,cjs,css,md}": "npx prettier --write"
   },
   "dependencies": {
-    "@cosmjs/stargate": "0.31.1"
+    "@cosmjs/stargate": "0.31.1",
+    "@mui/lab": "^5.0.0-alpha.170"
   }
 }

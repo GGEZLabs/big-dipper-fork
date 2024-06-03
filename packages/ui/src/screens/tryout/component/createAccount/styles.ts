@@ -1,28 +1,32 @@
 import { makeStyles } from 'tss-react/mui';
+
 export const useStyles = makeStyles()((theme) => ({
   root: {
-    height: '100%',
     display: 'flex',
-    justifyContent: 'flex-start',
     flexDirection: 'column',
+    '& .button': {
+      color: theme.palette.custom.fonts.fontTwo,
+      '&:hover': {
+        cursor: 'pointer',
+      },
+    },
   },
   label: {
     marginBottom: theme.spacing(2),
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   data: {
     display: 'flex',
     '& .data__item': {
       width: '50%',
-      paddingTop: '15px',
       whiteSpace: 'pre-wrap',
       '& h4': {
         color: theme.palette.custom.fonts.fontTwo,
       },
       '& .MuiTypography-caption': {
         color: theme.palette.custom.fonts.fontThree,
-      },
-      '& .loading': {
-        width: '40%',
       },
     },
   },
@@ -59,9 +63,11 @@ export const useStyles = makeStyles()((theme) => ({
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     flexWrap: 'wrap',
-    width: '100%',
     '& .MuiTypography-caption': {
       color: theme.palette.custom.fonts.fontThree,
+    },
+    '& .label': {
+      color: theme.palette.custom.customCreateAccountBGmenomic.one,
     },
     '& .legends__item': {
       width: '50%',
@@ -87,7 +93,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
   },
   content: {
-    flex: 0.5,
+    flex: 1,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
@@ -99,7 +105,8 @@ export const useStyles = makeStyles()((theme) => ({
     },
   },
   item: {
-    padding: theme.spacing(2, 0),
+    /*           marginTop:'20px',
+     */ padding: theme.spacing(2, 0),
     color: theme.palette.custom.fonts.fontTwo,
     '&:first-of-type': {
       paddingTop: 0,
@@ -111,11 +118,18 @@ export const useStyles = makeStyles()((theme) => ({
       borderBottom: `solid 1px ${theme.palette.divider}`,
     },
     '& .label': {
-      marginBottom: theme.spacing(1),
+      marginTop: 50,
     },
     '& .detail': {
       '&.MuiTypography-body1': {
         wordWrap: 'break-word',
+      },
+      '& .value': {
+        width: 'fit-content',
+        backgroundColor: '#F8F8F8',
+        padding: 10,
+        textAlign: 'center',
+        alignItems: 'center',
       },
     },
     '& a': {
@@ -126,8 +140,41 @@ export const useStyles = makeStyles()((theme) => ({
       '&:not(:last-child)': {
         borderBottom: 'none',
       },
-      '& .label': {
-        marginBottom: 0,
+    },
+  },
+  menomic: {
+    marginTop: '50px',
+    color: theme.palette.custom.fonts.fontTwo,
+    '&:first-of-type': {
+      paddingTop: 0,
+    },
+    '&:last-child': {
+      paddingBottom: 0,
+    },
+
+    '& .label': {},
+
+    '&.MuiTypography-body1': {
+      wordWrap: 'break-word',
+    },
+    '& .MuiTypography-caption': {
+      color: theme.palette.custom.fonts.fontThree,
+    },
+    '& .value': {
+      width: 'fit-content',
+      backgroundColor: theme.palette.custom.customCreateAccountBGmenomic.zero,
+      padding: 10,
+      textAlign: 'center',
+      color: theme.palette.custom.customCreateAccountBGmenomic.one,
+    },
+
+    '& a': {
+      color: theme.palette.custom.fonts.highlight,
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: 0,
+      '&:not(:last-child)': {
+        borderBottom: 'none',
       },
     },
   },
@@ -143,4 +190,43 @@ export const useStyles = makeStyles()((theme) => ({
       },
     },
   },
+  flexDev: {
+    display: 'flex',
+    width: '100%',
+  },
+  pubKey: {
+    display: 'flex',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap',
+    marginRight: 0, // lang === 'ar' ? '20%' : 0,
+    marginLeft: '10%', // lang === 'ar' ? '0' : '10%',
+    '& .label': {
+      color: theme.palette.custom.customCreateAccountBGmenomic.one,
+    },
+    '& .MuiTypography-caption': {
+      color: theme.palette.custom.fonts.fontThree,
+    },
+  },
+  alert: {
+    marginTop: '50px',
+  },
+  button: {
+    marginTop: '30px',
+    bottom: 30,
+  },
+
+  mobile: {
+    [theme.breakpoints.up('lg')]: {
+      display: 'none',
+    },
+  },
+  desktop: {
+    display: 'none',
+    [theme.breakpoints.up('lg')]: {
+      display: 'block',
+    },
+  },
 }));
+
+export default useStyles;

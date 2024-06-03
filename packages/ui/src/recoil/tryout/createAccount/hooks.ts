@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react';
-import { chainConfig } from '@configs';
-
-import { Secp256k1HdWallet, SigningCosmosClient } from '@cosmjs/launchpad';
+import chainConfigFile from '@/chain.json';
+import { Secp256k1HdWallet } from '@cosmjs/launchpad';
 import { useRecoilState, SetterOrUpdater } from 'recoil';
-import { writeCreateAccount } from '@recoil/tryout/createAccount';
-import { AtomCreateAccountState } from '@recoil/tryout/createAccount/types';
+import { writeCreateAccount } from '@/recoil/tryout/createAccount';
+import { AtomCreateAccountState } from '@/recoil/tryout/createAccount/types';
 
 import { Coin, StargateClient } from '@cosmjs/stargate';
 import { toBase64 } from '@cosmjs/encoding';
@@ -21,7 +20,7 @@ export const useGenerateMnemonicRecoil = () => {
     accountName: '',
     accountNumber: '',
   });
-
+  const chainConfig = JSON.parse(chainConfigFile.keplr);
   const [createAccountData, setCreateAccountData] = useRecoilState(writeCreateAccount) as [
     AtomCreateAccountState,
     SetterOrUpdater<AtomCreateAccountState>,
@@ -46,6 +45,8 @@ export const useGenerateMnemonicRecoil = () => {
       accountPublicKey: encodedPublicKey,
     };
     wallet && address ? setCreateAccountData(data) : null;
+    console.log('address :>> ', address);
+    console.log('wallet.mnemonic :>> ', wallet.mnemonic);
     state.accountAddress = address;
     state.accountMnemonic = wallet.mnemonic;
   };
