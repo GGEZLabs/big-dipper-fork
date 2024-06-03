@@ -56,7 +56,6 @@ const CreateAccount: React.FC<{
     AtomCreateAccountState,
     SetterOrUpdater<AtomCreateAccountState>,
   ];
-  console.log('account :>> ', account);
   const { t, lang } = useAppTranslation('tryouts');
 
   const { open, handleClose, handleOpen, handleCopyToClipboard } = useOverview(t);

@@ -45,8 +45,6 @@ export const useGenerateMnemonicRecoil = () => {
       accountPublicKey: encodedPublicKey,
     };
     wallet && address ? setCreateAccountData(data) : null;
-    console.log('address :>> ', address);
-    console.log('wallet.mnemonic :>> ', wallet.mnemonic);
     state.accountAddress = address;
     state.accountMnemonic = wallet.mnemonic;
   };

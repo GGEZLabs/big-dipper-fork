@@ -22,7 +22,6 @@ export const useTryoutKeplrAccountRecoil = () => {
     const { keplr } = window;
 
     if (!keplr) {
-      console.log('keplr :>> ', keplr);
       setKeplrWallet({
         keplerAdderss: '',
         balanceGGEZOneKeplr: '',

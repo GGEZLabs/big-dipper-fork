@@ -123,9 +123,6 @@ const KeplrCom: React.FC<
       ggezOneDenom: keplrWallet.GGEZOneDenom?.toUpperCase(),
     },
   ];
-  useEffect(() => {
-    console.log('Client keplerAdderss:', keplrWallet.keplerAdderss);
-  }, [keplrWallet.keplerAdderss]);
 
   return (
     <>

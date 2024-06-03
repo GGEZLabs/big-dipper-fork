@@ -1,10 +1,6 @@
 import { useState } from 'react';
-
-///////////////////
 import { toast } from 'react-toastify';
 import copy from 'copy-to-clipboard';
-
-import { Secp256k1HdWallet } from '@cosmjs/launchpad';
 
 export const useOverview = (t) => {
   const [open, setOpen] = useState(false);
