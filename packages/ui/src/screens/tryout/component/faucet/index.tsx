@@ -2,10 +2,8 @@ import React from 'react';
 import numeral from 'numeral';
 import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
-import Box from '@mui/material/Box';
+import Box from '@/components/box';
 
-import { useStyles } from './styles';
-import { useOverview } from './hooks';
 import { useTryoutFaucetOneRecoil } from '@/recoil/tryout/faucetOne';
 import { useTryoutFaucetTwoRecoil } from '@/recoil/tryout/faucetTwo';
 import CopyIcon from 'shared-utils/assets/icon-copy.svg';
@@ -29,6 +27,8 @@ import {
   EmailIcon,
 } from 'react-share';
 import useAppTranslation from '@/hooks/useAppTranslation';
+import { useOverview } from './hooks';
+import { useStyles } from './styles';
 
 const Faucet: React.FC<{
   className?: string;
@@ -124,7 +124,6 @@ const Faucet: React.FC<{
         <Typography variant="h2" className={classes.label}>
           {title === t('faucetAccountOne') ? t('faucetAccountOne') : t('faucetAccountTwo')}
         </Typography>
-
         <div className={classes.content}>
           <div className={classes.legends}>
             <div className={cx(classes.copyText, classes.item)}>
@@ -152,16 +151,17 @@ const Faucet: React.FC<{
         <div className={classes.data}>
           <div className="data__item">
             <Typography variant="caption">{t('balance')}</Typography>
+            {/* eslint-disable-next-line no-nested-ternary */}
             {title === t('faucetAccountOne') ? (
               faucetData[0]?.ggezFaucetOneBalance === '0' ? (
-                <Typography variant="h4">0 {'UGGEZ1'}</Typography>
+                <Typography variant="h4">0 UGGEZ1</Typography>
               ) : (
                 <Typography variant="h4">
                   {faucetData[0]?.ggezFaucetOneBalance} {faucetData[0]?.ggezDenom}
                 </Typography>
               )
             ) : faucetData[1]?.ggezFaucetTwoBalance === '0' ? (
-              <Typography variant="h4">0 {'UGGEZ1'}</Typography>
+              <Typography variant="h4">0 UGGEZ1</Typography>
             ) : (
               <Typography variant="h4">
                 {faucetData[1]?.ggezFaucetTwoBalance} {faucetData[1]?.ggezDenom}
@@ -170,16 +170,17 @@ const Faucet: React.FC<{
           </div>
           <div className="data__item">
             <Typography variant="caption">{t('balance')}</Typography>
+            {/* eslint-disable-next-line no-nested-ternary */}
             {title === t('faucetAccountOne') ? (
               faucetData[0]?.ggezOneFaucetOneBalance === '0' ? (
-                <Typography variant="h4">0 {'UGGEZ'}</Typography>
+                <Typography variant="h4">0 UGGEZ</Typography>
               ) : (
                 <Typography variant="h4">
                   {faucetData[0]?.ggezOneFaucetOneBalance} {faucetData[0]?.ggezOneDenom}
                 </Typography>
               )
             ) : faucetData[1]?.ggezOneFaucetTwoBalance === '0' ? (
-              <Typography variant="h4">0 {'UGGEZ'}</Typography>
+              <Typography variant="h4">0 UGGEZ</Typography>
             ) : (
               <Typography variant="h4">
                 {faucetData[1]?.ggezOneFaucetTwoBalance} {faucetData[1]?.ggezOneDenom}

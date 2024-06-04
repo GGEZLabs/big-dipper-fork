@@ -12,11 +12,7 @@ type TitleBarProps = {
 };
 
 const TitleBar: FC<TitleBarProps> = ({ title }) => {
-  const {
-    t,
-    // i18n
-  } = useAppTranslation('common');
-  // const lang = i18n.language;
+  const { t } = useAppTranslation('common');
   const { classes, cx } = useStyles();
 
   const marketState = useRecoilValue(readMarket);

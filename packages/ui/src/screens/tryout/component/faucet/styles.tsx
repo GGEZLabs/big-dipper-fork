@@ -1,4 +1,5 @@
 import { makeStyles } from 'tss-react/mui';
+
 export const useStyles = makeStyles()((theme) => ({
   root: {
     height: '100%',
@@ -72,10 +73,10 @@ export const useStyles = makeStyles()((theme) => ({
         height: '12px',
         marginRight: '5px',
       },
-      '&:first-of-type:before': {
+      '&:first-child:before': {
         background: theme.palette.custom.tokenomics.one,
       },
-      '&:nth-of-type(2):before': {
+      '&:nth-child(2):before': {
         background: theme.palette.custom.tokenomics.two,
       },
       '&:last-child:before': {
@@ -101,7 +102,7 @@ export const useStyles = makeStyles()((theme) => ({
   item: {
     padding: theme.spacing(2, 0),
     color: theme.palette.custom.fonts.fontTwo,
-    '&:first-of-type': {
+    '&:first-child': {
       paddingTop: 0,
     },
     '&:last-child': {

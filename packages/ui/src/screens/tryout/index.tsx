@@ -1,15 +1,13 @@
 import { NextSeo } from 'next-seo';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import Layout from '@/components/layout';
-import useStyles from '@/screens/tryout/styles';
-import React from 'react';
+import useStyles from './styles';
 import { Faucet, KeplrCom, CreateAccount, TestTransaction } from './component';
 // import { Faucet } from './component';
 
 const Tryout = () => {
   const { t } = useAppTranslation('tryouts');
   const { classes } = useStyles();
-
   return (
     <>
       <NextSeo title={t('tryout')} openGraph={{ title: t('tryout') }} />

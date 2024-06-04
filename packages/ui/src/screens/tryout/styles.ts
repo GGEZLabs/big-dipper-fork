@@ -2,7 +2,7 @@ import { makeStyles } from 'tss-react/mui';
 
 const useStyles = makeStyles()((theme) => ({
   root: {
-    ...theme.mixins.layout,
+    // ...theme.mixins.layout,
     display: 'grid',
     gridGap: theme.spacing(1),
     gridTemplateRows: 'auto auto 1fr',
