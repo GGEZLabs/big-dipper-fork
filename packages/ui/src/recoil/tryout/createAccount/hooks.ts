@@ -1,6 +1,8 @@
+/* eslint-disable import/no-cycle */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable turbo/no-undeclared-env-vars */
 /* eslint-disable no-unused-expressions */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import chainConfigFile from '@/chain.json';
 import { Secp256k1HdWallet } from '@cosmjs/launchpad';
 import { useRecoilState, SetterOrUpdater } from 'recoil';
