@@ -36,6 +36,7 @@ declare module '@mui/material/styles/createPalette' {
       two: string;
       three: string;
       four: string;
+      five: string;
     };
     tags: {
       zero: string;
@@ -84,19 +85,28 @@ declare module '@mui/material/styles/createPalette' {
       pass: string;
       fail: string;
     };
-    wallet: {
-      background: string;
-      backgroundTwo: string;
-      surfaceOne: string;
-      surfaceTwo: string;
-      surfaceThree: string;
-      surfaceFour: string;
-      surfaceFive: string;
-      divider: string;
-      textPrimary: string;
-      textSecondary: string;
-      active: string;
-      inactive: string;
+    consensus: {
+      zero: string;
+      one: string;
+    };
+    customTokenomics: {
+      zero: string;
+      one: string;
+      two: string;
+    };
+    customHero: {
+      zero: string;
+      one: string;
+    };
+    customCreateAccountBGmenomic: {
+      zero: string;
+      one: string;
+    };
+    customSelect: {
+      zero: string;
+      one: string;
+      two: string;
+      three: string;
     };
   }
 

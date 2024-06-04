@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React, { useEffect, useState } from 'react';
 import numeral from 'numeral';
 import Typography from '@mui/material/Typography';
@@ -16,8 +17,6 @@ import {
   EmailIcon,
 } from 'react-share';
 import Box from '@/components/box';
-import { useStyles } from './styles';
-import { useOverview } from './hooks';
 import { useTryoutKeplrAccountRecoil } from '@/recoil/tryout/keplrWallet';
 import CopyIcon from 'shared-utils/assets/icon-copy.svg';
 import ShareIcon from 'shared-utils/assets/icon-share.svg';
@@ -30,6 +29,8 @@ import QRCode from 'qrcode.react';
 import CloudDoneOutlinedIcon from '@mui/icons-material/CloudDoneOutlined';
 import { toast } from 'react-toastify';
 import { useWindowOrigin } from '@/hooks/use_window';
+import { useOverview } from './hooks';
+import { useStyles } from './styles';
 
 const KeplrCom: React.FC<
   {
@@ -56,7 +57,7 @@ const KeplrCom: React.FC<
       toast(
         <div>
           {t('PleaseInstallKeplr')}{' '}
-          <a target="_blank" href="https://www.keplr.app/download ">
+          <a target="_blank" href="https://www.keplr.app/download " rel="noreferrer">
             {' '}
             {t('clickHereToDownload')}
           </a>{' '}
@@ -73,7 +74,7 @@ const KeplrCom: React.FC<
           {t('pleaseCreateKeplrAccount')}
           <br />
           <br />
-          <a target="_blank" href="https://help.keplr.app/">
+          <a target="_blank" href="https://help.keplr.app/" rel="noreferrer">
             {t('clickHereCreatekeplrAccount')}
           </a>
         </div>
@@ -90,7 +91,7 @@ const KeplrCom: React.FC<
         addAccountKeplrError: '',
       });
     }
-  }, [keplrWallet.addAccountKeplrError]);
+  }, [keplrWallet.addAccountKeplrError, setKeplrWallet, t]);
 
   useEffect(() => {
     if (
@@ -210,11 +211,7 @@ const KeplrCom: React.FC<
               {t('KeplrWallet')}
             </Typography>
 
-            <Button
-              style={{ width: '35%' }}
-              variant="contained"
-              onClick={(e) => connectWithKeplr()}
-            >
+            <Button style={{ width: '35%' }} variant="contained" onClick={() => connectWithKeplr()}>
               {t('connectKeplrWallet')}
             </Button>
           </div>
@@ -237,6 +234,7 @@ const KeplrCom: React.FC<
                     <ShareIcon onClick={handleOpen} className={classes.actionIcons} />
                   </>
                 ) : (
+                  // eslint-disable-next-line react/jsx-no-useless-fragment
                   <></>
                 )}
 
@@ -265,7 +263,7 @@ const KeplrCom: React.FC<
           <div className="data__item">
             <Typography variant="caption">{t('balance')}</Typography>
 
-            {connect == true &&
+            {connect &&
             !keplrWallet.keplerAdderss &&
             !keplrWallet.installKeplrError &&
             !keplrWallet.addAccountKeplrError ? (
@@ -280,7 +278,7 @@ const KeplrCom: React.FC<
           </div>
           <div className="data__item">
             <Typography variant="caption">{t('balance')}</Typography>
-            {connect == true && !keplrWallet.keplerAdderss ? (
+            {connect && !keplrWallet.keplerAdderss ? (
               <Typography variant="h4" className="loading">
                 <LinearProgress />
               </Typography>

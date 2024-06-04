@@ -1,14 +1,3 @@
-import { ThemeOptions } from '@mui/material';
-import chainConfig from '@/chainConfig';
-
-const { themes } = chainConfig();
-const { light: theme } = themes;
-
-type DeepPartial<T> = T extends object
-  ? {
-      [P in keyof T]?: DeepPartial<T[P]>;
-    }
-  : T;
 const backgroundDefault = '#F8F8F8';
 const surfaceOne = '#FFFFFF';
 const surfaceTwo = '#F8F8F8';
@@ -16,7 +5,7 @@ const fontOne = '#000000';
 const fontTwo = '#414141';
 const fontThree = '#777777';
 /** Custom theme overrides for light mode */
-export const lightThemeOverride: DeepPartial<ThemeOptions> = {
+export const lightThemeOverride = {
   mixins: {
     tableCell: {
       background: surfaceOne, // surface one

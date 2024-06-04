@@ -13107,21 +13107,22 @@ export type ChainIdQueryHookResult = ReturnType<typeof useChainIdQuery>;
 export type ChainIdLazyQueryHookResult = ReturnType<typeof useChainIdLazyQuery>;
 export type ChainIdQueryResult = Apollo.QueryResult<ChainIdQuery, ChainIdQueryVariables>;
 export const MarketDataDocument = gql`
-    query MarketData($denom: String) {
-  communityPool: community_pool(order_by: {height: desc}, limit: 1) {
+query MarketData {
+  communityPool: community_pool(order_by: { height: desc }, limit: 1) {
     coins
   }
-  inflation: inflation(order_by: {height: desc}, limit: 1) {
+  inflation: inflation(order_by: { height: desc }, limit: 1) {
     value
   }
-  tokenPrice: token_price(where: {unit_name: {_eq: $denom}}) {
+  tokenPrice: token_price {
     marketCap: market_cap
     price
+    unitName: unit_name
   }
   supply {
     coins
   }
-  bondedTokens: staking_pool(order_by: {height: desc}, limit: 1) {
+  bondedTokens: staking_pool(order_by: { height: desc }, limit: 1) {
     bonded_tokens
   }
   distributionParams: distribution_params {

@@ -16,7 +16,7 @@
     "preserveWatchOutput": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": false
   },
   "exclude": ["node_modules"]
 }

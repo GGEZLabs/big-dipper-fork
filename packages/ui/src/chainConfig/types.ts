@@ -12,6 +12,8 @@ export interface ChainSettings {
   };
   primaryTokenUnit: string;
   votingPowerTokenUnit: string;
+  primaryCoinUnit: string;
+  votingPowerCoinUnit: string;
   tokenUnits: {
     [token: string]: {
       display: string;

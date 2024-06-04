@@ -31,7 +31,6 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
   const { t, i18n } = useAppTranslation('tryouts');
   const lang = i18n.language;
   const chainConfig = JSON.parse(chainConfigFile.keplr);
-  console.log('chainConfig :>> ', chainConfig);
   const walletState = useRecoilValue(readWalletSelection);
   const faucetOneState = useRecoilValue(readFaucetOne);
   const faucetTwoState = useRecoilValue(readFaucetTwo);

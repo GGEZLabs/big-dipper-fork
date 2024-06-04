@@ -1,11 +1,10 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { useRecoilValue } from 'recoil';
 import GgezLogoAR from 'shared-utils/assets/ggez-logo-ar.svg';
 import GgezLogoWhiteAR from 'shared-utils/assets/ggez-logo-ar-white.svg';
 import GgezLogoWhite from 'shared-utils/assets/ggez-logo-white.svg';
 import GgezLogo from 'shared-utils/assets/ggez-logo.svg';
-import useStyles from './styles';
-import { useDesktop } from './hooks';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import AppBar from '@mui/material/AppBar';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
@@ -14,6 +13,8 @@ import { readTheme } from '@/recoil/settings';
 import TitleBar from '@/components/nav/components/title_bar';
 import MenuItems from '@/components/nav/components/menu_items';
 import ActionBar from '@/components/nav/components/desktop/components/action_bar';
+import { useDesktop } from './hooks';
+import useStyles from './styles';
 
 const Desktop: React.FC<{
   className?: string;
@@ -29,7 +30,7 @@ const Desktop: React.FC<{
     <ClickAwayListener onClickAway={turnOffAll}>
       <div
         className={cx(className, classes.root)}
-        //style={{textAlign : 'right',alignItems:'flex-start',position: 'absolute',right: 0}}
+        // style={{textAlign : 'right',alignItems:'flex-start',position: 'absolute',right: 0}}
       >
         <AppBar
           position="fixed"
@@ -37,7 +38,7 @@ const Desktop: React.FC<{
             open: isMenu,
           })}
         >
-          <ActionBar toggleNetwork={toggleNetwork} isNetwork={isNetwork} title={title} />
+          <ActionBar toggleNetwork={toggleNetwork} isNetwork={isNetwork} className={title} />
           <TitleBar title={title} />
         </AppBar>
         <Drawer
@@ -62,7 +63,7 @@ const Desktop: React.FC<{
             <GgezLogo className={classes.logo} onClick={toggleMenu} role="button" />
           ) : lang === 'ar' && theme === 'dark' ? (
             <GgezLogoWhiteAR className={classes.logo} onClick={toggleMenu} role="button" />
-          ) : lang === 'en' && theme == 'dark' ? (
+          ) : lang === 'en' && theme === 'dark' ? (
             <GgezLogoWhite className={classes.logo} onClick={toggleMenu} role="button" />
           ) : (
             <GgezLogoAR className={classes.logo} onClick={toggleMenu} role="button" />

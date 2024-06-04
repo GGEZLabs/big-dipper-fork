@@ -12187,7 +12187,14 @@ export type MarketDataQueryVariables = Exact<{
 }>;
 
 
-export type MarketDataQuery = { communityPool: Array<{ __typename?: 'community_pool', coins: any }>, inflation: Array<{ __typename?: 'inflation', value: any }>, tokenPrice: Array<{ __typename?: 'token_price', price: any, marketCap: any }>, supply: Array<{ __typename?: 'supply', coins: any }>, bondedTokens: Array<{ __typename?: 'staking_pool', bonded_tokens: string }>, distributionParams: Array<{ __typename?: 'distribution_params', params: any }> };
+export type MarketDataQuery = { 
+  communityPool: Array<{ __typename?: 'community_pool', coins: any }>,
+  inflation: Array<{ __typename?: 'inflation', value: any }>,
+  tokenPrice: Array<{ __typename?: 'token_price', price: any, marketCap: any,unitName: string }>,
+  supply: Array<{ __typename?: 'supply', coins: any }>,
+  bondedTokens: Array<{ __typename?: 'staking_pool', bonded_tokens: string }>, 
+  distributionParams: Array<{ __typename?: 'distribution_params', params: any }> 
+  };
 
 export type MessageTypesQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -13107,21 +13114,22 @@ export type ChainIdQueryHookResult = ReturnType<typeof useChainIdQuery>;
 export type ChainIdLazyQueryHookResult = ReturnType<typeof useChainIdLazyQuery>;
 export type ChainIdQueryResult = Apollo.QueryResult<ChainIdQuery, ChainIdQueryVariables>;
 export const MarketDataDocument = gql`
-    query MarketData($denom: String) {
-  communityPool: community_pool(order_by: {height: desc}, limit: 1) {
+query MarketData {
+  communityPool: community_pool(order_by: { height: desc }, limit: 1) {
     coins
   }
-  inflation: inflation(order_by: {height: desc}, limit: 1) {
+  inflation: inflation(order_by: { height: desc }, limit: 1) {
     value
   }
-  tokenPrice: token_price(where: {unit_name: {_eq: $denom}}) {
+  tokenPrice: token_price {
     marketCap: market_cap
     price
+    unitName: unit_name
   }
   supply {
     coins
   }
-  bondedTokens: staking_pool(order_by: {height: desc}, limit: 1) {
+  bondedTokens: staking_pool(order_by: { height: desc }, limit: 1) {
     bonded_tokens
   }
   distributionParams: distribution_params {
