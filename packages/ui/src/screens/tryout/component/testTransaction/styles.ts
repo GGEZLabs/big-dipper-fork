@@ -19,6 +19,12 @@ export const useStyles = makeStyles()((theme) => ({
       height: theme.spacing(4.5),
     },
   },
+  button: {
+    backgroundColor: '#1976d2',
+    '&:hover': {
+      backgroundColor: '#1565c0',
+    },
+  },
   item: {
     color: theme.palette.custom.fonts.fontTwo,
     '&:first-of-type': {

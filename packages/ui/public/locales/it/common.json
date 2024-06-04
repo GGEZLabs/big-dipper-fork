@@ -92,5 +92,7 @@
   "walletTitle": "Connected wallets",
   "searchType": "Tipo di ricerca",
   "selectAll": "Seleziona tutto",
-  "filter": "Filtro"
+  "filter": "Filtro",
+  "StableCoin": "Stablecoin",
+  "GovernanceCoin": "Governance Coin"
 }

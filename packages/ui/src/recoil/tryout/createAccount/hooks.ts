@@ -1,3 +1,5 @@
+/* eslint-disable turbo/no-undeclared-env-vars */
+/* eslint-disable no-unused-expressions */
 import { useEffect, useState } from 'react';
 import chainConfigFile from '@/chain.json';
 import { Secp256k1HdWallet } from '@cosmjs/launchpad';
@@ -33,7 +35,7 @@ export const useGenerateMnemonicRecoil = () => {
     const [{ address, pubkey }] = await wallet.getAccounts();
     const encodedPublicKey = toBase64(pubkey);
 
-    let data = {
+    const data = {
       accountMnemonic: wallet.mnemonic,
       accountAddress: address,
       accountName: state.accountName ? state.accountName : createAccountData.accountName,
@@ -58,7 +60,7 @@ export const useGenerateMnemonicRecoil = () => {
       const balanceGGEZ: Coin = balancesFacuetOne[0];
       const balanceGGEZOne: Coin = balancesFacuetOne[1];
 
-      let data = {
+      const data = {
         accountMnemonic: createAccountData.accountMnemonic,
         accountAddress: createAccountData.accountAddress,
         accountName: createAccountData.accountName,

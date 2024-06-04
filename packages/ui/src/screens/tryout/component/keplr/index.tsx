@@ -211,7 +211,11 @@ const KeplrCom: React.FC<
               {t('KeplrWallet')}
             </Typography>
 
-            <Button style={{ width: '35%' }} variant="contained" onClick={() => connectWithKeplr()}>
+            <Button
+              className={classes.button}
+              variant="contained"
+              onClick={() => connectWithKeplr()}
+            >
               {t('connectKeplrWallet')}
             </Button>
           </div>

@@ -1,8 +1,13 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable consistent-return */
+/* eslint-disable eqeqeq */
+/* eslint-disable turbo/no-undeclared-env-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import Typography from '@mui/material/Typography';
-import { useTestTransaction } from './hooks';
-import { useStyles } from './styles';
 import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import SelectBox from '@mui/material/Box';
@@ -12,7 +17,7 @@ import chainConfigFile from '@/chain.json';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import FormHelperText from '@mui/material/FormHelperText';
 import { Alert, AlertTitle } from '@mui/material';
-import LoadingButton from '@mui/material/Button';
+import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import { TRANSACTION_DETAILS } from '@/utils/go_to_page';
@@ -25,8 +30,10 @@ import { readFaucetOne } from '@/recoil/tryout/faucetOne';
 import { readFaucetTwo } from '@/recoil/tryout/faucetTwo';
 import { readCreateAccount } from '@/recoil/tryout/createAccount';
 import { readKeplrWallet } from '@/recoil/tryout/keplrWallet';
+import { useStyles } from './styles';
+import { useTestTransaction } from './hooks';
 
-const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
+const TestTransaction: React.FC<ComponentDefault> = ({ className }) => {
   const { classes, theme } = useStyles();
   const { t, i18n } = useAppTranslation('tryouts');
   const lang = i18n.language;
@@ -40,23 +47,23 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
   const [loading, setLoading] = useState(false);
   const [successfulTransaction, setSuccessfulTransaction] = useState(false);
 
-  //// validate   ////////
+  /// / validate   ////////
   const [validateSender, setValidateSender] = useState(false);
   const [validateReceiver, setValidateReceiver] = useState(false);
   const [validateAddressInput, setValidateAddressInput] = useState(false);
   const [validateAmount, setValidateAmount] = useState(false);
   const [validateDenom, setValidateDenom] = useState(false);
-  ///////////////////////
+  /// ////////////////////
 
   const [checkReciverAddress, setCheckReciverAddress] = useState(false);
 
-  //////  Accounts///////
+  /// ///  Accounts///////
   const [accountOne, setAccountOne] = useState(process.env.NEXT_PUBLIC_FAUCET_ADDRESS_ONE);
   const [accountTwo, setAccountTwo] = useState(process.env.NEXT_PUBLIC_FAUCET_ADDRESS_TWO);
 
-  ///////////////////
+  /// ////////////////
 
-  ///// Data Form  //////
+  /// // Data Form  //////
   const [sender, setSender] = useState('');
   const [receiver, setReciver] = useState('');
   const [denom, setDenom] = useState('');
@@ -64,7 +71,7 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
   const [inputAddress, setInputAddress] = useState('');
   const [memoInput, setMemoInput] = useState('');
   const [result, setResult] = useState(false);
-  //////////////////
+  /// ///////////////
 
   const { state, processTransaction } = useTestTransaction();
 
@@ -81,7 +88,7 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
       setResult(false);
     }
   };
-  //////
+  /// ///
   const handleSender = (event: SelectChangeEvent) => {
     if (event.target.value) {
       if (inputAddress == event.target.value) {
@@ -145,7 +152,7 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
       setValidateAmount(true);
     }
   };
-  //////
+  /// ///
 
   const handleReset = () => {
     setAmount('');
@@ -166,7 +173,7 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
       receiver == '' ||
       denom == '' ||
       amount == ''
-      //|| inputAddress == ""
+      // || inputAddress == ""
     ) {
       sender == '' ? setValidateSender(true) : setValidateSender(false);
       receiver == '' ? setValidateReceiver(true) : setValidateReceiver(false);
@@ -276,7 +283,7 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
                   variant="outlined"
                   onChange={(e) => addressInput(e)}
                   helperText={validateAddressInput == true ? t('required') : null}
-                  error={validateAddressInput == true ? true : false}
+                  error={validateAddressInput == true}
                 />
               </FormControl>
               <ArrowBackIcon
@@ -321,11 +328,11 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
 
                     {keplrState.userNameKeplr ? (
                       <MenuItem value={`keplr_${keplrState.keplerAdderss}`}>
-                        {t('keplrWallet') + ' ' + keplrState.userNameKeplr}
+                        {`${t('keplrWallet')} ${keplrState.userNameKeplr}`}
                       </MenuItem>
                     ) : null}
 
-                    <MenuItem value={'Enter Wallet Address'}>{t('enterWalletAddress')}</MenuItem>
+                    <MenuItem value="Enter Wallet Address">{t('enterWalletAddress')}</MenuItem>
                   </Select>
                 ) : sender !== accountOne && sender !== accountTwo ? (
                   <Select
@@ -359,47 +366,45 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
                 null} */}
                     {keplrState.userNameKeplr ? (
                       <MenuItem value={`keplr_${keplrState.keplerAdderss}`}>
-                        {t('keplrWallet') + ' ' + keplrState.userNameKeplr}
+                        {`${t('keplrWallet')} ${keplrState.userNameKeplr}`}
                       </MenuItem>
                     ) : null}
 
-                    <MenuItem value={'Enter Wallet Address'}>{t('enterWalletAddress')}</MenuItem>
+                    <MenuItem value="Enter Wallet Address">{t('enterWalletAddress')}</MenuItem>
                   </Select>
                 ) : (
-                  <>
-                    <Select
-                      sx={{
-                        color: theme.palette.custom.customSelect.one,
-                        '.MuiOutlinedInput-notchedOutline': {
-                          borderColor: theme.palette.custom.customSelect.zero,
-                        },
-                        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                          borderColor: theme.palette.custom.customSelect.zero,
-                        },
-                        '&:hover .MuiOutlinedInput-notchedOutline': {
-                          borderColor: theme.palette.custom.customSelect.zero,
-                        },
-                        '.MuiSvgIcon-root ': {
-                          fill: theme.palette.custom.customSelect.zero,
-                        },
-                      }}
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      value={receiver}
-                      onChange={handleReceiver}
-                      error={validateReceiver}
-                    >
-                      <MenuItem value={accountOne}>{t('faucetOne')}</MenuItem>
+                  <Select
+                    sx={{
+                      color: theme.palette.custom.customSelect.one,
+                      '.MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.custom.customSelect.zero,
+                      },
+                      '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.custom.customSelect.zero,
+                      },
+                      '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: theme.palette.custom.customSelect.zero,
+                      },
+                      '.MuiSvgIcon-root ': {
+                        fill: theme.palette.custom.customSelect.zero,
+                      },
+                    }}
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={receiver}
+                    onChange={handleReceiver}
+                    error={validateReceiver}
+                  >
+                    <MenuItem value={accountOne}>{t('faucetOne')}</MenuItem>
 
-                      {keplrState.userNameKeplr ? (
-                        <MenuItem value={`keplr_${keplrState.keplerAdderss}`}>
-                          {t('keplrWallet') + ' ' + keplrState.userNameKeplr}
-                        </MenuItem>
-                      ) : null}
+                    {keplrState.userNameKeplr ? (
+                      <MenuItem value={`keplr_${keplrState.keplerAdderss}`}>
+                        {`${t('keplrWallet')} ${keplrState.userNameKeplr}`}
+                      </MenuItem>
+                    ) : null}
 
-                      <MenuItem value={'Enter Wallet Address'}>{t('enterWalletAddress')}</MenuItem>
-                    </Select>
-                  </>
+                    <MenuItem value="Enter Wallet Address">{t('enterWalletAddress')}</MenuItem>
+                  </Select>
                 )}
                 {validateReceiver ? (
                   <FormHelperText style={{ color: '#FF0000' }}>{t('required')}</FormHelperText>
@@ -440,9 +445,9 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
                   onChange={handleAmount}
                   error={validateAmount}
                 >
-                  <MenuItem value={'10000'}>10000</MenuItem>
-                  <MenuItem value={'15000'}>15000</MenuItem>
-                  <MenuItem value={'20000'}>20000</MenuItem>
+                  <MenuItem value="10000">10000</MenuItem>
+                  <MenuItem value="15000">15000</MenuItem>
+                  <MenuItem value="20000">20000</MenuItem>
                 </Select>
                 {validateAmount ? (
                   <FormHelperText style={{ color: '#FF0000' }}>{t('required')}</FormHelperText>
@@ -535,7 +540,7 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
           </div>
         </div>
         <div className={classes.label} style={{ display: 'flex', alignItems: 'center' }}>
-          <LoadingButton
+          <Button
             style={{
               float: 'left',
               minWidth: 100,
@@ -544,27 +549,26 @@ const TestTransaction: React.FC<{} & ComponentDefault> = ({ className }) => {
             }}
             size="small"
             color="primary"
-            // loadingPosition="start"
             onClick={check}
-            loading={loading.toString()}
-            startIcon={<SendIcon />}
+            startIcon={<SendIcon color="primary" />}
+            className={classes.button}
             variant="contained"
           >
             <span style={{ paddingRight: lang == 'ar' ? 5 : 0 }}> {t('process')}</span>
-          </LoadingButton>
+          </Button>
 
-          <LoadingButton
+          <Button
             style={{ float: 'left', minWidth: 100, marginLeft: 15, height: 40 }}
             size="small"
             color="primary"
-            // loadingPosition="start"
             onClick={handleReset}
-            startIcon={<RefreshIcon />}
+            startIcon={<RefreshIcon color="primary" />}
             variant="contained"
             disabled={loading}
+            className={classes.button}
           >
             <span style={{ paddingRight: lang == 'ar' ? 5 : 0 }}> {t('reset')} </span>
-          </LoadingButton>
+          </Button>
         </div>
 
         <div className={classes.label}>

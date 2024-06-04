@@ -90,5 +90,7 @@
   "walletTitle": "Connected wallets",
   "searchType": "搜尋類型",
   "selectAll": "全選",
-  "filter": "過濾器"
+  "filter": "過濾器",
+  "StableCoin": "Stablecoin",
+  "GovernanceCoin": "Governance Coin"
 }

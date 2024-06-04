@@ -30,6 +30,7 @@ export const useStyles = makeStyles()((theme) => ({
       },
     },
   },
+
   icons: {
     '& svg': {
       width: theme.spacing(4.5),
@@ -211,11 +212,16 @@ export const useStyles = makeStyles()((theme) => ({
   alert: {
     marginTop: '50px',
   },
-  button: {
+  buttons: {
     marginTop: '30px',
     bottom: 30,
   },
-
+  button: {
+    backgroundColor: '#1976d2',
+    '&:hover': {
+      backgroundColor: '#1565c0',
+    },
+  },
   mobile: {
     [theme.breakpoints.up('lg')]: {
       display: 'none',

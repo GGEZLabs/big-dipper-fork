@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/jsx-no-useless-fragment */
+/* eslint-disable eqeqeq */
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import TutorialLink from '@mui/material/Link';
@@ -5,16 +8,13 @@ import Typography from '@mui/material/Typography';
 import Dialog from '@mui/material/Dialog';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import Box from '@/components/box';
-import { useStyles } from './styles';
-import { useOverview } from './hooks';
-import { useGenerateMnemonicRecoil } from '@/recoil/tryout/createAccount';
+import { useGenerateMnemonicRecoil, writeCreateAccount } from '@/recoil/tryout/createAccount';
 import CopyIcon from 'shared-utils/assets/icon-copy.svg';
 import { ACCOUNT_DETAILS } from '@/utils/go_to_page';
 import { getMiddleEllipsis } from '@/utils/get_middle_ellipsis';
 import ShareIcon from 'shared-utils/assets/icon-share.svg';
 import QRCode from 'qrcode.react';
 import RefreshIcon from '@mui/icons-material/Refresh';
-import { writeCreateAccount } from '@/recoil/tryout/createAccount';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import {
   FacebookShareButton,
@@ -28,18 +28,21 @@ import {
   EmailShareButton,
   EmailIcon,
 } from 'react-share';
-import LoadingButton from '@mui/material/Button';
+import LoadingButton from '@mui/lab/LoadingButton';
 
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import { AtomCreateAccountState } from '@/recoil/tryout/createAccount/types';
 import { useRecoilState, SetterOrUpdater } from 'recoil';
 import { useWindowOrigin } from '@/hooks/use_window';
+import Button from '@mui/material/Button';
+import { useOverview } from './hooks';
+import { useStyles } from './styles';
 
 const CreateAccount: React.FC<{
   className?: string;
 }> = ({ className }) => {
-  let data = {
+  const data = {
     accountMnemonic: '',
     accountAddress: '',
     accountName: '',
@@ -52,6 +55,7 @@ const CreateAccount: React.FC<{
   };
   const { location } = useWindowOrigin();
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [account, setAccount] = useRecoilState(writeCreateAccount) as [
     AtomCreateAccountState,
     SetterOrUpdater<AtomCreateAccountState>,
@@ -296,36 +300,42 @@ const CreateAccount: React.FC<{
             <></>
           )}
         </div>
-        <div className={classes.button}>
-          <LoadingButton
+        <div className={classes.buttons}>
+          <Button
             style={{ minWidth: 100, height: 40 }}
             size="small"
             color="primary"
+            className={classes.button}
             // loadingPosition="start"
             onClick={createAccount}
-            loading={loading.toString()}
-            startIcon={<PersonAddIcon />}
+            startIcon={
+              <PersonAddIcon
+                color="primary"
+                style={{ display: createAccountData.accountAddress != '' ? 'none' : 'block' }}
+              />
+            }
             variant="contained"
-            disabled={createAccountData.accountAddress != '' ? true : false}
+            disabled={createAccountData.accountAddress != ''}
           >
             <span style={{ paddingRight: lang == 'ar' ? 8 : 0 }}> {t('createNewAccount')} </span>
-          </LoadingButton>
-          <LoadingButton
+          </Button>
+
+          <Button
             style={{
               minWidth: 100,
               height: 40,
-              marginLeft: lang === 'ar' ? 0 : '2%',
-              marginRight: lang === 'ar' ? '2%' : 0,
+              marginLeft: lang == 'ar' ? 0 : '2%',
+              marginRight: lang == 'ar' ? '2%' : 0,
             }}
+            className={classes.button}
             size="small"
             color="primary"
-            // loadingPosition="start"
             onClick={reset}
-            startIcon={<RefreshIcon />}
+            startIcon={<RefreshIcon color="primary" />}
             variant="contained"
           >
             <span style={{ paddingRight: lang === 'ar' ? 5 : 0 }}> {t('reset')} </span>
-          </LoadingButton>
+          </Button>
         </div>
       </>
     </Box>

@@ -97,6 +97,7 @@ export const common = (theme: ThemeOptions) =>
         fontSize: '0.875rem',
         letterSpacing: 1.25,
         textTransform: 'none',
+        // backgroundColor:'#1976d2'
       },
     },
     palette: {
@@ -189,7 +190,7 @@ export const common = (theme: ThemeOptions) =>
     },
   }) as ThemeOptions;
 
-export const lightTemplate = common(lightThemeOverride as ThemeOptions);
-export const darkTemplate = common(darkThemeOverride as ThemeOptions);
+export const lightTemplate = common(lightThemeOverride as unknown as ThemeOptions);
+export const darkTemplate = common(darkThemeOverride as unknown as ThemeOptions);
 export const deuteranopiaTemplate = common(deuteranopiaThemeOverride as ThemeOptions);
 export const tritanopiaTemplate = common(tritanopiaThemeOverride as ThemeOptions);

@@ -22,6 +22,7 @@
     "@keplr-wallet/types": "^0.11.59",
     "@keplr-wallet/wc-client": "^0.11.59",
     "@mui/icons-material": "^5.11.16",
+    "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.12.3",
     "@socialgouv/matomo-next": "^1.6.1",
     "@walletconnect/client": "^1.8.0",

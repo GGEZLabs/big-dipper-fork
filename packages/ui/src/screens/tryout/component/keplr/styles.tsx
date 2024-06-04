@@ -135,6 +135,13 @@ export const useStyles = makeStyles()((theme) => ({
       },
     },
   },
+  button: {
+    backgroundColor: '#1976d2',
+    width: '35%',
+    '&:hover': {
+      backgroundColor: '#1565c0',
+    },
+  },
   copyText: {
     '& .detail': {
       display: 'flex',

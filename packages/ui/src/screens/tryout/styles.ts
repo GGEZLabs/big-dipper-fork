@@ -1,8 +1,9 @@
+import { CSSObject } from '@emotion/react';
 import { makeStyles } from 'tss-react/mui';
 
 const useStyles = makeStyles()((theme) => ({
   root: {
-    // ...theme.mixins.layout,
+    ...(theme.mixins.layout as CSSObject),
     display: 'grid',
     gridGap: theme.spacing(1),
     gridTemplateRows: 'auto auto 1fr',
@@ -18,6 +19,7 @@ const useStyles = makeStyles()((theme) => ({
       gridTemplateColumns: 'repeat(4, 1fr)',
     },
   },
+
   dataBlocks: {
     [theme.breakpoints.up('md')]: {
       gridColumn: '1 / 3',
