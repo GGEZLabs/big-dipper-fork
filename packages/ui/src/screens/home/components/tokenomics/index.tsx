@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import chainConfig from '@/chainConfig';
 import Box from '@/components/box';
 import CustomToolTip, { type CustomToolTipData } from '@/components/custom_tool_tip';

@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react';
 import useStyles from '@/components/custom_tool_tip/styles';
 
 export interface CustomToolTipData {
+  fullTime?: ReactNode;
   legendKey: string;
   percentKey?: string;
   value: string;

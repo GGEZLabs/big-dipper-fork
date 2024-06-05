@@ -5114,6 +5114,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cron@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "@types/cron@npm:2.4.0"
+  dependencies:
+    cron: "npm:*"
+  checksum: 10/c763e99a757ea76aee435948c25e0bdaf32ec44c69603088c73e8832df6b121e87932709925fe3e94777833ca30845c31df1167be54c330cf458d348059b9ffc
+  languageName: node
+  linkType: hard
+
 "@types/d3-array@npm:^3.0.3":
   version: 3.0.4
   resolution: "@types/d3-array@npm:3.0.4"
@@ -5347,6 +5356,13 @@ __metadata:
   version: 4.0.2
   resolution: "@types/long@npm:4.0.2"
   checksum: 10/68afa05fb20949d88345876148a76f6ccff5433310e720db51ac5ca21cb8cc6714286dbe04713840ddbd25a8b56b7a23aa87d08472fabf06463a6f2ed4967707
+  languageName: node
+  linkType: hard
+
+"@types/luxon@npm:~3.4.0":
+  version: 3.4.2
+  resolution: "@types/luxon@npm:3.4.2"
+  checksum: 10/fd89566e3026559f2bc4ddcc1e70a2c16161905ed50be9473ec0cfbbbe919165041408c4f6e06c4bcf095445535052e2c099087c76b1b38e368127e618fc968d
   languageName: node
   linkType: hard
 
@@ -6836,6 +6852,7 @@ __metadata:
     "@mui/material": "npm:^5.15.19"
     "@next/eslint-plugin-next": "npm:^13.4.1"
     "@playwright/test": "npm:^1.33.0"
+    "@types/cron": "npm:^2.4.0"
     "@types/eslint": "npm:^8.37.0"
     "@types/node": "npm:^20.14.1"
     "@types/react": "npm:^18.3.3"
@@ -6843,6 +6860,7 @@ __metadata:
     "@types/recoil": "npm:^0.0.9"
     "@typescript-eslint/eslint-plugin": "npm:^5.59.2"
     "@typescript-eslint/parser": "npm:^5.59.2"
+    cron: "npm:^3.1.7"
     dotenv-cli: "npm:^7.2.1"
     eslint: "npm:^8.40.0"
     eslint-config-airbnb: "npm:^19.0.4"
@@ -7805,6 +7823,16 @@ __metadata:
   version: 1.1.1
   resolution: "create-require@npm:1.1.1"
   checksum: 10/a9a1503d4390d8b59ad86f4607de7870b39cad43d929813599a23714831e81c520bddf61bcdd1f8e30f05fd3a2b71ae8538e946eb2786dc65c2bbc520f692eff
+  languageName: node
+  linkType: hard
+
+"cron@npm:*, cron@npm:^3.1.7":
+  version: 3.1.7
+  resolution: "cron@npm:3.1.7"
+  dependencies:
+    "@types/luxon": "npm:~3.4.0"
+    luxon: "npm:~3.4.0"
+  checksum: 10/54f867b51039aa93fc909aee70461cfff3d253e412686ea19891d6b28a86cb413cdbd969d018613fc890403f1f17045f193628733596ef77eef3f3a93b344878
   languageName: node
   linkType: hard
 
@@ -12082,6 +12110,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luxon@npm:~3.4.0":
+  version: 3.4.4
+  resolution: "luxon@npm:3.4.4"
+  checksum: 10/c14164bc338987349075a08e63ea3ff902866735f7f5553a355b27be22667919765ff96fde4d3413d0e9a0edc4ff9e2e74ebcb8f86eae0ce8b14b27330d87d6e
+  languageName: node
+  linkType: hard
+
 "lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -15814,6 +15849,7 @@ __metadata:
     "@testing-library/react": "npm:^14.0.0"
     "@types/big.js": "npm:^6.1.6"
     "@types/color": "npm:^3.0.3"
+    "@types/cron": "npm:^2.4.0"
     "@types/eslint": "npm:^8.37.0"
     "@types/esprima": "npm:^4.0.3"
     "@types/jest": "npm:^29.5.1"
@@ -15838,6 +15874,7 @@ __metadata:
     big.js: "npm:^6.2.1"
     color: "npm:^4.2.3"
     copy-to-clipboard: "npm:^3.3.3"
+    cron: "npm:^3.1.7"
     csstype: "npm:^3.1.2"
     dayjs: "npm:^1.11.7"
     dotenv: "npm:^16.0.3"

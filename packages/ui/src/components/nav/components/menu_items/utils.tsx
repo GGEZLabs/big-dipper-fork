@@ -5,6 +5,8 @@ import TryoutIcon from 'shared-utils/assets/icon-test-transaction.svg';
 import ProposalsIcon from 'shared-utils/assets/icon-proposals.svg';
 import TransactionIcon from 'shared-utils/assets/icon-transaction.svg';
 import UserIcon from 'shared-utils/assets/icon-user.svg';
+import AssetsCollateral from 'shared-utils/assets/assetsCollateral.svg';
+
 import {
   BLOCKS,
   HOME,
@@ -13,6 +15,7 @@ import {
   TRANSACTIONS,
   VALIDATORS,
   TRYOUT,
+  ASSETS,
 } from '@/utils/go_to_page';
 
 export const getMenuItems = () => {
@@ -43,6 +46,16 @@ export const getMenuItems = () => {
       icon: <TransactionIcon {...iconProps} />,
     },
     {
+      key: 'tryout',
+      url: TRYOUT,
+      icon: <TryoutIcon {...iconProps} />,
+    },
+    {
+      key: 'assets',
+      url: ASSETS,
+      icon: <AssetsCollateral {...iconProps} />,
+    },
+    {
       key: 'proposals',
       url: PROPOSALS,
       icon: <ProposalsIcon {...iconProps} />,
@@ -51,11 +64,6 @@ export const getMenuItems = () => {
       key: 'params',
       url: PARAMS,
       icon: <ParamIcon {...iconProps} />,
-    },
-    {
-      key: 'tryout',
-      url: TRYOUT,
-      icon: <TryoutIcon {...iconProps} />,
     },
   ];
 };

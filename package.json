@@ -31,6 +31,7 @@
     "@changesets/cli": "^2.26.1",
     "@next/eslint-plugin-next": "^13.4.1",
     "@playwright/test": "^1.33.0",
+    "@types/cron": "^2.4.0",
     "@types/eslint": "^8.37.0",
     "@types/recoil": "^0.0.9",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
@@ -74,6 +75,7 @@
     "@types/node": "^20.14.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "cron": "^3.1.7",
     "recoil": "^0.7.7"
   }
 }

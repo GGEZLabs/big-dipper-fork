@@ -4,7 +4,6 @@ const { prefix } = chainConfig();
 
 export const HOME = '/';
 export const BLOCKS = '/blocks';
-export const TRYOUT = '/tryout';
 export const BLOCK_DETAILS = (slot: string | number): string => `/blocks/${slot}`;
 export const VALIDATOR_DETAILS = (address: string): string => `/validators/${address}`;
 export const VALIDATORS = '/validators';
@@ -15,6 +14,10 @@ export const PROPOSAL_DETAILS = (id: string | number): string => `/proposals/${i
 export const ACCOUNT_DETAILS = (address: string): string => `/accounts/${address}`;
 export const PARAMS = '/params';
 export const PROFILE_DETAILS = (dtag: string): string => `/${dtag}`;
+export const TRYOUT = '/tryout';
+export const ASSETS = '/assets';
+export const HOLDINGS = '/holdings';
+export const TRADES = '/trades';
 
 /**
  * Helper to determine if we are routing to validator details or account details

@@ -24,13 +24,13 @@ const formatTokenomics = (data: TokenomicsQuery, state: TokenomicsState) => {
   }
 
   const bonded = data?.stakingPool?.[0]?.bonded ?? state.bonded;
-  results.bonded = numeral(formatToken(bonded, results.denom).value).value() ?? 0;
+  results.bonded = numeral(formatToken(bonded, results.denom).value).value() / 1000000 ?? 0;
 
   const unbonding = data?.stakingPool?.[0]?.unbonded ?? state.bonded;
-  results.unbonding = numeral(formatToken(unbonding, results.denom).value).value() ?? 0;
+  results.unbonding = numeral(formatToken(unbonding, results.denom).value).value() / 1000000 ?? 0;
 
-  const unbonded = results.total - results.unbonding - results.bonded;
-  results.unbonded = unbonded;
+  const unbonded = results.total - Number(unbonding) - Number(bonded);
+  results.unbonded = unbonded / 1000000;
 
   return results;
 };
