@@ -41,14 +41,14 @@ const useStyles = makeStyles()((theme) => ({
         height: '12px',
         marginRight: '5px',
       },
-      '&:first-of-type:before': {
-        background: theme.palette.custom.tokenomics.one,
+      '&:first-child:before': {
+        background: theme.palette.custom.customTokenomics.zero,
       },
-      '&:nth-of-type(2):before': {
-        background: theme.palette.custom.tokenomics.two,
+      '&:nth-child(2):before': {
+        background: theme.palette.custom.customTokenomics.one,
       },
       '&:last-child:before': {
-        background: theme.palette.custom.tokenomics.three,
+        background: theme.palette.custom.customTokenomics.two,
       },
       '& .caption__percent': {
         color: theme.palette.custom.fonts.fontThree,

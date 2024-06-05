@@ -1,5 +1,4 @@
 import { makeStyles } from 'tss-react/mui';
-import Color from 'color';
 
 const useStyles = makeStyles()((theme) => ({
   root: {
@@ -21,7 +20,8 @@ const useStyles = makeStyles()((theme) => ({
   },
   chart: {
     '& .recharts-radial-bar-background-sector': {
-      fill: Color(theme.palette.primary.main).alpha(0.4).toString(),
+      fill: theme.palette.custom.consensus.one,
+      // Color(theme.palette.primary.main).alpha(0.4).toString(),
     },
   },
   chartPercentLabel: {

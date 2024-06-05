@@ -1,18 +1,18 @@
+/* eslint-disable arrow-body-style */
 import chainConfig from '@/chainConfig';
 import SocialMedia from '@/components/footer/components/social_media';
 import useStyles from '@/components/footer/styles';
-import { donateLink, footerLinks } from '@/components/footer/utils';
+import { footerLinks } from '@/components/footer/utils';
 import generalConfig from '@/generalConfig';
 import { readTheme } from '@/recoil/settings';
-import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
 import AppTrans from '@/components/AppTrans';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import { FC } from 'react';
 import { useRecoilValue } from 'recoil';
-import FooterLogoLight from 'shared-utils/assets/big-dipper-red.svg';
-import FooterLogoDark from 'shared-utils/assets/big-dipper-white.svg';
+import FooterGgezLogo from 'shared-utils/assets/footer-ggez-logo.svg';
+import FooterLogoDark from 'shared-utils/assets/footer-ggez-logo -white.svg';
 
 const { title } = chainConfig();
 
@@ -27,14 +27,14 @@ const Footer: FC<{ className?: string }> = ({ className }) => {
   const year = new Date().getFullYear();
 
   return (
-    <div className={cx(classes.root, className)}>
-      <div className="footer">
+    <div className={cx(className, classes.root)}>
+      <div className={cx('footer')}>
         {/* ============================= */}
         {/* logo */}
         {/* ============================= */}
         <div className="footer__logo--container">
           {theme === 'light' ? (
-            <FooterLogoLight className="footer__logo" />
+            <FooterGgezLogo className="footer__logo" />
           ) : (
             <FooterLogoDark className="footer__logo" />
           )}
@@ -44,30 +44,26 @@ const Footer: FC<{ className?: string }> = ({ className }) => {
         {/* links */}
         {/* ============================= */}
         <div className="footer__links">
-          {footerLinks.map((group) => (
-            <div key={group.key} className={`${group.key} links__group`}>
-              <h3>{t(`common:${group.key}`)}</h3>
-              {group.links.map((x) => (
-                <a key={x.url} href={x.url} target="_blank" rel="noreferrer">
-                  {t(`common:${x.key}`)}
-                </a>
-              ))}
-            </div>
-          ))}
+          {footerLinks.map((group) => {
+            return (
+              <div key={group.key} className={`${group.key} links__group`}>
+                <h3>{t(`common:${group.key}`)}</h3>
+                {group.links.map((x) => {
+                  return (
+                    <a key={x.url} href={x.url} target="_blank" rel="noreferrer">
+                      {t(`common:${x.key}`)}
+                    </a>
+                  );
+                })}
+              </div>
+            );
+          })}
           {/* ============================= */}
           {/* social */}
           {/* ============================= */}
           <div className="footer__social">
             <h3>{t('common:community')}</h3>
             <SocialMedia />
-            <div>
-              <p className="footer__donate--excerpt">{t('common:donateExcerpt')}</p>
-              <a href={donateLink.url} target="_blank" rel="noreferrer">
-                <Button className="footer__donate-button" variant="contained" color="primary">
-                  {t('common:donate')}
-                </Button>
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -85,12 +81,7 @@ const Footer: FC<{ className?: string }> = ({ className }) => {
             i18nKey="common:copyright"
             components={[
               // eslint-disable-next-line
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                title="LICENSE"
-                href="https://raw.githubusercontent.com/forbole/big-dipper-2.0-cosmos/master/LICENSE"
-              />,
+              <a target="_blank" rel="noreferrer" href="https://ggez.one/legal/terms" />,
             ]}
             values={{
               name: generalConfig.maintainer.name,
@@ -102,9 +93,8 @@ const Footer: FC<{ className?: string }> = ({ className }) => {
           <AppTrans
             i18nKey="common:maintainBy"
             components={[
-              <a href={generalConfig.maintainer.url} target="_blank" rel="noreferrer">
-                {}
-              </a>,
+              // eslint-disable-next-line
+              <a target="_blank" rel="noreferrer" href={generalConfig.maintainer.url} />,
             ]}
             values={{
               name: generalConfig.maintainer.name,

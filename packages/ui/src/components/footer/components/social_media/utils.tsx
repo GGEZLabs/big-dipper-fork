@@ -1,29 +1,23 @@
-import { ReactNode } from 'react';
-import { GithubIcon, LinkedinIcon, TelegramIcon, TwitterIcon } from '@/components/icons';
+import { LinkedinIcon, TelegramIcon, TwitterIcon } from '@/components/icons';
 
 export const socialMediaLinks: {
-  component: ReactNode;
+  component: React.ReactNode;
   className: string;
   url: string;
 }[] = [
   {
     component: <TelegramIcon />,
     className: 'telegram',
-    url: 'https://t.me/forbole',
+    url: 'https://t.me/ggezone',
   },
   {
     component: <LinkedinIcon />,
     className: 'linkedin',
-    url: 'https://www.linkedin.com/company/forbole',
+    url: 'https://www.linkedin.com/company/ggezone',
   },
   {
     component: <TwitterIcon />,
     className: 'twitter',
-    url: 'https://twitter.com/bigdipperlive',
-  },
-  {
-    component: <GithubIcon />,
-    className: 'github',
-    url: 'https://github.com/forbole',
+    url: 'https://twitter.com/ggez_one',
   },
 ];

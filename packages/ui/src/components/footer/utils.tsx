@@ -1,9 +1,8 @@
-const FORBOLE_URL = 'https://www.forbole.com';
-const BIG_DIPPER_URL = 'https://bigdipper.live';
+const GGEZ_SITE_URL = 'https://ggez.one';
 
 export const donateLink = {
   key: 'donate',
-  url: `${BIG_DIPPER_URL}/donation`,
+  url: `${GGEZ_SITE_URL}/donate`,
 };
 
 export const footerLinks = [
@@ -11,20 +10,8 @@ export const footerLinks = [
     key: 'company',
     links: [
       {
-        key: 'forbole',
-        url: FORBOLE_URL,
-      },
-      {
-        key: 'stakeNow',
-        url: `${FORBOLE_URL}/stake-now`,
-      },
-      {
         key: 'contact',
-        url: `${FORBOLE_URL}/contact`,
-      },
-      {
-        key: 'blog',
-        url: `${FORBOLE_URL}/blog`,
+        url: `${GGEZ_SITE_URL}`,
       },
     ],
   },
@@ -33,23 +20,19 @@ export const footerLinks = [
     links: [
       {
         key: 'about',
-        url: `${BIG_DIPPER_URL}/#about`,
+        url: `${GGEZ_SITE_URL}`,
       },
       {
         key: 'faq',
-        url: `${BIG_DIPPER_URL}/faq`,
+        url: `${GGEZ_SITE_URL}`,
       },
       {
         key: 'termsAndConditions',
-        url: `${BIG_DIPPER_URL}/terms-and-conditions`,
+        url: `${GGEZ_SITE_URL}/legal/terms`,
       },
       {
         key: 'privacyPolicy',
-        url: `${BIG_DIPPER_URL}/privacy-policy`,
-      },
-      {
-        key: 'documentation',
-        url: 'https://docs.bigdipper.live/',
+        url: `${GGEZ_SITE_URL}/legal/privacy`,
       },
     ],
   },

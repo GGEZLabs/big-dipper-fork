@@ -38,7 +38,7 @@ const Tokenomics: FC<ComponentDefault> = ({ className }) => {
       value: numeral(state.bonded).format('0,0'),
       rawValue: state.bonded,
       percent: `${numeral((state.bonded * 100) / state.total).format('0.00')}%`,
-      fill: theme.palette.custom.tokenomics.one,
+      fill: theme.palette.custom.customTokenomics.zero,
     },
     {
       legendKey: 'unbonded',
@@ -46,14 +46,14 @@ const Tokenomics: FC<ComponentDefault> = ({ className }) => {
       value: numeral(state.unbonded).format('0,0'),
       rawValue: state.unbonded,
       percent: `${numeral((state.unbonded * 100) / state.total).format('0.00')}%`,
-      fill: theme.palette.custom.tokenomics.two,
+      fill: theme.palette.custom.customTokenomics.one,
     },
     {
       legendKey: 'unbonding',
       value: numeral(state.unbonding).format('0,0'),
       rawValue: state.unbonding,
       percent: `${numeral((state.unbonding * 100) / state.total).format('0.00')}%`,
-      fill: theme.palette.custom.tokenomics.three,
+      fill: theme.palette.custom.customTokenomics.two,
     },
   ];
 

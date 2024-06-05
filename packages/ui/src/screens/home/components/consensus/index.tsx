@@ -21,7 +21,7 @@ const Consensus: FC<ComponentDefault> = ({ className }) => {
   const data = [
     {
       value: state.roundCompletion,
-      fill: theme.palette.primary.main,
+      fill: theme.palette.custom.consensus.zero,
     },
   ];
 

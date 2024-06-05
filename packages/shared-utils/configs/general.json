@@ -1,9 +1,12 @@
 {
   "maintainer": {
-    "name": "Forbole",
-    "url": "https://forbole.com"
+    "name": "GGEZ1",
+    "url": "https://ggez.one"
   },
   "github": {
-    "reportIssue": "https://github.com/forbole/big-dipper-2.0-cosmos/issues"
-  }
+    "reportIssue": "https://github.com/GGEZLabs/ggezchain/issues"
+  },
+  "basePath": "",
+  "previewImage": "https://ggez.one/images/coins/coin1-Shadow.png",
+  "version": "base-v2.1.1"
 }

@@ -6,11 +6,7 @@ const useStyles = makeStyles()((theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: '100vh',
-    minWidth: '100vw',
     padding: theme.spacing(6),
-    position: 'fixed',
-    zIndex: 10000000,
-    backgroundColor: theme.palette.background.default,
     '& svg': {
       width: '100%',
     },
