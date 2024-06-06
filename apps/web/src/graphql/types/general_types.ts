@@ -12187,7 +12187,14 @@ export type MarketDataQueryVariables = Exact<{
 }>;
 
 
-export type MarketDataQuery = { communityPool: Array<{ __typename?: 'community_pool', coins: any }>, inflation: Array<{ __typename?: 'inflation', value: any }>, tokenPrice: Array<{ __typename?: 'token_price', price: any, marketCap: any }>, supply: Array<{ __typename?: 'supply', coins: any }>, bondedTokens: Array<{ __typename?: 'staking_pool', bonded_tokens: string }>, distributionParams: Array<{ __typename?: 'distribution_params', params: any }> };
+export type MarketDataQuery = { 
+  communityPool: Array<{ __typename?: 'community_pool', coins: any }>,
+  inflation: Array<{ __typename?: 'inflation', value: any }>,
+  tokenPrice: Array<{ __typename?: 'token_price', price: any, marketCap: any,unitName: string }>,
+  supply: Array<{ __typename?: 'supply', coins: any }>,
+  bondedTokens: Array<{ __typename?: 'staking_pool', bonded_tokens: string }>, 
+  distributionParams: Array<{ __typename?: 'distribution_params', params: any }> 
+  };
 
 export type MessageTypesQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -12280,7 +12287,7 @@ export type TokenPriceListenerSubscriptionVariables = Exact<{
 }>;
 
 
-export type TokenPriceListenerSubscription = { tokenPrice: Array<{ __typename?: 'token_price', id: number, price: any, timestamp: any, marketCap: any, unitName: string }> };
+export type TokenPriceListenerSubscription = { tokenPrice: Array<{ __typename?: 'token_price', price: any, timestamp: any, marketCap: any, unitName: string }> };
 
 export type TokenPriceHistoryQueryVariables = Exact<{
   denom?: InputMaybe<Scalars['String']>;
@@ -13705,7 +13712,6 @@ export type ProposalsQueryResult = Apollo.QueryResult<ProposalsQuery, ProposalsQ
 export const TokenPriceListenerDocument = gql`
     subscription TokenPriceListener($denom: String) {
   tokenPrice: token_price(where: {unit_name: {_eq: $denom}}) {
-    id
     price
     timestamp
     marketCap: market_cap
@@ -14594,3 +14600,765 @@ export function useValidatorAddressesLazyQuery(baseOptions?: Apollo.LazyQueryHoo
 export type ValidatorAddressesQueryHookResult = ReturnType<typeof useValidatorAddressesQuery>;
 export type ValidatorAddressesLazyQueryHookResult = ReturnType<typeof useValidatorAddressesLazyQuery>;
 export type ValidatorAddressesQueryResult = Apollo.QueryResult<ValidatorAddressesQuery, ValidatorAddressesQueryVariables>;
+// Trade
+export type Trades = {
+  __typename?: "trades";
+  /** An object relationship */
+  id: Scalars["ID"];
+  asset_ticker: Scalars["String"];
+  fund_name?: Scalars["String"];
+  type?: Scalars["String"];
+  no_shares: Scalars["bigint"];
+  currency: Scalars["String"];
+  price?: Scalars["Float"];
+  value: Scalars["Float"];
+  fee?: Scalars["Float"];
+  net_value?: Scalars["Float"];
+  net_price: Scalars["Float"];
+  issued_coins: Scalars["bigint"];
+  coin_minting_price: Scalars["Float"];
+  timestamp: Scalars["String"];
+};
+// trade query 
+export type TradesQuery = {
+  trades: Array<
+    { __typename?: "trades" } & Pick<
+      Trades,
+      | "id"
+      | "asset_ticker"
+      | "fund_name"
+      | "type"
+      | "no_shares"
+      | "currency"
+      | "price"
+      | "value"
+      | "fee"
+      | "net_value"
+      | "net_price"
+      | "issued_coins"
+      | "coin_minting_price"
+      | "timestamp"
+    >
+  >;
+};
+export type TradesQueryVariables = Exact<{
+  limit?: Maybe<Scalars["Int"]>;
+  offset?: Maybe<Scalars["Int"]>;
+}>;
+export const TradesDocument = gql`
+  query TradesListener($limit: Int = 7, $offset: Int = 0) {
+    trades: assets_transaction(
+      limit: $limit
+      offset: $offset
+      order_by: { id: desc }
+    ) {
+      asset_ticker
+      coin_minting_price
+      currency
+      fee
+      fund_name
+      id
+      issued_coins
+      net_price
+      net_value
+      no_shares
+      price
+      type
+      value
+      timestamp
+    }
+  }
+`;
+
+export function useTradesQuery(
+  baseOptions?: Apollo.QueryHookOptions<TradesQuery, TradesQueryVariables>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<TradesQuery, TradesQueryVariables>(
+    TradesDocument,
+    options
+  );
+}
+export type TradesQueryHookResult = ReturnType<typeof useTradesQuery>;
+// trade query subscription
+
+export type TradesListenerSubscriptionVariables = Exact<{
+  limit?: Maybe<Scalars["Int"]>;
+  offset?: Maybe<Scalars["Int"]>;
+}>;
+export type TradesListenerSubscription = {
+  trades: Array<
+    { __typename?: "trades" } & Pick<
+      Trades,
+      | "id"
+      | "asset_ticker"
+      | "fund_name"
+      | "type"
+      | "no_shares"
+      | "currency"
+      | "price"
+      | "value"
+      | "fee"
+      | "net_value"
+      | "net_price"
+      | "issued_coins"
+      | "coin_minting_price"
+      | "timestamp"
+    >
+  >;
+};
+export const TradesListenerDocument = gql`
+subscription TradesListener($limit: Int = 7, $offset: Int = 0) {
+  trades: assets_transaction(
+    limit: $limit
+    offset: $offset
+    order_by: { id: desc }
+  ) {
+    asset_ticker
+    coin_minting_price
+    currency
+    fee
+    fund_name
+    id
+    issued_coins
+    net_price
+    net_value
+    no_shares
+    price
+    type
+    value
+    timestamp
+  }
+}
+`;
+export function useTradesListenerSubscription(
+  baseOptions?: Apollo.SubscriptionHookOptions<
+    TradesListenerSubscription,
+    TradesListenerSubscriptionVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useSubscription<
+    TradesListenerSubscription,
+    TradesListenerSubscriptionVariables
+  >(TradesListenerDocument, options);
+}
+export type TradesListenerSubscriptionHookResult = ReturnType<
+  typeof useTradesListenerSubscription
+>;
+export type TradesListenerSubscriptionResult =
+  Apollo.SubscriptionResult<TradesListenerSubscription>;
+
+
+
+  // tset 
+
+  export type Test = {
+    __typename?: "test";
+    /** An object relationship */
+    id: Scalars["ID"];
+    asset_ticker: Scalars["String"];
+    fund_name?: Scalars["String"];
+    type?: Scalars["String"];
+    no_shares: Scalars["bigint"];
+    currency: Scalars["String"];
+    price?: Scalars["Float"];
+    value: Scalars["Float"];
+    fee?: Scalars["Float"];
+    net_value?: Scalars["Float"];
+    net_price: Scalars["Float"];
+    issued_coins: Scalars["bigint"];
+    coin_minting_price: Scalars["Float"];
+    timestamp: Scalars["String"];
+  };
+
+  // test query 
+  export const TestDocument = gql`
+  query TestListener($limit: Int = 7, $offset: Int = 0) {
+    test: assets_test_table(
+      limit: $limit
+      offset: $offset
+      order_by: { id: desc }
+    ) {
+      asset_ticker
+      coin_minting_price
+      currency
+      fee
+      fund_name
+      id
+      issued_coins
+      net_price
+      net_value
+      no_shares
+      price
+      type
+      value
+      timestamp
+    }
+  }
+`;
+export type TestQuery = {
+  test: Array<
+    { __typename?: "test" } & Pick<
+      Test,
+      | "id"
+      | "asset_ticker"
+      | "fund_name"
+      | "type"
+      | "no_shares"
+      | "currency"
+      | "price"
+      | "value"
+      | "fee"
+      | "net_value"
+      | "net_price"
+      | "issued_coins"
+      | "coin_minting_price"
+      | "timestamp"
+    >
+  >;
+};
+export type TestQueryVariables = Exact<{
+  limit?: Maybe<Scalars["Int"]>;
+  offset?: Maybe<Scalars["Int"]>;
+}>;
+
+export function useTestQuery(
+  baseOptions?: Apollo.QueryHookOptions<TestQuery, TestQueryVariables>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<TestQuery, TestQueryVariables>(TestDocument, options);
+}
+export type TestQueryHookResult = ReturnType<typeof useTestQuery>;
+
+// test query subscription
+  export const TestListenerDocument = gql`
+  subscription TradesListener($limit: Int = 7, $offset: Int = 0) {
+    test: assets_test_table(
+      limit: $limit
+      offset: $offset
+      order_by: { id: desc }
+    ) {
+      asset_ticker
+      coin_minting_price
+      currency
+      fee
+      fund_name
+      id
+      issued_coins
+      net_price
+      net_value
+      no_shares
+      price
+      type
+      value
+      timestamp
+    }
+  }
+`;
+
+export type TestListenerSubscription = {
+  test: Array<
+    { __typename?: "test" } & Pick<
+      Test,
+      | "id"
+      | "asset_ticker"
+      | "fund_name"
+      | "type"
+      | "no_shares"
+      | "currency"
+      | "price"
+      | "value"
+      | "fee"
+      | "net_value"
+      | "net_price"
+      | "issued_coins"
+      | "coin_minting_price"
+      | "timestamp"
+    >
+  >;
+};
+export type TestListenerSubscriptionVariables = Exact<{
+  limit?: Maybe<Scalars["Int"]>;
+  offset?: Maybe<Scalars["Int"]>;
+}>;
+  export function useTestListenerSubscription(
+    baseOptions?: Apollo.SubscriptionHookOptions<
+      TestListenerSubscription,
+      TestListenerSubscriptionVariables
+    >
+  ) {
+    const options = { ...defaultOptions, ...baseOptions };
+    return Apollo.useSubscription<
+      TestListenerSubscription,
+      TestListenerSubscriptionVariables
+    >(TestListenerDocument, options);
+  }
+  export type TestListenerSubscriptionHookResult = ReturnType<
+    typeof useTestListenerSubscription
+  >;
+  export type TestListenerSubscriptionResult =
+    Apollo.SubscriptionResult<TestListenerSubscription>;
+
+
+    // Holding
+    export type Holding = {
+      __typename?: "holding";
+      /** An object relationship */
+      id: Scalars["ID"];
+      asset_id: Scalars["ID"];
+      holder_id: Scalars["ID"];
+      asset_ticker: Scalars["String"];
+      fund_name?: Scalars["String"];
+      issuer?: Scalars["String"];
+      aum: Scalars["String"];
+      expense_ratio: Scalars["String"];
+      one_yr_tr?: Scalars["Float"];
+      two_yr_tr: Scalars["Float"];
+      three_yr_tr?: Scalars["Float"];
+      five_yr_tr?: Scalars["Float"];
+      segment: Scalars["String"];
+      held_no_shares: Scalars["bigint"];
+      avg_price: Scalars["Float"];
+      purchase_value: Scalars["Float"];
+      last_trade_price: Scalars["Float"];
+      current_value: Scalars["Float"];
+      return_amount: Scalars["Float"];
+      return_percent: Scalars["Float"];
+      issued_coins: Scalars["bigint"];
+      percent_of_total_supply: Scalars["Float"];
+      holder_name: Scalars["String"];
+      holder_type: Scalars["String"];
+      holder_country: Scalars["String"];
+    };
+
+    // Holding query
+    export const HoldingDocument = gql`
+    query HoldingListener($limit: Int = 7, $offset: Int = 0) {
+      holding: assets_assets_holding_view(
+        limit: $limit
+        offset: $offset
+        order_by: { id: desc_nulls_last }
+      ) {
+        asset_ticker
+        aum
+        avg_price
+        current_value
+        expense_ratio
+        five_yr_tr
+        fund_name
+        held_no_shares
+        id
+        issued_coins
+        issuer
+        last_trade_price
+        one_yr_tr
+        percent_of_total_supply
+        purchase_value
+        return_amount
+        return_percent
+        segment
+        three_yr_tr
+        two_yr_tr
+        asset_id
+        currency
+        exchange
+        country
+        holder_type
+        holder_name
+        holder_id
+        holder_country
+        type
+      }
+    }
+  `;
+  export type HoldingQueryVariables = Exact<{
+    limit?: Maybe<Scalars["Int"]>;
+    offset?: Maybe<Scalars["Int"]>;
+  }>;
+  export type HoldingQuery = {
+    holding: Array<
+      { __typename?: "holding" } & Pick<
+        Holding,
+        | "id"
+        | "asset_id"
+        | "holder_id"
+        | "asset_ticker"
+        | "fund_name"
+        | "issuer"
+        | "aum"
+        | "expense_ratio"
+        | "one_yr_tr"
+        | "two_yr_tr"
+        | "three_yr_tr"
+        | "five_yr_tr"
+        | "segment"
+        | "held_no_shares"
+        | "avg_price"
+        | "purchase_value"
+        | "last_trade_price"
+        | "current_value"
+        | "return_amount"
+        | "return_percent"
+        | "issued_coins"
+        | "percent_of_total_supply"
+        | "holder_name"
+        | "holder_type"
+        | "holder_country"
+      >
+    >;
+  };
+
+  export function useHoldingQuery(
+    baseOptions?: Apollo.QueryHookOptions<HoldingQuery, HoldingQueryVariables>
+  ) {
+    const options = { ...defaultOptions, ...baseOptions };
+    return Apollo.useQuery<HoldingQuery, HoldingQueryVariables>(
+      HoldingDocument,
+      options
+    );
+  }
+  export type HoldingQueryHookResult = ReturnType<typeof useHoldingQuery>;
+
+  // holdings query subscription
+  export const HoldingListenerDocument = gql`
+subscription HoldingListener($limit: Int = 7, $offset: Int = 0) {
+  holding: assets_assets_holding_view(
+    limit: $limit
+    offset: $offset
+    order_by: { id: desc_nulls_last }
+  ) {
+    asset_ticker
+    aum
+    avg_price
+    current_value
+    expense_ratio
+    five_yr_tr
+    fund_name
+    held_no_shares
+    id
+    issued_coins
+    issuer
+    last_trade_price
+    one_yr_tr
+    percent_of_total_supply
+    purchase_value
+    return_amount
+    return_percent
+    segment
+    three_yr_tr
+    two_yr_tr
+    asset_id
+    currency
+    exchange
+    country
+    holder_type
+    holder_name
+    holder_id
+    holder_country
+    type
+  }
+}
+`;
+export type HoldingListenerSubscriptionVariables = Exact<{
+  limit?: Maybe<Scalars["Int"]>;
+  offset?: Maybe<Scalars["Int"]>;
+}>;
+
+export type HoldingListenerSubscription = {
+  holding: Array<
+    { __typename?: "holding" } & Pick<
+      Holding,
+      | "id"
+      | "asset_id"
+      | "holder_id"
+      | "asset_ticker"
+      | "fund_name"
+      | "issuer"
+      | "aum"
+      | "expense_ratio"
+      | "one_yr_tr"
+      | "two_yr_tr"
+      | "three_yr_tr"
+      | "five_yr_tr"
+      | "segment"
+      | "held_no_shares"
+      | "avg_price"
+      | "purchase_value"
+      | "last_trade_price"
+      | "current_value"
+      | "return_amount"
+      | "return_percent"
+      | "issued_coins"
+      | "percent_of_total_supply"
+      | "holder_name"
+      | "holder_type"
+      | "holder_country"
+    >
+  >;
+};
+
+export function useHoldingListenerSubscription(
+  baseOptions?: Apollo.SubscriptionHookOptions<
+    HoldingListenerSubscription,
+    HoldingListenerSubscriptionVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useSubscription<
+    HoldingListenerSubscription,
+    HoldingListenerSubscriptionVariables
+  >(HoldingListenerDocument, options);
+}
+export type HoldingListenerSubscriptionHookResult = ReturnType<
+  typeof useHoldingListenerSubscription
+>;
+export type HoldingListenerSubscriptionResult =
+  Apollo.SubscriptionResult<HoldingListenerSubscription>;
+ // assets transaction 
+
+ export const InsertIntoTransactionDocument = gql`
+  mutation insert_single_article {
+    insert_assets_transaction(
+      objects: {
+        asset_ticker: "NURE"
+        coin_minting_price: "0.0110"
+        currency: "USD"
+        fee: "160.95"
+        fund_name: "Nuveen Short-Term REIT ETF"
+        id: 12
+        issued_coins: "2926364"
+        net_price: "32.35"
+        net_value: "32350.95"
+        no_shares: "1000"
+        price: "32.19"
+        timestamp: "2023-02-01 00:00:00.000"
+        type: "Buy"
+        value: "32190.00"
+      }
+    ) {
+      affected_rows
+      returning {
+        asset_ticker
+        coin_minting_price
+        currency
+        fee
+      }
+    }
+  }
+`;
+
+export function useInsertIntoTransactionQuery() {
+  return Apollo.useMutation(InsertIntoTransactionDocument);
+}
+export type InsertIntoTransactionQueryHookResult = ReturnType<
+  typeof useInsertIntoTransactionQuery
+>;
+
+// portfolio history 
+
+export type Portfolio_Price_History = {
+  __typename?: "portfolio_price_history";
+  coin_price: Scalars["numeric"];
+  timestamp: Scalars["timestamp"];
+};
+
+export type PortfolioHistory = {
+  __typename?: "portfolio_history";
+  /** An object relationship */
+  id: Scalars["ID"];
+  asset_current_value: Scalars["Float"];
+  assets_purchase_value: Scalars["Float"];
+  return_amount: Scalars["Float"];
+  return_percent: Scalars["Float"];
+};
+export type PortfolioPriceHistoryQuery = {
+  portfolioPriceHistory: any;
+  tokenPrice: Array<
+    { __typename?: "portfolio_price_history" } & Pick<
+      Portfolio_Price_History,
+      "coin_price" | "timestamp"
+    >
+  >;
+};
+export type PortfolioPriceHistoryQueryVariables = Exact<{
+  denom?: Maybe<Scalars["String"]>;
+  limit?: Maybe<Scalars["Int"]>;
+}>;
+export const PortfolioPriceHistoryDocument = gql`
+  query PortfolioPriceHistory($limit: Int = 10) {
+    portfolioPriceHistory: assets_portfolio_history(
+      limit: $limit
+      order_by: { timestamp: desc }
+    ) {
+      coin_price
+      timestamp
+    }
+  }
+`;
+
+export function usePortfolioPriceHistoryQuery(
+  baseOptions?: Apollo.QueryHookOptions<
+    PortfolioPriceHistoryQuery,
+    PortfolioPriceHistoryQueryVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<
+    PortfolioPriceHistoryQuery,
+    PortfolioPriceHistoryQueryVariables
+  >(PortfolioPriceHistoryDocument, options);
+}
+export function usePortfolioPriceHistoryLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<
+    PortfolioPriceHistoryQuery,
+    PortfolioPriceHistoryQueryVariables
+  >
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<
+    PortfolioPriceHistoryQuery,
+    PortfolioPriceHistoryQueryVariables
+  >(PortfolioPriceHistoryDocument, options);
+}
+export type PortfolioPriceHistoryQueryHookResult = ReturnType<
+  typeof usePortfolioPriceHistoryQuery
+>;
+export type PortfolioPriceHistoryLazyQueryHookResult = ReturnType<
+  typeof usePortfolioPriceHistoryLazyQuery
+>;
+// segmant  & Issuer
+//
+export const SegmentGraphDocument = gql`
+  query SegmentGraph {
+    assets_held_assets_segment_view {
+      segment
+      percent_of_total_supply: percent_sum
+    }
+  }
+`;
+export type SegmentGraph = {
+  __typename?: "segment";
+  /** An object relationship */
+
+  segment: Scalars["String"];
+  percent_of_total_supply: Scalars["Float"];
+};
+export type IssuerGraph = {
+  __typename?: "issuer";
+  /** An object relationship */
+  issuer?: Scalars["String"];
+  percent_of_total_supply: Scalars["Float"];
+};
+export type SegmentGraphQuery = {
+  segment: Array<
+    { __typename?: "segment" } & Pick<
+      SegmentGraph,
+      "segment" | "percent_of_total_supply"
+    >
+  >;
+};
+export type IssuerGraphQuery = {
+  issuer: Array<
+    { __typename?: "issuer" } & Pick<
+      IssuerGraph,
+      "issuer" | "percent_of_total_supply"
+    >
+  >;
+};
+
+export function useSegmentGraphQuery(
+  baseOptions?: Apollo.QueryHookOptions<SegmentGraphQuery>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<SegmentGraphQuery>(SegmentGraphDocument, options);
+}
+export function useSegmentGraphLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<SegmentGraphQuery>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<SegmentGraphQuery>(SegmentGraphDocument, options);
+}
+export type SegmentGraphQueryHookResult = ReturnType<
+  typeof useSegmentGraphQuery
+>;
+export type SegmentGraphLazyQueryHookResult = ReturnType<
+  typeof useSegmentGraphLazyQuery
+>;
+export type SegmentGraphQueryResult = Apollo.QueryResult<SegmentGraphQuery>;
+//
+export const IssuerGraphDocument = gql`
+  query IssuerGraph {
+    assets_held_assets_issuer_view {
+      issuer
+      percent_of_total_supply: percent_sum
+    }
+  }
+`;
+
+
+export function useIssuerGraphQuery(
+  baseOptions?: Apollo.QueryHookOptions<IssuerGraphQuery>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<IssuerGraphQuery>(IssuerGraphDocument, options);
+}
+export function useIssuerGraphLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<IssuerGraphQuery>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<IssuerGraphQuery>(IssuerGraphDocument, options);
+}
+export type IssuerGraphQueryHookResult = ReturnType<typeof useIssuerGraphQuery>;
+export type IssuerGraphLazyQueryHookResult = ReturnType<
+  typeof useIssuerGraphLazyQuery
+>;
+export type IssuerGraphQueryResult = Apollo.QueryResult<IssuerGraphQuery>;
+
+// latest investment 
+export type LatestInvestmentListenerSubscription = {
+  trades: Array<
+    { __typename?: "portfolio_history" } & Pick<
+      PortfolioHistory,
+      | "id"
+      | "asset_current_value"
+      | "assets_purchase_value"
+      | "return_amount"
+      | "return_percent"
+    >
+  >;
+};
+export const LatestInvestmentListenerDocument = gql`
+  subscription LatestInvestmentListener($offset: Int = 0) {
+    portfolio_history: assets_portfolio_history(
+      limit: 1
+      offset: $offset
+      order_by: { id: desc }
+    ) {
+      id
+      assets_current_value
+      assets_purchase_value
+      held_no_assets
+      return_amount
+      return_percent
+    }
+  }
+`;
+
+
+
+export type LatestInvestmentListenerSubscriptionResult =
+  Apollo.SubscriptionResult<LatestBlockHeightListenerSubscription>;
+
+  export function useLatestInvestmentListenerSubscription(
+    baseOptions?: Apollo.SubscriptionHookOptions<LatestInvestmentListenerSubscription>
+  ) {
+    const options = { ...defaultOptions, ...baseOptions };
+    return Apollo.useSubscription<LatestInvestmentListenerSubscription>(
+      LatestInvestmentListenerDocument,
+      options
+    );
+  }
+  export type LatestInvestmentListenerSubscriptionHookResult = ReturnType<
+    typeof useLatestInvestmentListenerSubscription
+  >;
