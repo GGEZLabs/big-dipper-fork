@@ -2,9 +2,9 @@ import { ThemeOptions } from '@mui/material/styles';
 import chainConfig from '@/chainConfig';
 import {
   darkTemplate,
-  deuteranopiaTemplate,
+  // deuteranopiaTemplate,
   lightTemplate,
-  tritanopiaTemplate,
+  // tritanopiaTemplate,
 } from '@/styles/theme';
 
 const { themes } = chainConfig();
@@ -22,10 +22,10 @@ const getThemeDictionary = (list: string[]): ThemeDictionaryType => {
         themeDict.dark = darkTemplate;
         break;
       case 'deuteranopia':
-        themeDict.deuteranopia = deuteranopiaTemplate;
+        // themeDict.deuteranopia = deuteranopiaTemplate;
         break;
       case 'tritanopia':
-        themeDict.tritanopia = tritanopiaTemplate;
+        // themeDict.tritanopia = tritanopiaTemplate;
         break;
       default:
         break;

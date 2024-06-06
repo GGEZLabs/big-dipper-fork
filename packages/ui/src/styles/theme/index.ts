@@ -1,7 +1,7 @@
 import { darkThemeOverride } from '@/styles/theme/dark';
-import { deuteranopiaThemeOverride } from '@/styles/theme/deuteranopia';
+// import { deuteranopiaThemeOverride } from '@/styles/theme/deuteranopia';
 import { lightThemeOverride } from '@/styles/theme/light';
-import { tritanopiaThemeOverride } from '@/styles/theme/tritanopia';
+// import { tritanopiaThemeOverride } from '@/styles/theme/tritanopia';
 import { ThemeOptions } from '@mui/material/styles';
 import * as R from 'ramda';
 
@@ -192,5 +192,5 @@ export const common = (theme: ThemeOptions) =>
 
 export const lightTemplate = common(lightThemeOverride as unknown as ThemeOptions);
 export const darkTemplate = common(darkThemeOverride as unknown as ThemeOptions);
-export const deuteranopiaTemplate = common(deuteranopiaThemeOverride as ThemeOptions);
-export const tritanopiaTemplate = common(tritanopiaThemeOverride as ThemeOptions);
+// export const deuteranopiaTemplate = common(deuteranopiaThemeOverride as ThemeOptions);
+// export const tritanopiaTemplate = common(tritanopiaThemeOverride as ThemeOptions);
