@@ -217,9 +217,9 @@ export const useTrades = () => {
   // block subscription
   // ================================
   useTradesListenerSubscription({
-    onSubscriptionData: (data) => {
+    onData: (data) => {
       handleSetState({
-        items: formatTrades(data.subscriptionData.data),
+        items: formatTrades(data.data.data),
       });
     },
   });

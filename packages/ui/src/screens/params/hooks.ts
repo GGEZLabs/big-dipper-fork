@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-console */
 import numeral from 'numeral';
 import * as R from 'ramda';
 import { useCallback, useState } from 'react';
@@ -98,26 +100,51 @@ const formatDistribution = (data: ParamsQuery) => {
 // gov
 // ================================
 
-const formatGov = (data: ParamsQuery) => {
+// const formatGov = (data: ParamsQuery) => {
+//   if (data.govParams.length) {
+//     const govParamsRaw = GovParams.fromJson(data?.govParams?.[0] ?? {});
+//     console.log('govParamsRaw :>> ', govParamsRaw);
+//     return {
+//       minDeposit: formatToken(
+//         govParamsRaw.depositParams.minDeposit?.[0]?.amount ?? 0,
+//         govParamsRaw.depositParams.minDeposit?.[0]?.denom ?? primaryTokenUnit
+//       ),
+//       maxDepositPeriod: govParamsRaw.depositParams.maxDepositPeriod,
+//       quorum: numeral(numeral(govParamsRaw.tallyParams.quorum).format('0.[00]')).value() ?? 0,
+//       threshold: numeral(numeral(govParamsRaw.tallyParams.threshold).format('0.[00]')).value() ?? 0,
+//       vetoThreshold:
+//         numeral(numeral(govParamsRaw.tallyParams.vetoThreshold).format('0.[00]')).value() ?? 0,
+//       votingPeriod: govParamsRaw.votingParams.votingPeriod,
+//     };
+//   }
+
+//   return null;
+// };
+const formatGov = (data) => {
   if (data.govParams.length) {
-    const govParamsRaw = GovParams.fromJson(data?.govParams?.[0] ?? {});
+    const govParamsRaw = GovParams.fromJson(R.pathOr({}, ['govParams', 0], data));
+    console.log('data :>> ', data);
+    console.log('govParamsRaw :>> ', govParamsRaw);
+
     return {
       minDeposit: formatToken(
-        govParamsRaw.depositParams.minDeposit?.[0]?.amount ?? 0,
-        govParamsRaw.depositParams.minDeposit?.[0]?.denom ?? primaryTokenUnit
+        R.pathOr(0, [0, 'amount'], govParamsRaw?.params?.depositParams?.minDeposit),
+        R.pathOr(primaryTokenUnit, [0, 'denom'], govParamsRaw?.params?.depositParams.minDeposit)
       ),
-      maxDepositPeriod: govParamsRaw.depositParams.maxDepositPeriod,
-      quorum: numeral(numeral(govParamsRaw.tallyParams.quorum).format('0.[00]')).value() ?? 0,
-      threshold: numeral(numeral(govParamsRaw.tallyParams.threshold).format('0.[00]')).value() ?? 0,
-      vetoThreshold:
-        numeral(numeral(govParamsRaw.tallyParams.vetoThreshold).format('0.[00]')).value() ?? 0,
-      votingPeriod: govParamsRaw.votingParams.votingPeriod,
+      maxDepositPeriod: govParamsRaw?.params?.depositParams?.maxDepositPeriod,
+      quorum: numeral(numeral(govParamsRaw?.params?.tallyParams?.quorum).format('0.[00]')).value(),
+      threshold: numeral(
+        numeral(govParamsRaw?.params?.tallyParams?.threshold).format('0.[00]')
+      ).value(),
+      vetoThreshold: numeral(
+        numeral(govParamsRaw?.params?.tallyParams?.vetoThreshold).format('0.[00]')
+      ).value(),
+      votingPeriod: govParamsRaw?.params?.votingParams?.votingPeriod,
     };
   }
 
   return null;
 };
-
 const formatParam = (data: ParamsQuery) => {
   const results: Partial<ParamsState> = {};
 

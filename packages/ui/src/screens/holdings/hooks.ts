@@ -27,8 +27,8 @@ export const useHoldings = () => {
       limit: 1,
       offset: 0,
     },
-    onSubscriptionData: (data) => {
-      const newItems = [...formatHoldings(data.subscriptionData.data), ...state.items];
+    onData: (data) => {
+      const newItems = [...formatHoldings(data.data.data), ...state.items];
       handleSetState({
         loading: false,
         items: newItems,

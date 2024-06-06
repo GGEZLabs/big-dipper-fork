@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import * as R from 'ramda';
 import {
@@ -27,10 +28,10 @@ export const useHoldings = () => {
       limit: 7,
       offset: 0,
     },
-    onSubscriptionData: (data) => {
+    onData: (data) => {
       handleSetState({
         loading: false,
-        items: formatHolding(data.subscriptionData.data),
+        items: formatHolding(data.data.data),
       });
     },
   });

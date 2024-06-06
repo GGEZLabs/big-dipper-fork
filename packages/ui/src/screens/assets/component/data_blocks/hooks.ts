@@ -22,34 +22,15 @@ export const useDataBlocks = () => {
   // ====================================
 
   useLatestInvestmentListenerSubscription({
-    onSubscriptionData: (data) => {
+    onData: (result) => {
+      const { data } = result.data;
       setState((prevState) => ({
         ...prevState,
-        assetsCurrentValue: R.pathOr(
-          0,
-          ['portfolio_history', 0, 'assets_current_value'],
-          data.subscriptionData.data
-        ),
-        assetsPurchaseValue: R.pathOr(
-          0,
-          ['portfolio_history', 0, 'assets_purchase_value'],
-          data.subscriptionData.data
-        ),
-        returnAmount: R.pathOr(
-          0,
-          ['portfolio_history', 0, 'return_amount'],
-          data.subscriptionData.data
-        ),
-        returnPercent: R.pathOr(
-          0,
-          ['portfolio_history', 0, 'return_percent'],
-          data.subscriptionData.data
-        ),
-        heldNoAssets: R.pathOr(
-          0,
-          ['portfolio_history', 0, 'held_no_assets'],
-          data.subscriptionData.data
-        ),
+        assetsCurrentValue: R.pathOr(0, ['portfolio_history', 0, 'assets_current_value'], data),
+        assetsPurchaseValue: R.pathOr(0, ['portfolio_history', 0, 'assets_purchase_value'], data),
+        returnAmount: R.pathOr(0, ['portfolio_history', 0, 'return_amount'], data),
+        returnPercent: R.pathOr(0, ['portfolio_history', 0, 'return_percent'], data),
+        heldNoAssets: R.pathOr(0, ['portfolio_history', 0, 'held_no_assets'], data),
       }));
     },
   });
