@@ -1,3 +1,7 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable eqeqeq */
+/* eslint-disable turbo/no-undeclared-env-vars */
+/* eslint-disable no-console */
 // import { readFile } from "fs/promises";
 // import { promises as fs } from "fs";
 // import { promises as fsPromises } from 'fs';
@@ -9,9 +13,8 @@ import { SigningStargateClient } from '@cosmjs/stargate';
 import { useTryoutFaucetOneRecoil } from '@/recoil/tryout/faucetOne';
 import { readKeplrWallet, useTryoutKeplrAccountRecoil } from '@/recoil/tryout/keplrWallet';
 import { useTryoutFaucetTwoRecoil } from '@/recoil/tryout/faucetTwo';
-import { useGenerateMnemonicRecoil } from '@/recoil/tryout/createAccount';
+import { useGenerateMnemonicRecoil, readCreateAccount } from '@/recoil/tryout/createAccount';
 import { useRecoilValue } from 'recoil';
-import { readCreateAccount } from '@/recoil/tryout/createAccount';
 
 export const useTestTransaction = () => {
   const [state, setState] = useState<{
@@ -42,26 +45,23 @@ export const useTestTransaction = () => {
   const createAccountState = useRecoilValue(readCreateAccount);
   const keplrState = useRecoilValue(readKeplrWallet);
 
-  const getFaucetOneSignerFromMnemonic = async (): Promise<OfflineDirectSigner> => {
-    return DirectSecp256k1HdWallet.fromMnemonic(
-      //(await readFile("./testnet.faucet1.mnemonic.key")).toString(),
+  const getFaucetOneSignerFromMnemonic = async (): Promise<OfflineDirectSigner> =>
+    DirectSecp256k1HdWallet.fromMnemonic(
+      // (await readFile("./testnet.faucet1.mnemonic.key")).toString(),
       process.env.NEXT_PUBLIC_MENEMONIC_FAUCET_ONE,
       {
         prefix: 'ggez',
       }
     );
-  };
 
-  const getFaucetTwoSignerFromMnemonic = async (): Promise<OfflineDirectSigner> => {
-    return DirectSecp256k1HdWallet.fromMnemonic(process.env.NEXT_PUBLIC_MENEMONIC_FAUCET_Two, {
+  const getFaucetTwoSignerFromMnemonic = async (): Promise<OfflineDirectSigner> =>
+    DirectSecp256k1HdWallet.fromMnemonic(process.env.NEXT_PUBLIC_MENEMONIC_FAUCET_Two, {
       prefix: 'ggez',
     });
-  };
-  const getSignerFromMnemonic = async (): Promise<OfflineDirectSigner> => {
-    return DirectSecp256k1HdWallet.fromMnemonic(createAccountState.accountMnemonic, {
+  const getSignerFromMnemonic = async (): Promise<OfflineDirectSigner> =>
+    DirectSecp256k1HdWallet.fromMnemonic(createAccountState.accountMnemonic, {
       prefix: 'ggez',
     });
-  };
   const processTransaction = async () => {
     const faucetOneSigner: OfflineDirectSigner =
       state.sender == process.env.NEXT_PUBLIC_FAUCET_ADDRESS_ONE
@@ -97,7 +97,7 @@ export const useTestTransaction = () => {
         amount: [{ denom: state.denom, amount: state.fee }],
         gas: state.gas,
       },
-      //memo
+      // memo
       state.memo
     );
     if (result.transactionHash) {

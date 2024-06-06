@@ -1,25 +1,18 @@
-export interface OverviewType {
+export type OverviewType = {
   title: string;
-  id: number;
+  id: number | string;
   proposer: string;
   description: string;
   status: string;
   submitTime: string;
-  proposalType: string;
   depositEndTime: string;
   votingStartTime: string | null;
   votingEndTime: string | null;
-  content: {
-    recipient: string;
-    amount: Array<{
-      amount: string;
-      denom: string;
-    }>;
-  };
-}
+  content: any;
+};
 
-export interface ProposalState {
+export type ProposalState = {
   loading: boolean;
   exists: boolean;
   overview: OverviewType;
-}
+};

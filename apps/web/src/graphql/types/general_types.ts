@@ -13481,8 +13481,8 @@ export type ParamsQueryHookResult = ReturnType<typeof useParamsQuery>;
 export type ParamsLazyQueryHookResult = ReturnType<typeof useParamsLazyQuery>;
 export type ParamsQueryResult = Apollo.QueryResult<ParamsQuery, ParamsQueryVariables>;
 export const ProposalDetailsDocument = gql`
-    query ProposalDetails($proposalId: Int) {
-  proposal(where: {id: {_eq: $proposalId}}) {
+query ProposalDetails($proposalId: Int) {
+  proposal(where: { id: { _eq: $proposalId } }) {
     proposer: proposer_address
     title
     description
@@ -13490,7 +13490,6 @@ export const ProposalDetailsDocument = gql`
     content
     proposalId: id
     submitTime: submit_time
-    proposalType: proposal_type
     depositEndTime: deposit_end_time
     votingStartTime: voting_start_time
     votingEndTime: voting_end_time
@@ -13526,9 +13525,9 @@ export type ProposalDetailsQueryHookResult = ReturnType<typeof useProposalDetail
 export type ProposalDetailsLazyQueryHookResult = ReturnType<typeof useProposalDetailsLazyQuery>;
 export type ProposalDetailsQueryResult = Apollo.QueryResult<ProposalDetailsQuery, ProposalDetailsQueryVariables>;
 export const ProposalDetailsTallyDocument = gql`
-    query ProposalDetailsTally($proposalId: Int) {
+query ProposalDetailsTally($proposalId: Int) {
   proposalTallyResult: proposal_tally_result(
-    where: {proposal_id: {_eq: $proposalId}}
+    where: { proposal_id: { _eq: $proposalId } }
   ) {
     yes
     no
@@ -13536,12 +13535,12 @@ export const ProposalDetailsTallyDocument = gql`
     abstain
   }
   stakingPool: proposal_staking_pool_snapshot(
-    where: {proposal_id: {_eq: $proposalId}}
+    where: { proposal_id: { _eq: $proposalId } }
   ) {
     bondedTokens: bonded_tokens
   }
-  quorum: gov_params(limit: 1, order_by: {height: desc}) {
-    tallyParams: tally_params
+  quorum: gov_params(limit: 1, order_by: { height: desc }) {
+    params
   }
 }
     `;

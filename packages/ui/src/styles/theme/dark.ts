@@ -8,7 +8,8 @@ const fontThree = '#fff';
 export const darkThemeOverride = {
   mixins: {
     tableCell: {
-      background: surfaceOne, // surface one
+      background: surfaceOne,
+      // surface one
       '&.odd': {
         background: surfaceTwo, // surface two
       },

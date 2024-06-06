@@ -29,6 +29,7 @@ const TokenPrice = (props) => {
 
   const { tickPriceFormatter, formatTime } = usePrice();
   const { state } = useHero();
+
   const dateFormat = useRecoilValue(readDate);
 
   const uniqueAndSort = R.pipe(
@@ -64,7 +65,7 @@ const TokenPrice = (props) => {
                   />
                   <stop
                     offset="95%"
-                    stopColor={theme.palette.custom.primaryData.one}
+                    stopColor={theme.palette.custom.primaryData.three}
                     stopOpacity={0.1}
                   />
                 </linearGradient>

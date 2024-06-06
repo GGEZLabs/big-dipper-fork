@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Box from '@/components/box';
 import InfoPopover from '@/components/info_popover';
 import QuorumExplanation from '@/screens/proposal_details/components/votes_graph/components/quorum_explanation';

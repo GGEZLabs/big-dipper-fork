@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import dayjs from '@/utils/dayjs';
 import numeral from 'numeral';
@@ -47,15 +48,18 @@ export const useHero = () => {
       const newState: any = {
         loading: false,
       };
+
       if (data.portfolioPriceHistory.length === 10) {
-        newState.portfolioPriceHistory = data.portfolioPriceHistory.reverse().map((x) => ({
-          time: x.timestamp,
-          value: Number(x.coin_price)?.toString(),
-        }));
+        newState.portfolioPriceHistory = data?.portfolioPriceHistory
+          .map((x) => ({
+            time: x.timestamp,
+            value: Number(x.coin_price)?.toString(),
+          }))
+          .reverse();
       }
       handleSetState(newState);
     },
-    onError: () => {
+    onError: (err) => {
       handleSetState({
         loading: false,
       });

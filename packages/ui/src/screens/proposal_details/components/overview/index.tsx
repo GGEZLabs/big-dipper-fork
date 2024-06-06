@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { FC, useCallback } from 'react';
 import { useRecoilValue } from 'recoil';
 import Divider from '@mui/material/Divider';
@@ -31,7 +32,10 @@ const Overview: FC<OverviewProps> = ({ className, overview }) => {
   const { classes, cx } = useStyles();
   const { t } = useAppTranslation('proposals');
 
-  const type = getProposalType(R.pathOr('', ['@type'], overview.content));
+  let type = getProposalType(R.pathOr('', ['@type'], overview.content[0]));
+  if (type == '/cosmos.gov.v1.MsgExecLegacyContent') {
+    type = getProposalType(R.pathOr('', ['@type'], overview.content[0].content));
+  }
   const { address: proposerAddress, name: proposerName } = useProfileRecoil(overview.proposer);
   const { name: recipientName } = useProfileRecoil(overview?.content?.recipient);
   const proposerMoniker = proposerName || overview.proposer;
@@ -64,9 +68,9 @@ const Overview: FC<OverviewProps> = ({ className, overview }) => {
             {t('plan')}
           </Typography>
           <SoftwareUpgrade
-            height={R.pathOr('0', ['plan', 'height'], overview.content)}
-            info={R.pathOr('', ['plan', 'info'], overview.content)}
-            name={R.pathOr('', ['plan', 'name'], overview.content)}
+            height={R.pathOr('0', ['plan', 'height'], overview.content[0].content)}
+            info={R.pathOr('', ['plan', 'info'], overview.content[0].content)}
+            name={R.pathOr('', ['plan', 'name'], overview.content[0].content)}
           />
         </>
       );

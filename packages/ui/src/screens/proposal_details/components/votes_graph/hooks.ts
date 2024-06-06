@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Big from 'big.js';
 import { useRouter } from 'next/router';
 import * as R from 'ramda';
@@ -56,12 +57,27 @@ export const useVotesGraph = () => {
 
     return {
       votes: {
-        yes: formatToken(data?.proposalTallyResult?.[0]?.yes ?? '0', votingPowerTokenUnit),
-        no: formatToken(data?.proposalTallyResult?.[0]?.no ?? '0', votingPowerTokenUnit),
-        veto: formatToken(data?.proposalTallyResult?.[0]?.noWithVeto ?? '0', votingPowerTokenUnit),
-        abstain: formatToken(data?.proposalTallyResult?.[0]?.abstain ?? '0', votingPowerTokenUnit),
+        yes: formatToken(
+          Number(data?.proposalTallyResult?.[0]?.yes) / 1000000 ?? '0',
+          votingPowerTokenUnit
+        ),
+        no: formatToken(
+          Number(data?.proposalTallyResult?.[0]?.no) / 1000000 ?? '0',
+          votingPowerTokenUnit
+        ),
+        veto: formatToken(
+          Number(data?.proposalTallyResult?.[0]?.noWithVeto) / 1000000 ?? '0',
+          votingPowerTokenUnit
+        ),
+        abstain: formatToken(
+          Number(data?.proposalTallyResult?.[0]?.abstain) / 1000000 ?? '0',
+          votingPowerTokenUnit
+        ),
       },
-      bonded: formatToken(data?.stakingPool?.[0]?.bondedTokens ?? '0', votingPowerTokenUnit),
+      bonded: formatToken(
+        Number(data?.stakingPool?.[0]?.bondedTokens) / 1000000 ?? '0',
+        votingPowerTokenUnit
+      ),
       quorum: Big(quorumRaw)?.times(100).toFixed(2),
     };
   };

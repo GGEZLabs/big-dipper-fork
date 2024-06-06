@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useRouter } from 'next/router';
 import * as R from 'ramda';
 import { useCallback, useState } from 'react';
@@ -21,9 +23,9 @@ const formatOverview = (data: ProposalDetailsQuery) => {
     id: data?.proposal?.[0]?.proposalId ?? '',
     description: data?.proposal?.[0]?.description ?? '',
     status: data?.proposal?.[0]?.status ?? '',
-    submitTime: data?.proposal?.[0]?.submitTime ?? '',
     proposalType: data?.proposal?.[0]?.proposalType ?? '',
     depositEndTime: data?.proposal?.[0]?.depositEndTime ?? '',
+    submitTime: data?.proposal?.[0]?.submitTime ?? '',
     votingStartTime,
     votingEndTime,
   };
@@ -56,16 +58,12 @@ export const useProposalDetails = () => {
     exists: true,
     overview: {
       proposer: '',
-      content: {
-        recipient: '',
-        amount: [],
-      },
+      content: '',
       title: '',
       id: 0,
       description: '',
       status: '',
       submitTime: '',
-      proposalType: '',
       depositEndTime: '',
       votingStartTime: '',
       votingEndTime: '',
@@ -87,6 +85,7 @@ export const useProposalDetails = () => {
       proposalId: parseFloat((router?.query?.id as string) ?? '0'),
     },
     onCompleted: (data) => {
+      console.log('data :>> ', data);
       handleSetState((prevState) => ({ ...prevState, ...formatProposalQuery(data) }));
     },
   });
