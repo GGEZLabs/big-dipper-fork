@@ -13,6 +13,7 @@ import { ApolloProvider, NormalizedCacheObject } from '@apollo/client';
 import useAppTranslation from '@/hooks/useAppTranslation';
 import { DefaultSeo } from 'next-seo';
 import { RecoilRoot } from 'recoil';
+import { useEffect } from 'react';
 
 const { title } = chainConfig();
 
@@ -20,9 +21,13 @@ function MyApp(props: MainProps<{ initialApolloState?: NormalizedCacheObject }>)
   useApp();
   const { pageProps } = props;
   const apolloClient = useApollo(pageProps.initialApolloState);
-  const { t } = useAppTranslation();
+  const { t, i18n } = useAppTranslation();
   const { location } = useWindowOrigin();
-
+  const lang = i18n.language;
+  useEffect(() => {
+    let a = document.getElementsByTagName('html')[0];
+    lang == 'en' ? a.setAttribute('dir', 'ltr') : a.setAttribute('dir', 'rtl');
+  }, [lang]);
   return (
     <RecoilRoot>
       <DefaultSeo

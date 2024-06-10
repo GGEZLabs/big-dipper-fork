@@ -128,11 +128,26 @@ export const common = (theme: ThemeOptions) =>
           nineteen: '#D37763',
           twenty: '#D9C788',
         },
+        wallet: {
+          background: '#5E5E5E',
+          backgroundTwo: '#212123',
+          surfaceOne: '#5E5C5C',
+          surfaceTwo: '#D9D9D9',
+          surfaceThree: '#4D4D4D',
+          surfaceFour: '#414141',
+          surfaceFive: '#777777',
+          divider: '#34383E',
+          textPrimary: '#000000',
+          textSecondary: '#DDDDDD',
+          active: '#29CC6A',
+          inactive: '#CC3929',
+        },
         fonts: {
           fontFive: '#FFFFFF',
           highlight: '#1D86FF', // links
           // highlight: '#56B4E9', // links
         },
+
         condition: {
           zero: '#E8E8E8',
           one: '#1EC490',
@@ -154,36 +169,107 @@ export const common = (theme: ThemeOptions) =>
         },
       },
     },
-    overrides: {
-      MuiTableHead: {
-        root: {
-          backgroundColor: 'initial',
+    components: {
+      MuiPaper: {
+        styleOverrides: {
+          root: {
+            '&': {
+              backgroundImage: 'none',
+            },
+          },
         },
       },
+      MuiSvgIcon: {
+        defaultProps: {
+          htmlColor: theme.palette?.custom?.general?.icon ?? '#999999', // same as custom /general /icons
+        },
+      },
+      MuiButton: {
+        defaultProps: {
+          disableElevation: true,
+        },
+      },
+      MuiTableHead: {
+        styleOverrides: {
+          root: {
+            '&': {
+              backgroundColor: 'initial',
+            },
+          },
+        },
+      },
+      MuiTextField: {
+        styleOverrides: {
+          root: {
+            borderRadius: '12px',
+          },
+        },
+      },
+      // MuiInputBase: {
+      //   styleOverrides: {
+      //     root: {
+      //       '&': {
+      //         borderRadius: '12px',
+      //       },
+      //     },
+      //     input: {
+      //       '&': {
+      //         padding: '8px 12px',
+      //       },
+      //     },
+      //   },
+      // },
       MuiTooltip: {
-        tooltip: {
-          backgroundColor: 'transparent',
+        styleOverrides: {
+          popper: {
+            pointerEvents: 'none',
+          },
+          tooltip: {
+            pointerEvents: 'auto',
+            background: theme.palette?.background?.paper,
+            color: theme.palette?.text?.primary,
+            padding: 4,
+            borderRadius: 4,
+          },
+          arrow: {
+            color: theme.palette?.divider,
+          },
         },
       },
       MuiTableCell: {
-        root: {
-          borderBottom: 'none',
-          padding: '0 16px',
-          height: '50px',
-          fontSize: '1rem',
+        styleOverrides: {
+          root: {
+            '&': {
+              borderBottom: 'none',
+              padding: '0 16px',
+              height: '50px',
+              fontSize: '1rem',
+            },
+          },
         },
       },
+      // MuiTableRow: {
+      //   styleOverrides: {
+      //     root: {
+      //       '&:nth-child(odd)': {
+      //         background: '#19191D',
+      //       },
+      //     },
+      //   },
+      // },
       MuiTabs: {
-        root: {
-          // '& .MuiTabs-fixed': {
-          //   overflow: 'auto',
-          // },
-          '&.MuiTabs-root, & .MuiTab-root': {
-            minHeight: '40px',
-          },
-          '& .MuiTab-textColorInherit': {
-            opacity: 1,
-            fontSize: '1rem',
+        styleOverrides: {
+          root: {
+            // '& .MuiTabs-fixed': {
+            //   overflow: 'auto',
+            // },
+            '&.MuiTabs-root, & .MuiTab-root': {
+              minHeight: '40px',
+            },
+            '& .MuiTab-textColorInherit': {
+              opacity: 1,
+              fontSize: '1rem',
+            },
           },
         },
       },

@@ -1,0 +1,16 @@
+{
+  "ticker": "Ticker",
+  "fundName": "Fund Name",
+  "type": "Type",
+  "heldNoShares": "No. Shares",
+  "currency": "Cur.",
+  "price": "Price",
+  "value": "Value",
+  "fee": "Fee",
+  "issuedCoins": "Issued Coins",
+  "netValue": "Net Value",
+  "netPrice": "Net Price",
+  "time": "Time",
+  "coinMintingPrice": "Coin Minting Price",
+  "seeMore": "See More"
+}

@@ -25,10 +25,10 @@ const HoldingsTable: React.FC<{
     <Box className={cx(className, classes.root)}>
       <div className={classes.label}>
         <Typography variant="h2">{t('holding')}</Typography>
-        <Link href={HOLDINGS} passHref>
-          <Typography variant="h4" className="button" component="a">
-            {t('seeMore')}
-          </Typography>
+        <Link href={HOLDINGS}>
+          {/* <Typography variant="h4" className="button" component="a"> */}
+          {t('seeMore')}
+          {/* </Typography> */}
         </Link>
       </div>
       {!state.items.length ? (
@@ -41,14 +41,14 @@ const HoldingsTable: React.FC<{
             <Mobile className={classes.mobile} holdings={state.items} />
           )}
           <Divider className={classes.mobile} />
-          <Link href={HOLDINGS} passHref>
-            <Typography
+          <Link href={HOLDINGS} className={cx(classes.seeMoreFooter, classes.mobile, 'button')}>
+            {/* <Typography
               variant="h4"
               component="a"
               className={cx(classes.seeMoreFooter, classes.mobile, 'button')}
-            >
-              {t('seeMore')}
-            </Typography>
+            > */}
+            {t('seeMore')}
+            {/* </Typography> */}
           </Link>
         </>
       )}

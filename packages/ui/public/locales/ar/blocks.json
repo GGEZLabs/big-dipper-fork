@@ -1,0 +1,15 @@
+{
+  "blocks": " الكتل ",
+  "blockDetails": " تفاصيل الكتل  ",
+  "height": " رقم الكتلة ",
+  "validator": " المدقق ",
+  "hash": " الرقم المشفر  ",
+  "txs": "Txs",
+  "time": " الوقت ",
+  "overview": " الصفحة الرئيسية ",
+  "signedVotingPower": " قوة التصويت الموثقة ",
+  "proposer": " مقترح ",
+  "signatures": " التوثيقات ",
+  "votingPower": " قوة التصويت ",
+  "signed": " وثقت "
+}

@@ -20,7 +20,8 @@ const Desktop: React.FC<{
   className?: string;
   title: string;
 }> = ({ className, title }) => {
-  const { classes, cx } = useStyles();
+  const style = useStyles();
+  const { classes, cx } = style();
   const theme = useRecoilValue(readTheme);
   const { isMenu, toggleMenu, turnOffAll, toggleNetwork, isNetwork } = useDesktop();
   const { i18n } = useAppTranslation('common');
@@ -38,7 +39,7 @@ const Desktop: React.FC<{
             open: isMenu,
           })}
         >
-          <ActionBar toggleNetwork={toggleNetwork} isNetwork={isNetwork} className={title} />
+          <ActionBar isNetwork={isNetwork} className={title} />
           <TitleBar title={title} />
         </AppBar>
         <Drawer

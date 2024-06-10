@@ -539,7 +539,10 @@ const TestTransaction: React.FC<ComponentDefault> = ({ className }) => {
             />
           </div>
         </div>
-        <div className={classes.label} style={{ display: 'flex', alignItems: 'center' }}>
+        <div
+          className={classes.label}
+          style={{ display: loading ? 'none' : 'flex', alignItems: 'center' }}
+        >
           <Button
             style={{
               float: 'left',

@@ -47,72 +47,60 @@ const Desktop: React.FC<{
                     : (cur = 'Not Found');
     return {
       ticker: (
-        <Link href={`https://www.etf.com/${x.asset_ticker}`} passHref>
-          <Typography variant="body1" component="a" target="_blank">
-            {x.asset_ticker}
-          </Typography>
+        <Link href={`https://www.etf.com/${x.asset_ticker}`}>
+          {/* <Typography variant="body1" component="a" target="_blank"> */}
+          {x.asset_ticker}
+          {/* </Typography> */}
         </Link>
       ),
-      fundName: (
-        <Typography variant="body1" className="value">
-          {x.fund_name}
-        </Typography>
-      ),
-      type: (
-        <Typography variant="body1" className="value">
-          {x.type}
-        </Typography>
-      ),
-      heldNoShares: (
-        <Typography variant="body1" className="value">
-          {numeral(x.no_shares).format('0,0')}
-        </Typography>
-      ),
-      currency: (
-        <Typography variant="body1" className="value">
-          {x.currency}
-        </Typography>
-      ),
-      price: (
-        <Typography variant="body1" className="value">
-          {cur + numeral(x.price).format('0,0.00')}
-        </Typography>
-      ),
-      value: (
-        <Typography variant="body1" className="value">
-          {cur + numeral(x.value).format('0,0.00')}
-        </Typography>
-      ),
-      fee: (
-        <Typography variant="body1" className="value">
-          {cur + numeral(x.fee).format('0,0.00')}
-        </Typography>
-      ),
-      netValue: (
-        <Typography variant="body1" className="value">
-          {cur + numeral(x.net_value).format('0,0.00')}
-        </Typography>
-      ),
-      netPrice: (
-        <Typography variant="body1" className="value">
-          {cur + numeral(x.net_price).format('0,0.00')}
-        </Typography>
-      ),
-      issuedCoins: (
-        <Typography variant="body1" className="value">
-          {numeral(x.issued_coins / 1000000).format('0,0.00')}
-        </Typography>
-      ),
-      coinMintingPrice: (
-        <Typography variant="body1" className="value">
-          {cur + numeral(x.coin_minting_price * 1000000).format('0.0000')}
-        </Typography>
-      ),
-      time: (
-        <Typography variant="body1" className="value">
-          {x.timestamp}
-        </Typography>
-      ),
+      fundName:
+        // <Typography variant="body1" className="value">
+        x.fund_name,
+        // </Typography>
+      type:
+        // <Typography variant="body1" className="value">
+        x.type,
+        // </Typography>
+      heldNoShares:
+        // <Typography variant="body1" className="value">
+        numeral(x.no_shares).format('0,0'),
+        // </Typography>
+      currency:
+        // <Typography variant="body1" className="value">
+        x.currency,
+        // </Typography>
+      price:
+        // <Typography variant="body1" className="value">
+        cur + numeral(x.price).format('0,0.00'),
+        // </Typography>
+      value:
+        // <Typography variant="body1" className="value">
+        cur + numeral(x.value).format('0,0.00'),
+        // </Typography>
+      fee:
+        // <Typography variant="body1" className="value">
+        cur + numeral(x.fee).format('0,0.00'),
+        // </Typography>
+      netValue:
+        // <Typography variant="body1" className="value">
+        cur + numeral(x.net_value).format('0,0.00'),
+        // </Typography>
+      netPrice:
+        // <Typography variant="body1" className="value">
+        cur + numeral(x.net_price).format('0,0.00'),
+        // </Typography>
+      issuedCoins:
+        // <Typography variant="body1" className="value">
+        numeral(x.issued_coins / 1000000).format('0,0.00'),
+        // </Typography>
+      coinMintingPrice:
+        // <Typography variant="body1" className="value">
+        cur + numeral(x.coin_minting_price * 1000000).format('0.0000'),
+        // </Typography>
+      time:
+        // <Typography variant="body1" className="value">
+        x.timestamp,
+        // </Typography>
     };
   });
 

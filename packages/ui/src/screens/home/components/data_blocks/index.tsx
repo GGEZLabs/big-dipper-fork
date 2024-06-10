@@ -24,8 +24,8 @@ const DataBlocks: FC<ComponentDefault> = ({ className }) => {
     {
       key: t('price'),
       value: state.price !== null ? `$${numeral(state.price).format('0.000')}` : 'N/A',
-      description: t('dataFrom'),
-      Icon: <CoinGeckoIcon />,
+      // description: t('dataFrom'),
+      // Icon: <CoinGeckoIcon />,
       className: classes.price,
     },
     {
@@ -47,7 +47,7 @@ const DataBlocks: FC<ComponentDefault> = ({ className }) => {
           value={x.value}
           description={x.description}
           className={x.className}
-          Icon={x.Icon}
+          // Icon={x.Icon}
         />
       ))}
     </div>

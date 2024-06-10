@@ -20,7 +20,8 @@ import Toggle from '@/components/toggle';
 const release = `${process.env.NEXT_PUBLIC_RELEASE ?? ''}`;
 
 const Settings: FC<ComponentDefault> = (props) => {
-  const { classes, cx } = useStyles();
+  const style = useStyles();
+  const { classes, cx } = style();
   const router = useRouter();
   const { t, i18n } = useAppTranslation('common');
   const {

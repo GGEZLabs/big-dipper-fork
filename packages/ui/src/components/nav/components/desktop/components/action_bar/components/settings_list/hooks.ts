@@ -19,7 +19,7 @@ export const useSettingList = ({ lang }: { lang: string }) => {
   const [tx, setTx] = useRecoilState(writeTx) as [Tx, SetterOrUpdater<Tx>];
   const [time, setTimeFormat] = useRecoilState(writeTimeFormat) as [
     TimeFormat,
-    SetterOrUpdater<TimeFormat>
+    SetterOrUpdater<TimeFormat>,
   ];
 
   const [open, setOpen] = useState(false);
@@ -76,15 +76,16 @@ export const useSettingList = ({ lang }: { lang: string }) => {
     e.preventDefault();
 
     if (state.lang !== lang) {
+      const lang = state.lang;
       router.push(
         {
           pathname: router.pathname,
           query: router.query,
         },
         router.asPath,
-        { locale: state.lang }
+        { locale: lang }
       );
-      i18n?.changeLanguage(state.lang);
+      i18n?.changeLanguage(lang);
     }
 
     if (state.dateFormat !== date) {

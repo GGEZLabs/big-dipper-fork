@@ -136,14 +136,21 @@ const Faucet: React.FC<{
                   onClick={() => handleCopyToClipboard(address)}
                 />
                 <ShareIcon onClick={handleOpen} className={classes.actionIcons} />
-                <Link href={ACCOUNT_DETAILS(address)} passHref>
+                <Link shallow prefetch={false} href={ACCOUNT_DETAILS(address)}>
+                  {getMiddleEllipsis(address, {
+                    beginning: 15,
+                    ending: 5,
+                  })}
+                </Link>
+
+                {/* <Link href={ACCOUNT_DETAILS(address)} passHref>
                   <Typography variant="body1" className="value" component="a">
                     {getMiddleEllipsis(address, {
                       beginning: 15,
                       ending: 5,
                     })}
                   </Typography>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

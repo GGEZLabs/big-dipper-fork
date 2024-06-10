@@ -36,9 +36,9 @@ const Trades: React.FC<{
       <div className={classes.label}>
         <Typography variant="h2">{t('trades')}</Typography>
         <Link href={TRADES} passHref>
-          <Typography variant="h4" className="button" component="a">
-            {t('seeMore')}
-          </Typography>
+          {/* <Typography variant="h4" className="button" component="a"> */}
+          {t('seeMore')}
+          {/* </Typography> */}
         </Link>
       </div>
       {!state.items.length ? (
@@ -51,14 +51,18 @@ const Trades: React.FC<{
             <Mobile className={classes.mobile} items={state.items} />
           )}
           <Divider className={classes.mobile} />
-          <Link href={TRADES} passHref>
-            <Typography
+          <Link
+            href={TRADES}
+            passHref
+            className={cx(classes.seeMoreFooter, classes.mobile, 'button')}
+          >
+            {/* <Typography
               variant="h4"
               component="a"
               className={cx(classes.seeMoreFooter, classes.mobile, 'button')}
-            >
-              {t('seeMore')}
-            </Typography>
+            > */}
+            {t('seeMore')}
+            {/* </Typography> */}
           </Link>
         </>
       )}

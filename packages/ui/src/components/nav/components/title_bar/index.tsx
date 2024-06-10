@@ -13,7 +13,8 @@ type TitleBarProps = {
 
 const TitleBar: FC<TitleBarProps> = ({ title }) => {
   const { t } = useAppTranslation('common');
-  const { classes, cx } = useStyles();
+  const style = useStyles();
+  const { classes, cx } = style();
 
   const marketState = useRecoilValue(readMarket);
 

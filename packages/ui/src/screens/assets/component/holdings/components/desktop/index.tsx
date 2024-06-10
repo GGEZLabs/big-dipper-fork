@@ -37,40 +37,26 @@ const Desktop: React.FC<HoldingsListState> = ({ className, holdings }) => {
   }));
   const formatData = holdings.map((x) => ({
     ticker: (
-      <Link href={`https://www.etf.com/${x.asset_ticker}`} passHref>
-        <Typography variant="body1" component="a" target="_blank">
-          {x.asset_ticker}
-        </Typography>
+      <Link href={`https://www.etf.com/${x.asset_ticker}`}>
+        {/* <Typography variant="body1" component="a" target="_blank"> */}
+        {x.asset_ticker}
+        {/* </Typography> */}
       </Link>
     ),
-    fundName: <Typography variant="body1">{x.fund_name}</Typography>,
-    issuer: <Typography variant="body1">{x.issuer}</Typography>,
-    segment: <Typography variant="body1">{x.segment}</Typography>,
-    heldNoShares: (
-      <Typography variant="body1">{numeral(x.held_no_shares).format('0,0')}</Typography>
-    ),
-    AVGPrice: <Typography variant="body1">${numeral(x.avg_price).format('0,0.00')}</Typography>,
-    invtValue: (
-      <Typography variant="body1">${numeral(x.purchase_value).format('0,0.00')}</Typography>
-    ),
-    lastTradePrice: (
-      <Typography variant="body1">${numeral(x.last_trade_price).format('0,0.00')}</Typography>
-    ),
-    currentInvtValue: (
-      <Typography variant="body1">${numeral(x.current_value).format('0,0.00')}</Typography>
-    ),
-    returnAmt: (
-      <Typography variant="body1">${numeral(x.return_amount).format('0,0.00')}</Typography>
-    ),
-    returnPct: (
-      <Typography variant="body1">{numeral(x.return_percent).format('0,0.00')}</Typography>
-    ),
-    issuedCoins: (
-      <Typography variant="body1">{numeral(x.issued_coins / 1000000).format('0,0.00')}</Typography>
-    ),
-    percentOfTotalSupply: (
-      <Typography variant="body1">{numeral(x.percent_of_total_supply).format('0,0.00')}</Typography>
-    ),
+    fundName: x.fund_name, // <Typography variant="body1">{x.fund_name}</Typography>,
+    issuer: x.issuer, // <Typography variant="body1">{x.issuer}</Typography>,
+    segment: x.segment, // <Typography variant="body1">{x.segment}</Typography>,
+    heldNoShares: numeral(x.held_no_shares).format('0,0'),
+    //  (  <Typography variant="body1">{numeral(x.held_no_shares).format('0,0')}</Typography>),
+    AVGPrice: `$${numeral(x.avg_price).format('0,0.00')}`, // <Typography variant="body1">${numeral(x.avg_price).format('0,0.00')}</Typography>,
+    invtValue: `$${numeral(x.purchase_value).format('0,0.00')}`, // (<Typography variant="body1">${numeral(x.purchase_value).format('0,0.00')}</Typography>),
+    lastTradePrice: `$${numeral(x.last_trade_price).format('0,0.00')}`, // (<Typography variant="body1">${numeral(x.last_trade_price).format('0,0.00')}</Typography>),
+    currentInvtValue: `$${numeral(x.current_value).format('0,0.00')}`, // (<Typography variant="body1">${numeral(x.current_value).format('0,0.00')}</Typography>),
+    returnAmt: `$${numeral(x.return_amount).format('0,0.00')}`, // (<Typography variant="body1">${numeral(x.return_amount).format('0,0.00')}</Typography>),
+    returnPct: numeral(x.return_percent).format('0,0.00'), // (<Typography variant="body1">{numeral(x.return_percent).format('0,0.00')}</Typography>),
+    issuedCoins: numeral(x.issued_coins / 1000000).format('0,0.00'),
+    // (<Typography variant="body1">{numeral(x.issued_coins / 1000000).format('0,0.00')}</Typography>),
+    percentOfTotalSupply: numeral(x.percent_of_total_supply).format('0,0.00'), // (<Typography variant="body1">{numeral(x.percent_of_total_supply).format('0,0.00')}</Typography>),
     moreDetails: (
       <HtmlTooltip
         title={
@@ -139,7 +125,7 @@ const Desktop: React.FC<HoldingsListState> = ({ className, holdings }) => {
                 return (
                   <TableCell
                     style={{ width: `${column.width}%` }}
-                    align={lang == 'ar' ? 'right' : 'left'}
+                    align={align}
                     key={`${key}-${index}`}
                   >
                     {item}
