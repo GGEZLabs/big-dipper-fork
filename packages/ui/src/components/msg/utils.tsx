@@ -115,13 +115,26 @@ const defaultTypeToModel = {
     tagTheme: 'seven',
     tagDisplay: 'txDepositLabel',
   },
-  '/cosmos.gov.v1beta1.MsgVote': {
+  '/cosmos.gov.v1.MsgDeposit': {
+    model: MODELS.MsgDeposit,
+    content: COMPONENTS.DepositProposal,
+    tagTheme: 'seven',
+    tagDisplay: 'txDepositLabel',
+  },
+  '/cosmos.gov.v1.MsgVote': {
     model: MODELS.MsgVote,
     content: COMPONENTS.Vote,
     tagTheme: 'seven',
     tagDisplay: 'txVoteLabel',
   },
+
   '/cosmos.gov.v1beta1.MsgSubmitProposal': {
+    model: MODELS.MsgSubmitProposal,
+    content: COMPONENTS.SubmitProposal,
+    tagTheme: 'seven',
+    tagDisplay: 'txSubmitProposalLabel',
+  },
+  '/cosmos.gov.v1.MsgSubmitProposal': {
     model: MODELS.MsgSubmitProposal,
     content: COMPONENTS.SubmitProposal,
     tagTheme: 'seven',
@@ -353,6 +366,20 @@ type DefaultTypeToModel = typeof defaultTypeToModel;
 // Update your chain's message types here
 // =====================================
 const customTypeToModel = {
+  // trade
+
+  '/ggezchain.trade.MsgCreateTrade': {
+    model: MODELS.MsgCreateTrade,
+    content: COMPONENTS.CreateTrade,
+    tagTheme: 'fourteen',
+    tagDisplay: 'txCreateTradeLabel',
+  },
+  '/ggezchain.trade.MsgProcessTrade': {
+    model: MODELS.MsgProcessTrade,
+    content: COMPONENTS.ProcessTrade,
+    tagTheme: 'six',
+    tagDisplay: 'txProcessTradeLabel',
+  },
   // ========================
   // profiles
   // ========================
@@ -419,7 +446,7 @@ type TypeToModel = DefaultTypeToModel & CustomTypeToModel extends infer R1
 
 type Data = TypeToModel[keyof TypeToModel];
 
-const getDataByType = (type: string): Data | null => {
+export const getDataByType = (type: string): Data | null => {
   if (isKeyOf(type, defaultTypeToModel) && defaultTypeToModel[type])
     return defaultTypeToModel[type];
 

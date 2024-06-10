@@ -19,6 +19,7 @@ import { VariableSizeGrid as Grid } from 'react-window';
 import InfiniteLoader from 'react-window-infinite-loader';
 import FilterTxsByType from '@/components/transaction_type_filter';
 import NoData from '@/components/no_data';
+import { getDataByType } from '@/components/msg/utils';
 
 const useRenderHeaderCell = ({
   columnIndex,
@@ -51,31 +52,45 @@ const Desktop: FC<TransactionsListState> = ({
 }) => {
   const { gridRef, onResize, getColumnWidth, getRowHeight, columnRef } = useGrid(columns);
   const { classes, cx } = useStyles();
+  const { t } = useAppTranslation();
 
-  const items = transactions.map((x) => ({
-    block: (
-      <Link shallow prefetch={false} href={BLOCK_DETAILS(x.height)}>
-        {numeral(x.height).format('0,0')}
-      </Link>
-    ),
-    hash: (
-      <Link shallow prefetch={false} href={TRANSACTION_DETAILS(x.hash)}>
-        {getMiddleEllipsis(x.hash, {
-          beginning: 4,
-          ending: 4,
-        })}
-      </Link>
-    ),
-    type: (
-      <div>
-        <Tag value={x.type?.[0] ?? ''} theme="six" />
-        {x.messages.count > 1 && ` + ${x.messages.count - 1}`}
-      </div>
-    ),
-    result: <Result success={x.success} />,
-    time: <Timestamp timestamp={x.timestamp} />,
-    messages: numeral(x.messages.count).format('0,0'),
-  }));
+  const items = transactions.map((x) => {
+    const txType = x.messages.items[0].type;
+    const data = getDataByType(txType);
+    const tag = {
+      display: 'txUnknownLabel',
+      theme: 'zero' as TagTheme,
+    };
+    if (data) {
+      tag.display = data.tagDisplay;
+      tag.theme = data.tagTheme as TagTheme;
+    }
+
+    return {
+      block: (
+        <Link shallow prefetch={false} href={BLOCK_DETAILS(x.height)}>
+          {numeral(x.height).format('0,0')}
+        </Link>
+      ),
+      hash: (
+        <Link shallow prefetch={false} href={TRANSACTION_DETAILS(x.hash)}>
+          {getMiddleEllipsis(x.hash, {
+            beginning: 4,
+            ending: 4,
+          })}
+        </Link>
+      ),
+      type: (
+        <div>
+          <Tag value={t(`message_labels:${tag.display}`)} theme={tag.theme} />
+          {x.messages.count > 1 && ` + ${x.messages.count - 1}`}
+        </div>
+      ),
+      result: <Result success={x.success} />,
+      time: <Timestamp timestamp={x.timestamp} />,
+      messages: numeral(x.messages.count).format('0,0'),
+    };
+  });
 
   // Default isItemLoaded function
   const defaultIsItemLoaded = () => true;

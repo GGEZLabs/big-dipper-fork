@@ -60,3 +60,5 @@ export { default as Undelegate } from '@/components/msg/staking/undelegate';
 export { default as Unknown } from '@/components/msg/unknown';
 export { default as CreatePeriodicVestingAccount } from '@/components/msg/vesting/create_periodic_vesting_account';
 export { default as CreateVestingAccount } from '@/components/msg/vesting/create_vesting_account';
+export { default as CreateTrade } from '@/components/msg/trade/create_trade';
+export { default as ProcessTrade } from '@/components/msg/trade/process_trade';

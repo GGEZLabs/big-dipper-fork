@@ -69,3 +69,5 @@ export { default as MsgCreatePeriodicVestingAccount } from '@/models/msg/vesting
 export { default as MsgCreateVestingAccount } from '@/models/msg/vesting/msg_create_vesting_account';
 export { default as SlashingParams } from '@/models/slashing_params';
 export { default as StakingParams } from '@/models/staking_params';
+export { default as MsgCreateTrade } from '@/models/msg/trade/msg_create_trade';
+export { default as MsgProcessTrade } from '@/models/msg/trade/msg_process_trade';
