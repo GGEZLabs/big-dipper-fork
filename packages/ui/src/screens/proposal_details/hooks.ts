@@ -85,7 +85,6 @@ export const useProposalDetails = () => {
       proposalId: parseFloat((router?.query?.id as string) ?? '0'),
     },
     onCompleted: (data) => {
-      console.log('data :>> ', data);
       handleSetState((prevState) => ({ ...prevState, ...formatProposalQuery(data) }));
     },
   });

@@ -13,12 +13,7 @@ const useStyles = () => {
       flexDirection: 'column',
       alignItems: 'flex-start',
       [theme.breakpoints.up('lg')]: {
-        padding:
-          lang == 'en'
-            ? theme.spacing(1, 3)
-            : lang == 'ar'
-              ? `${theme.spacing(1, 3)} ${theme.spacing(1, 0.5)}`
-              : '',
+        padding: lang == 'en' ? theme.spacing(1, 3) : lang == 'ar' ? theme.spacing(1, 1.75) : '',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
