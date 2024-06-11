@@ -3,7 +3,7 @@
 exports[`screen: Home/SingleBlock matches snapshot 1`] = `
 .emotion-0 {
   padding: 16px;
-  background: #FF835B;
+  background: #8400CD;
   border-radius: 4px;
   height: 110px;
   display: -webkit-box;
@@ -67,7 +67,7 @@ exports[`screen: Home/SingleBlock matches snapshot 1`] = `
   margin: 0;
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
 }
@@ -76,7 +76,7 @@ exports[`screen: Home/SingleBlock matches snapshot 1`] = `
   margin: 0;
   font-size: 2rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 300;
   line-height: 1.167;
 }

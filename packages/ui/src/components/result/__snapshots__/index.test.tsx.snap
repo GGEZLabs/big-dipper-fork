@@ -49,7 +49,7 @@ exports[`components: Result matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -72,7 +72,7 @@ exports[`components: Result matches snapshot 1`] = `
   <span
     className="MuiTypography-root MuiTypography-body1 emotion-2"
   >
-    fail
+    ui:common.fail
   </span>
 </span>
 `;
@@ -126,7 +126,7 @@ exports[`components: Result matches snapshot success 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -149,7 +149,7 @@ exports[`components: Result matches snapshot success 1`] = `
   <span
     className="MuiTypography-root MuiTypography-body1 emotion-2"
   >
-    success
+    ui:common.success
   </span>
 </span>
 `;

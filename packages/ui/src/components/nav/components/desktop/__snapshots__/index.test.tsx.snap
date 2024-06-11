@@ -208,21 +208,8 @@ exports[`screen: Nav/Desktop it renders 1`] = `
   top: 0;
   left: auto;
   right: 0;
-  background-color: #FF835B;
-  color: #FFFFFF;
-}
-
-.emotion-1 {
-  background-image: none;
-}
-
-@media print {
-  .emotion-1 {
-    position: absolute;
-  }
-}
-
-.emotion-1.emotion-1 {
+  background-color: #8400CD;
+  color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -239,22 +226,33 @@ exports[`screen: Nav/Desktop it renders 1`] = `
   color: #414141;
   width: calc(100% - 59px);
   z-index: 1201;
+  margin-right: 0px;
   -webkit-transition: width 225ms cubic-bezier(0.4, 0, 1, 1) 0ms,margin 225ms cubic-bezier(0.4, 0, 1, 1) 0ms;
   transition: width 225ms cubic-bezier(0.4, 0, 1, 1) 0ms,margin 225ms cubic-bezier(0.4, 0, 1, 1) 0ms;
 }
 
+.emotion-1 {
+  background-image: none;
+}
+
+@media print {
+  .emotion-1 {
+    position: absolute;
+  }
+}
+
 @media (min-width: 1280px) {
-  .emotion-1.emotion-1 {
+  .emotion-1 {
     height: 160px;
     overflow: hidden;
   }
 }
 
-.emotion-1.emotion-1.MuiPaper-elevation4 {
+.emotion-1.MuiPaper-elevation4 {
   box-shadow: none;
 }
 
-.emotion-1.emotion-1.open {
+.emotion-1.open {
   margin-left: 230px;
   width: calc(100% - 230px);
   -webkit-transition: width 225ms cubic-bezier(0.4, 0, 1, 1) 0ms,margin 225ms cubic-bezier(0.4, 0, 1, 1) 0ms;
@@ -329,9 +327,9 @@ exports[`screen: Nav/Desktop it renders 1`] = `
     className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionFixed open mui-fixed emotion-1"
   >
     <div
+      className="hello world"
       id="actionBar"
       isNetwork={false}
-      toggleNetwork={[Function]}
     />
     <div
       id="TitleBar"
@@ -345,7 +343,6 @@ exports[`screen: Nav/Desktop it renders 1`] = `
       className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper open MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft emotion-3"
     >
       <svg
-        aria-label="toggle menu"
         className="emotion-4"
         onClick={[Function]}
         role="button"

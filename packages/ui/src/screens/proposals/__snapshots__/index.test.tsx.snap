@@ -12,7 +12,7 @@ exports[`screen: Proposals matches snapshot 1`] = `
 }
 
 .emotion-0 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 .emotion-1 {
@@ -22,7 +22,7 @@ exports[`screen: Proposals matches snapshot 1`] = `
 <div
   className="emotion-0"
   id="Layout"
-  navTitle="proposals"
+  navTitle="ui:proposals.proposals"
 >
   <div
     className="emotion-1"

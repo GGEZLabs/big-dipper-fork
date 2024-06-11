@@ -35,7 +35,7 @@ exports[`components: Loading matches snapshot 1`] = `
 
 .emotion-1 {
   display: inline-block;
-  color: #FF835B;
+  color: #8400CD;
   -webkit-animation: animation-0 1.4s linear infinite;
   animation: animation-0 1.4s linear infinite;
 }

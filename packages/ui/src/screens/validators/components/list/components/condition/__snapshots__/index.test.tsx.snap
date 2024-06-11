@@ -4,7 +4,7 @@ exports[`screen: Validators/Condition matches snapshot 1`] = `
 .emotion-0 {
   width: 10px;
   height: 10px;
-  background: #E6E6E6;
+  background: #E8E8E8;
   margin: 0 auto;
   border-radius: 50%;
 }
@@ -14,11 +14,11 @@ exports[`screen: Validators/Condition matches snapshot 1`] = `
 }
 
 .emotion-0.yellow {
-  background: #FF9338;
+  background: #FF961B;
 }
 
 .emotion-0.red {
-  background: #FF608A;
+  background: #FC6A8A;
 }
 
 <div

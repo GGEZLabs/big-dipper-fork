@@ -15,7 +15,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
 .emotion-1 caption {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   padding: 16px;
@@ -49,17 +49,17 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
 }
 
 .emotion-3.Mui-selected {
-  background-color: rgba(255, 131, 91, 0.08);
+  background-color: rgba(132, 0, 205, 0.08);
 }
 
 .emotion-3.Mui-selected:hover {
-  background-color: rgba(255, 131, 91, 0.12);
+  background-color: rgba(132, 0, 205, 0.12);
 }
 
 .emotion-4 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 500;
   line-height: 1.5rem;
   display: table-cell;
@@ -80,7 +80,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
 .emotion-7 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 500;
   line-height: 1.5rem;
   display: table-cell;
@@ -116,7 +116,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
 .emotion-11 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   display: table-cell;
@@ -137,7 +137,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
 .emotion-14 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   display: table-cell;
@@ -183,7 +183,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          block
+          ui:transactions.block
         </th>
         <th
           aria-sort={null}
@@ -195,7 +195,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          hash
+          ui:transactions.hash
         </th>
         <th
           aria-sort={null}
@@ -207,7 +207,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          type
+          ui:transactions.type
         </th>
         <th
           aria-sort={null}
@@ -219,7 +219,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          result
+          ui:transactions.result
         </th>
         <th
           aria-sort={null}
@@ -231,7 +231,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          time
+          ui:transactions.time
         </th>
       </tr>
     </thead>

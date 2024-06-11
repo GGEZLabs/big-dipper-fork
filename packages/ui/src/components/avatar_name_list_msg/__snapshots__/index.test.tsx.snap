@@ -2,7 +2,7 @@
 
 exports[`components: AvatarNameListMsg matches snapshot 1`] = `
 .emotion-0 {
-  color: #4092CD;
+  color: #1D86FF;
   word-break: break-all;
 }
 
@@ -26,7 +26,7 @@ exports[`components: AvatarNameListMsg matches snapshot with empty values 1`] = 
 exports[`components: AvatarNameListMsg matches snapshot with multiple values 1`] = `
 [
   .emotion-0 {
-  color: #4092CD;
+  color: #1D86FF;
   word-break: break-all;
 }
 
@@ -44,10 +44,10 @@ exports[`components: AvatarNameListMsg matches snapshot with multiple values 1`]
     name-1
   </a>,
   " ",
-  "and",
+  "ui:transactions.and",
   " ",
   .emotion-0 {
-  color: #4092CD;
+  color: #1D86FF;
   word-break: break-all;
 }
 

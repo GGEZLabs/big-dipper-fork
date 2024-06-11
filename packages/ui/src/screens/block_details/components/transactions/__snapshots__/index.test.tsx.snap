@@ -43,7 +43,7 @@ exports[`screen: BlockDetails/Transactions matches snapshot 1`] = `
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 0;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -64,7 +64,7 @@ exports[`screen: BlockDetails/Transactions matches snapshot 1`] = `
     <h2
       className="MuiTypography-root MuiTypography-h2 emotion-2"
     >
-      transactions
+      ui:transactions.transactions
     </h2>
   </div>
   <div

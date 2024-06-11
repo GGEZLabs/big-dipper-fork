@@ -16,7 +16,7 @@ exports[`screen: Blocks/List matches snapshot 1`] = `
 }
 
 .emotion-0 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 @media (min-width:1280px) {
@@ -39,7 +39,7 @@ exports[`screen: Blocks/List matches snapshot 1`] = `
 
 <div
   id="Layout"
-  navTitle="transactionDetails"
+  navTitle="ui:transactions.transactionDetails"
 >
   <div
     exists={true}

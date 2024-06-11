@@ -22,7 +22,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
 
 .emotion-1 {
   padding: 16px;
-  background: #FF835B;
+  background: #8400CD;
   border-radius: 4px;
   height: 110px;
   display: -webkit-box;
@@ -40,7 +40,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   color: #FFFFFF;
-  background: #F87255;
+  background: #0055AB;
 }
 
 .emotion-1 .label {
@@ -87,7 +87,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
   margin: 0;
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
 }
@@ -96,14 +96,14 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
   margin: 0;
   font-size: 2rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 300;
   line-height: 1.167;
 }
 
 .emotion-4 {
   padding: 16px;
-  background: #FF835B;
+  background: #8400CD;
   border-radius: 4px;
   height: 110px;
   display: -webkit-box;
@@ -121,7 +121,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   color: #FFFFFF;
-  background: #FA9147;
+  background: #0079F2;
 }
 
 .emotion-4 .label {
@@ -166,7 +166,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
 
 .emotion-7 {
   padding: 16px;
-  background: #FF835B;
+  background: #8400CD;
   border-radius: 4px;
   height: 110px;
   display: -webkit-box;
@@ -184,7 +184,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   color: #FFFFFF;
-  background: #20D494;
+  background: #2994FF;
 }
 
 .emotion-7 .label {
@@ -228,17 +228,8 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
 }
 
 .emotion-10 {
-  margin: 0;
-  font-size: 0.75rem;
-  letter-spacing: 0.4px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
-  font-weight: 400;
-  line-height: 1.66;
-}
-
-.emotion-11 {
   padding: 16px;
-  background: #FF835B;
+  background: #8400CD;
   border-radius: 4px;
   height: 110px;
   display: -webkit-box;
@@ -256,14 +247,14 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   color: #FFFFFF;
-  background: #2FB6E0;
+  background: #71B8FF;
 }
 
-.emotion-11 .label {
+.emotion-10 .label {
   margin-bottom: 16px;
 }
 
-.emotion-11 .content {
+.emotion-10 .content {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -278,17 +269,17 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
   justify-content: space-between;
 }
 
-.emotion-11 .description {
+.emotion-10 .description {
   display: none;
 }
 
 @media (min-width:768px) {
-  .emotion-11 .description {
+  .emotion-10 .description {
     display: block;
   }
 }
 
-.emotion-11 .flexContent {
+.emotion-10 .flexContent {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -297,6 +288,15 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   gap: 4px;
+}
+
+.emotion-13 {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+  font-family: "Hind Madurai",sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
 }
 
 <div
@@ -308,7 +308,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 label emotion-2"
     >
-      latestBlock
+      ui:home.latestBlock
     </p>
     <div
       className="content"
@@ -329,7 +329,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 label emotion-2"
     >
-      averageBlockTime
+      ui:home.averageBlockTime
     </p>
     <div
       className="content"
@@ -350,7 +350,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 label emotion-2"
     >
-      price
+      ui:home.price
     </p>
     <div
       className="content"
@@ -362,23 +362,16 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
       </h1>
       <div
         className="flexContent"
-      >
-        <span
-          className="MuiTypography-root MuiTypography-caption description emotion-10"
-        >
-          dataFrom
-        </span>
-        <svg />
-      </div>
+      />
     </div>
   </div>
   <div
-    className="emotion-11"
+    className="emotion-10"
   >
     <p
       className="MuiTypography-root MuiTypography-body2 label emotion-2"
     >
-      activeValidators
+      ui:home.activeValidators
     </p>
     <div
       className="content"
@@ -392,9 +385,9 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
         className="flexContent"
       >
         <span
-          className="MuiTypography-root MuiTypography-caption description emotion-10"
+          className="MuiTypography-root MuiTypography-caption description emotion-13"
         >
-          outOfValidators
+          ui:home.outOfValidators
         </span>
       </div>
     </div>

@@ -6,7 +6,7 @@ exports[`screen: TransactionDetails/IBCConnectionOpenTry matches snapshot 1`] = 
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -16,7 +16,12 @@ exports[`screen: TransactionDetails/IBCConnectionOpenTry matches snapshot 1`] = 
 >
   <span
     data-testid="Trans"
-    i18nKey="message_contents:txConnectionOpenTryContent"
+    i18nKey={
+      [
+        "ui:message_contents.txConnectionOpenTryContent",
+        "message_contents:txConnectionOpenTryContent",
+      ]
+    }
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"

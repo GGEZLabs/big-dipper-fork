@@ -15,7 +15,7 @@ exports[`component: DesmosProfile matches snapshot 1`] = `
 .emotion-1 {
   height: 150px;
   background: #999999;
-  background-image: url("/base/images/default_cover_pattern.png");
+  background-image: url("/ggezchain/images/default_cover_pattern.png");
   background-repeat: repeat;
   -webkit-background-position: center center;
   background-position: center center;
@@ -157,10 +157,10 @@ exports[`component: DesmosProfile matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 .emotion-5:hover {
@@ -179,7 +179,7 @@ exports[`component: DesmosProfile matches snapshot 1`] = `
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 0;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -188,7 +188,7 @@ exports[`component: DesmosProfile matches snapshot 1`] = `
   margin: 0;
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
 }
@@ -232,7 +232,7 @@ exports[`component: DesmosProfile matches snapshot 1`] = `
       onClick={[Function]}
       role="button"
     >
-      connections
+      ui:accounts.connections
     </p>
   </div>
   <div

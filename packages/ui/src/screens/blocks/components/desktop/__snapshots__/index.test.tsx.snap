@@ -35,7 +35,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
   margin: 0;
   font-size: 1rem;
   letter-spacing: 0.15px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.235;
 }
@@ -44,7 +44,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
   margin: 0;
   font-size: 1rem;
   letter-spacing: 0.15px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.235;
   text-align: right;
@@ -82,7 +82,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -92,7 +92,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
   text-align: right;
@@ -140,7 +140,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 emotion-2"
         >
-          height
+          ui:blocks.height
         </h4>
       </div>
       <div
@@ -159,7 +159,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 emotion-2"
         >
-          proposer
+          ui:blocks.proposer
         </h4>
       </div>
       <div
@@ -178,7 +178,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 emotion-2"
         >
-          hash
+          ui:blocks.hash
         </h4>
       </div>
       <div
@@ -197,7 +197,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 MuiTypography-alignRight emotion-8"
         >
-          txs
+          ui:blocks.txs
         </h4>
       </div>
       <div
@@ -216,7 +216,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 MuiTypography-alignRight emotion-8"
         >
-          time
+          ui:blocks.time
         </h4>
       </div>
     </div>

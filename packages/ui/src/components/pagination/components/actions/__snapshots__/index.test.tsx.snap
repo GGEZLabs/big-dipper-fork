@@ -71,7 +71,7 @@ exports[`components: Pagination/Actions matches snapshot 1`] = `
   margin: 0;
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   height: 30px;
@@ -94,8 +94,8 @@ exports[`components: Pagination/Actions matches snapshot 1`] = `
 }
 
 .emotion-5.selected {
-  color: #FFFFFF;
-  background: #FF835B;
+  color: #fff;
+  background: #8400CD;
 }
 
 .emotion-5.selected:hover {

@@ -76,7 +76,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
   margin: 0;
   font-size: 1rem;
   letter-spacing: 0.15px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.235;
 }
@@ -114,7 +114,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
   margin: 0;
   font-size: 0.75rem;
   letter-spacing: 0.4px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.66;
   padding: 4px 8px;
@@ -124,15 +124,15 @@ exports[`screen: Nav/Mobile it renders 1`] = `
 }
 
 .emotion-9.retired {
-  background: #2FB6E0;
+  background: #00E7FF;
 }
 
 .emotion-9.testnet {
-  background: #20D494;
+  background: #00d5ff;
 }
 
 .emotion-9.mainnet {
-  background: #FF835B;
+  background: #8400CD;
 }
 
 .emotion-13 {
@@ -145,6 +145,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  grid-gap: 16px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -186,20 +187,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
   }
 }
 
-.emotion-14.emotion-14 h1 {
-  line-height: 56px;
-}
-
 .emotion-15 {
-  margin: 0;
-  font-size: 2rem;
-  letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
-  font-weight: 300;
-  line-height: 1.167;
-}
-
-.emotion-16 {
   width: 100%;
   background: #FFFFFF;
   margin-top: 16px;
@@ -223,7 +211,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
 }
 
 @media (min-width:768px) {
-  .emotion-16 {
+  .emotion-15 {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -231,7 +219,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
 }
 
 @media (min-width:1280px) {
-  .emotion-16 {
+  .emotion-15 {
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -249,7 +237,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
   }
 }
 
-.emotion-17 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,15 +257,26 @@ exports[`screen: Nav/Mobile it renders 1`] = `
   width: 100%;
 }
 
-.emotion-17 .label {
+.emotion-16 .label {
   margin-right: 8px;
+  font-size: 0.875rem;
+}
+
+.emotion-16 .data-left {
+  font-size: 1.05rem;
+  color: #039abf;
+}
+
+.emotion-16 .data-right {
+  font-size: 1.05rem;
+  color: #8400CD;
 }
 
 @media (min-width:375px) {
-  .emotion-17 {
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
+  .emotion-16 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -289,24 +288,33 @@ exports[`screen: Nav/Mobile it renders 1`] = `
 }
 
 @media (min-width:768px) {
-  .emotion-17 {
-    width: 50%;
+  .emotion-16 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
   }
 }
 
 @media (min-width:1280px) {
-  .emotion-17 {
+  .emotion-16 {
     padding: 0;
     width: auto;
   }
 }
 
-.emotion-18 {
+.emotion-17 {
   margin: 0;
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -415,84 +423,135 @@ exports[`screen: Nav/Mobile it renders 1`] = `
     }
   />
   <div
-    className="emotion-14"
+    className="hello world emotion-14"
   >
-    <h1
-      className="MuiTypography-root MuiTypography-h1 emotion-15"
-    >
-      hello world
-    </h1>
     <div
-      className="emotion-16"
+      className="emotion-15"
     >
+      <img
+        alt="icon"
+        src="https://res.cloudinary.com/dvgnuchjw/image/upload/v1717481412/ggez1-s_gq5u9i.png"
+        width={35}
+      />
       <div
-        className="emotion-17"
+        className="emotion-16"
       >
         <p
-          className="MuiTypography-root MuiTypography-body1 label emotion-18"
+          className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          marketCap
+          ui:common.GovernanceCoin
         </p>
         <p
-          className="MuiTypography-root MuiTypography-body1 emotion-18"
+          className="MuiTypography-root MuiTypography-body1 data-left emotion-17"
+        >
+          GGEZ1
+        </p>
+      </div>
+      <div
+        className="emotion-16"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 label emotion-17"
+        >
+          ui:common.marketCap
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body1 data-left emotion-17"
         >
           N/A
         </p>
       </div>
       <div
-        className="emotion-17"
+        className="emotion-16"
       >
         <p
-          className="MuiTypography-root MuiTypography-body1 label emotion-18"
+          className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          inflation
+          ui:common.supply
         </p>
         <p
-          className="MuiTypography-root MuiTypography-body1 emotion-18"
+          className="MuiTypography-root MuiTypography-body1 data-left emotion-17"
         >
-          0%
+          0
         </p>
       </div>
       <div
-        className="emotion-17"
+        className="emotion-16"
       >
         <p
-          className="MuiTypography-root MuiTypography-body1 label emotion-18"
+          className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          apr
+          ui:common.price
         </p>
         <p
-          className="MuiTypography-root MuiTypography-body1 emotion-18"
+          className="MuiTypography-root MuiTypography-body1 data-left emotion-17"
         >
-          0%
+          N/A
+        </p>
+      </div>
+    </div>
+    <div
+      className="emotion-15"
+    >
+      <img
+        alt="icon"
+        src="https://res.cloudinary.com/dvgnuchjw/image/upload/v1717481418/ggez-s_fhlf1r.png"
+        width={35}
+      />
+      <div
+        className="emotion-16"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 label emotion-17"
+        >
+          ui:common.StableCoin
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body1 data-right emotion-17"
+        >
+          GGEZ
         </p>
       </div>
       <div
-        className="emotion-17"
+        className="emotion-16"
       >
         <p
-          className="MuiTypography-root MuiTypography-body1 label emotion-18"
+          className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          supply
+          ui:common.marketCap
         </p>
         <p
-          className="MuiTypography-root MuiTypography-body1 emotion-18"
+          className="MuiTypography-root MuiTypography-body1 data-right emotion-17"
         >
-          0 
+          N/A
         </p>
       </div>
       <div
-        className="emotion-17"
+        className="emotion-16"
       >
         <p
-          className="MuiTypography-root MuiTypography-body1 label emotion-18"
+          className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          communityPool
+          ui:common.supply
         </p>
         <p
-          className="MuiTypography-root MuiTypography-body1 emotion-18"
+          className="MuiTypography-root MuiTypography-body1 data-right emotion-17"
         >
-          0 
+          0
+        </p>
+      </div>
+      <div
+        className="emotion-16"
+      >
+        <p
+          className="MuiTypography-root MuiTypography-body1 label emotion-17"
+        >
+          ui:common.price
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body1 data-right emotion-17"
+        >
+          N/A
         </p>
       </div>
     </div>

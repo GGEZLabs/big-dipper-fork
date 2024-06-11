@@ -12,12 +12,12 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
           300
         </ForwardRef(Typography)>,
         "key": "height",
-        "label": "height",
+        "label": "ui:blocks.height",
       },
       {
         "detail": "hash",
         "key": "hash",
-        "label": "hash",
+        "label": "ui:blocks.hash",
       },
       {
         "detail": <Unknown
@@ -26,21 +26,21 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
           name="proposer"
         />,
         "key": "proposer",
-        "label": "proposer",
+        "label": "ui:blocks.proposer",
       },
       {
         "detail": "2020-08-10 12:00:00",
         "key": "time",
-        "label": "time",
+        "label": "ui:blocks.time",
       },
       {
         "detail": "0",
         "key": "txs",
-        "label": "txs",
+        "label": "ui:blocks.txs",
       },
     ]
   }
   id="BoxDetails"
-  title="overview"
+  title="ui:blocks.overview"
 />
 `;

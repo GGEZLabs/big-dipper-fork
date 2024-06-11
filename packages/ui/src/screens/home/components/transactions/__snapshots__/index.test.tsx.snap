@@ -12,7 +12,7 @@ exports[`screen: Home/Blocks/Mobile matches snapshot 1`] = `
 }
 
 .emotion-0 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 .emotion-0 .button {
@@ -42,7 +42,7 @@ exports[`screen: Home/Blocks/Mobile matches snapshot 1`] = `
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 0;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -108,7 +108,7 @@ exports[`screen: Home/Blocks/Mobile matches snapshot 1`] = `
     <h2
       className="MuiTypography-root MuiTypography-h2 emotion-2"
     >
-      latestTransactions
+      ui:home.latestTransactions
     </h2>
     <a
       aria-label="see more txs"
@@ -118,7 +118,7 @@ exports[`screen: Home/Blocks/Mobile matches snapshot 1`] = `
       onMouseEnter={[Function]}
       onTouchStart={[Function]}
     >
-      seeMore
+      ui:home.seeMore
     </a>
   </div>
   <div
@@ -164,7 +164,7 @@ exports[`screen: Home/Blocks/Mobile matches snapshot 1`] = `
     onMouseEnter={[Function]}
     onTouchStart={[Function]}
   >
-    seeMore
+    ui:home.seeMore
   </a>
 </div>
 `;

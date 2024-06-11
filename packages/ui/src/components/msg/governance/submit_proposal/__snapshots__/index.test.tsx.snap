@@ -6,7 +6,7 @@ exports[`screen: TransactionDetails/SubmitProposal matches snapshot with Communi
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -16,7 +16,12 @@ exports[`screen: TransactionDetails/SubmitProposal matches snapshot with Communi
 >
   <span
     data-testid="Trans"
-    i18nKey="message_contents:txSubmitProposalContent"
+    i18nKey={
+      [
+        "ui:message_contents.txSubmitProposalContent",
+        "message_contents:txSubmitProposalContent",
+      ]
+    }
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"
@@ -33,7 +38,7 @@ exports[`screen: TransactionDetails/SubmitProposal matches snapshot with Paramet
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -43,7 +48,12 @@ exports[`screen: TransactionDetails/SubmitProposal matches snapshot with Paramet
 >
   <span
     data-testid="Trans"
-    i18nKey="message_contents:txSubmitProposalContent"
+    i18nKey={
+      [
+        "ui:message_contents.txSubmitProposalContent",
+        "message_contents:txSubmitProposalContent",
+      ]
+    }
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"
@@ -60,7 +70,7 @@ exports[`screen: TransactionDetails/SubmitProposal matches snapshot with Softwar
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -70,7 +80,12 @@ exports[`screen: TransactionDetails/SubmitProposal matches snapshot with Softwar
 >
   <span
     data-testid="Trans"
-    i18nKey="message_contents:txSubmitProposalContent"
+    i18nKey={
+      [
+        "ui:message_contents.txSubmitProposalContent",
+        "message_contents:txSubmitProposalContent",
+      ]
+    }
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"
@@ -87,7 +102,7 @@ exports[`screen: TransactionDetails/SubmitProposal matches snapshot with Text Pr
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -97,7 +112,12 @@ exports[`screen: TransactionDetails/SubmitProposal matches snapshot with Text Pr
 >
   <span
     data-testid="Trans"
-    i18nKey="message_contents:txSubmitProposalContent"
+    i18nKey={
+      [
+        "ui:message_contents.txSubmitProposalContent",
+        "message_contents:txSubmitProposalContent",
+      ]
+    }
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"

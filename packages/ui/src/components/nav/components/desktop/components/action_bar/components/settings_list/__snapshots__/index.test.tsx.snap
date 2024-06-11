@@ -2,6 +2,7 @@
 
 exports[`screen: Nav/SettingList it renders 1`] = `
 .emotion-0 {
+  padding-right: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

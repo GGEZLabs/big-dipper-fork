@@ -66,7 +66,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 0;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 300;
   line-height: 1.2;
 }
@@ -215,11 +215,11 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
 }
 
 .emotion-6.Mui-checked {
-  color: #FF835B;
+  color: #8400CD;
 }
 
 .emotion-6.Mui-checked:hover {
-  background-color: rgba(255, 131, 91, 0.04);
+  background-color: rgba(132, 0, 205, 0.04);
 }
 
 @media (hover: none) {
@@ -229,11 +229,11 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
 }
 
 .emotion-6.Mui-checked.Mui-disabled {
-  color: rgb(255, 207, 192);
+  color: rgb(208, 158, 236);
 }
 
 .emotion-6.Mui-checked+.MuiSwitch-track {
-  background-color: #FF835B;
+  background-color: #8400CD;
 }
 
 .emotion-7 {
@@ -273,7 +273,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -368,7 +368,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
 }
 
 .emotion-25 {
-  color: #4092CD;
+  color: #1D86FF;
   word-break: break-all;
 }
 
@@ -389,7 +389,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
       <h2
         className="MuiTypography-root MuiTypography-h2 emotion-3"
       >
-        messages
+        ui:transactions.messages
       </h2>
       <label
         className="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd emotion-4"
@@ -431,7 +431,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
         <span
           className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label emotion-10"
         >
-          raw
+          ui:transactions.raw
         </span>
       </label>
     </div>
@@ -478,7 +478,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
         <span
           className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label emotion-10"
         >
-          raw
+          ui:transactions.raw
         </span>
       </label>
       <div
@@ -540,7 +540,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
                 <div
                   id="Tag"
                   theme="two"
-                  value="message_labels:txSendLabel"
+                  value="ui:message_labels.txSendLabel"
                 />
               </div>
               <span
@@ -551,7 +551,12 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
                 >
                   <span
                     data-testid="Trans"
-                    i18nKey="message_contents:txSendContent"
+                    i18nKey={
+                      [
+                        "ui:message_contents.txSendContent",
+                        "message_contents:txSendContent",
+                      ]
+                    }
                   >
                     <a
                       className="emotion-25"

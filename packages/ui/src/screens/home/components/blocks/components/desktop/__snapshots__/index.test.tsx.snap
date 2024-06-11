@@ -6,7 +6,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
 }
 
 .emotion-0 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 .emotion-1 {
@@ -19,7 +19,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
 .emotion-1 caption {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   padding: 16px;
@@ -53,17 +53,17 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
 }
 
 .emotion-3.Mui-selected {
-  background-color: rgba(255, 131, 91, 0.08);
+  background-color: rgba(132, 0, 205, 0.08);
 }
 
 .emotion-3.Mui-selected:hover {
-  background-color: rgba(255, 131, 91, 0.12);
+  background-color: rgba(132, 0, 205, 0.12);
 }
 
 .emotion-4 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 500;
   line-height: 1.5rem;
   display: table-cell;
@@ -84,7 +84,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
 .emotion-7 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 500;
   line-height: 1.5rem;
   display: table-cell;
@@ -120,7 +120,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
 .emotion-11 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   display: table-cell;
@@ -141,7 +141,7 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
 .emotion-14 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   display: table-cell;
@@ -182,35 +182,35 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-4"
           scope="col"
         >
-          height
+          ui:blocks.height
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-4"
           scope="col"
         >
-          proposer
+          ui:blocks.proposer
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-4"
           scope="col"
         >
-          hash
+          ui:blocks.hash
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium emotion-7"
           scope="col"
         >
-          txs
+          ui:blocks.txs
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium emotion-7"
           scope="col"
         >
-          time
+          ui:blocks.time
         </th>
       </tr>
     </thead>

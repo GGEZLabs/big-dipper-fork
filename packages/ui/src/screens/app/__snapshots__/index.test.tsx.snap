@@ -23,7 +23,7 @@ exports[`screen: _app matches snapshot 1`] = `
 }
 
 .emotion-0 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 .emotion-1 {
@@ -40,34 +40,21 @@ exports[`screen: _app matches snapshot 1`] = `
   max-width: 100%;
   max-height: 100%;
   min-width: 100%;
-  display: none;
-}
-
-.mode-dark .emotion-2 {
-  display: initial;
-}
-
-.emotion-3 {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  min-width: 100%;
   object-fit: contain;
 }
 
-.mode-dark .emotion-3 {
+.mode-dark .emotion-2 {
   display: none;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: grid;
   grid-template-columns: repeat(4, 65px);
   gap: 8px;
   margin: 24px 0px;
 }
 
-.emotion-5 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,7 +72,7 @@ exports[`screen: _app matches snapshot 1`] = `
   flex-direction: column;
 }
 
-.emotion-5 .MuiTypography-h1 {
+.emotion-4 .MuiTypography-h1 {
   width: 100%;
   text-align: center;
   background: #FFFFFF;
@@ -93,7 +80,7 @@ exports[`screen: _app matches snapshot 1`] = `
   margin-bottom: 16px;
 }
 
-.emotion-6 {
+.emotion-5 {
   margin: 0;
   font-size: 2rem;
   letter-spacing: 0.25px;
@@ -102,7 +89,7 @@ exports[`screen: _app matches snapshot 1`] = `
   line-height: 1.167;
 }
 
-.emotion-7 {
+.emotion-6 {
   margin: 0;
   font-size: 1.25rem;
   letter-spacing: 0.15px;
@@ -111,14 +98,14 @@ exports[`screen: _app matches snapshot 1`] = `
   line-height: 1.167;
 }
 
-.emotion-17 {
+.emotion-16 {
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 0;
   font-family: fontFamily;
   font-weight: 300;
   line-height: 1.2;
-  color: #FF835B;
+  color: #8400CD;
 }
 
 <div
@@ -132,100 +119,83 @@ exports[`screen: _app matches snapshot 1`] = `
         className="emotion-2"
         data-nimg="1"
         decoding="async"
-        height={0}
+        height={30}
         loading="lazy"
         onError={[Function]}
         onLoad={[Function]}
-        src="svg"
+        src="https://ggez.one/images/logo.png?sanitize=true"
         style={
           {
             "color": "transparent",
           }
         }
-        width={0}
-      />
-      <img
-        alt="logo"
-        className="emotion-3"
-        data-nimg="1"
-        decoding="async"
-        height={0}
-        loading="lazy"
-        onError={[Function]}
-        onLoad={[Function]}
-        src="svg"
-        style={
-          {
-            "color": "transparent",
-          }
-        }
-        width={0}
+        width={30}
       />
     </span>
     <div
-      className="emotion-4"
+      className="emotion-3"
     >
       <div
-        className="emotion-5"
+        className="emotion-4"
       >
         <h1
-          className="MuiTypography-root MuiTypography-h1 emotion-6"
+          className="MuiTypography-root MuiTypography-h1 emotion-5"
         >
           0
         </h1>
         <h3
-          className="MuiTypography-root MuiTypography-h3 emotion-7"
+          className="MuiTypography-root MuiTypography-h3 emotion-6"
         >
           Day
         </h3>
       </div>
       <div
-        className="emotion-5"
+        className="emotion-4"
       >
         <h1
-          className="MuiTypography-root MuiTypography-h1 emotion-6"
+          className="MuiTypography-root MuiTypography-h1 emotion-5"
         >
           0
         </h1>
         <h3
-          className="MuiTypography-root MuiTypography-h3 emotion-7"
+          className="MuiTypography-root MuiTypography-h3 emotion-6"
         >
           Hour
         </h3>
       </div>
       <div
-        className="emotion-5"
+        className="emotion-4"
       >
         <h1
-          className="MuiTypography-root MuiTypography-h1 emotion-6"
+          className="MuiTypography-root MuiTypography-h1 emotion-5"
         >
           0
         </h1>
         <h3
-          className="MuiTypography-root MuiTypography-h3 emotion-7"
+          className="MuiTypography-root MuiTypography-h3 emotion-6"
         >
           Min
         </h3>
       </div>
       <div
-        className="emotion-5"
+        className="emotion-4"
       >
         <h1
-          className="MuiTypography-root MuiTypography-h1 emotion-6"
+          className="MuiTypography-root MuiTypography-h1 emotion-5"
         >
           0
         </h1>
         <h3
-          className="MuiTypography-root MuiTypography-h3 emotion-7"
+          className="MuiTypography-root MuiTypography-h3 emotion-6"
         >
           Sec
         </h3>
       </div>
     </div>
     <h2
-      className="MuiTypography-root MuiTypography-h2 emotion-17"
+      className="MuiTypography-root MuiTypography-h2 emotion-16"
     >
-      desmos-mainnet
+      ggezchain
     </h2>
   </div>,
   <div

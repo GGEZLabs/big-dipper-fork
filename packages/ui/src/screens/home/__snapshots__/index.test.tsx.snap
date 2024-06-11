@@ -16,7 +16,7 @@ exports[`screen: Home matches snapshot 1`] = `
 }
 
 .emotion-0 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 @media (min-width:768px) {

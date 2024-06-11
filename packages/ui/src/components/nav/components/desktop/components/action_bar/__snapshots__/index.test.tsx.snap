@@ -78,7 +78,7 @@ exports[`screen: Nav/ActionBar displays network 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.4375em;
   color: #000000;
@@ -98,10 +98,6 @@ exports[`screen: Nav/ActionBar displays network 1`] = `
 .emotion-3.Mui-disabled {
   color: rgba(0, 0, 0, 0.38);
   cursor: default;
-}
-
-.emotion-3 {
-  border-radius: 12px;
 }
 
 .emotion-4 {
@@ -239,10 +235,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
   animation-duration: 5000s;
   -webkit-animation-name: mui-auto-fill;
   animation-name: mui-auto-fill;
-}
-
-.emotion-6 {
-  padding: 8px 12px;
 }
 
 .emotion-7 {
@@ -438,11 +430,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
 }
 
 .emotion-10.Mui-checked {
-  color: #FF835B;
+  color: #8400CD;
 }
 
 .emotion-10.Mui-checked:hover {
-  background-color: rgba(255, 131, 91, 0.04);
+  background-color: rgba(132, 0, 205, 0.04);
 }
 
 @media (hover: none) {
@@ -452,11 +444,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
 }
 
 .emotion-10.Mui-checked.Mui-disabled {
-  color: rgb(255, 207, 192);
+  color: rgb(208, 158, 236);
 }
 
 .emotion-10.Mui-checked+.MuiSwitch-track {
-  background-color: #FF835B;
+  background-color: #8400CD;
 }
 
 .emotion-11 {
@@ -507,7 +499,7 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
   margin: 0;
   font-size: 0.75rem;
   letter-spacing: 0.4px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.66;
   margin-left: 8px;
@@ -519,23 +511,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
     display: none;
     margin: 0;
   }
-}
-
-.emotion-16 {
-  width: 100%;
-  z-index: 1201;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.emotion-16.open {
-  opacity: 1;
-  visibility: visible;
 }
 
 <div
@@ -574,14 +549,14 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
           </svg>
         </div>
         <input
-          aria-label="searchBarPlaceholderDtag"
+          aria-label="ui:common.searchBarPlaceholderDtag"
           className="MuiInputBase-input MuiInputBase-inputAdornedStart emotion-6"
           onAnimationStart={[Function]}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
-          placeholder="searchBarPlaceholderDtag"
+          placeholder="ui:common.searchBarPlaceholderDtag"
           type="text"
           value=""
         />
@@ -590,7 +565,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
     <div
       className="emotion-7 open"
       id="network"
-      toggleNetwork={[MockFunction]}
     />
     <div
       className="MuiBox-root emotion-8"
@@ -636,18 +610,13 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
       <span
         className="MuiTypography-root MuiTypography-caption emotion-15"
       >
-        light
+        ui:common.light
       </span>
     </div>
     <div
       id="SettingsList"
     />
   </div>
-  <div
-    actionHeight={0}
-    className="emotion-16 open"
-    id="NetworkList"
-  />
 </div>
 `;
 
@@ -729,7 +698,7 @@ exports[`screen: Nav/ActionBar it renders 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.4375em;
   color: #000000;
@@ -749,10 +718,6 @@ exports[`screen: Nav/ActionBar it renders 1`] = `
 .emotion-3.Mui-disabled {
   color: rgba(0, 0, 0, 0.38);
   cursor: default;
-}
-
-.emotion-3 {
-  border-radius: 12px;
 }
 
 .emotion-4 {
@@ -890,10 +855,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
   animation-duration: 5000s;
   -webkit-animation-name: mui-auto-fill;
   animation-name: mui-auto-fill;
-}
-
-.emotion-6 {
-  padding: 8px 12px;
 }
 
 .emotion-7 {
@@ -1089,11 +1050,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
 }
 
 .emotion-10.Mui-checked {
-  color: #FF835B;
+  color: #8400CD;
 }
 
 .emotion-10.Mui-checked:hover {
-  background-color: rgba(255, 131, 91, 0.04);
+  background-color: rgba(132, 0, 205, 0.04);
 }
 
 @media (hover: none) {
@@ -1103,11 +1064,11 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
 }
 
 .emotion-10.Mui-checked.Mui-disabled {
-  color: rgb(255, 207, 192);
+  color: rgb(208, 158, 236);
 }
 
 .emotion-10.Mui-checked+.MuiSwitch-track {
-  background-color: #FF835B;
+  background-color: #8400CD;
 }
 
 .emotion-11 {
@@ -1146,7 +1107,7 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
   margin: 0;
   font-size: 0.75rem;
   letter-spacing: 0.4px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.66;
   margin-left: 8px;
@@ -1158,23 +1119,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
     display: none;
     margin: 0;
   }
-}
-
-.emotion-15 {
-  width: 100%;
-  z-index: 1201;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.emotion-15.open {
-  opacity: 1;
-  visibility: visible;
 }
 
 <div
@@ -1213,14 +1157,14 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
           </svg>
         </div>
         <input
-          aria-label="searchBarPlaceholderDtag"
+          aria-label="ui:common.searchBarPlaceholderDtag"
           className="MuiInputBase-input MuiInputBase-inputAdornedStart emotion-6"
           onAnimationStart={[Function]}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
-          placeholder="searchBarPlaceholderDtag"
+          placeholder="ui:common.searchBarPlaceholderDtag"
           type="text"
           value=""
         />
@@ -1229,7 +1173,6 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
     <div
       className="emotion-7"
       id="network"
-      toggleNetwork={[MockFunction]}
     />
     <div
       className="MuiBox-root emotion-8"
@@ -1272,17 +1215,12 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
       <span
         className="MuiTypography-root MuiTypography-caption emotion-14"
       >
-        light
+        ui:common.light
       </span>
     </div>
     <div
       id="SettingsList"
     />
   </div>
-  <div
-    actionHeight={0}
-    className="emotion-15"
-    id="NetworkList"
-  />
 </div>
 `;

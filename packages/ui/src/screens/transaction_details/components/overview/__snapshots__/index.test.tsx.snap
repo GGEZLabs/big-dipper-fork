@@ -19,7 +19,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
       {
         "detail": "",
         "key": "hash",
-        "label": "hash",
+        "label": "ui:transactions.hash",
       },
       {
         "detail": <ForwardRef(LinkComponent)
@@ -30,45 +30,45 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
           0
         </ForwardRef(LinkComponent)>,
         "key": "height",
-        "label": "height",
+        "label": "ui:transactions.height",
       },
       {
         "detail": "2020-08-10 12:00:00",
         "key": "time",
-        "label": "time",
+        "label": "ui:transactions.time",
       },
       {
         "detail": "5,000 DARIC",
         "key": "fee",
-        "label": "fee",
+        "label": "ui:transactions.fee",
       },
       {
         "detail": "0 / 0",
         "key": "gas",
-        "label": "gas",
+        "label": "ui:transactions.gas",
       },
       {
         "detail": <Unknown
           success={false}
         />,
         "key": "result",
-        "label": "result",
+        "label": "ui:transactions.result",
       },
       {
         "className": "memo",
         "detail": "",
         "key": "memo",
-        "label": "memo",
+        "label": "ui:transactions.memo",
       },
       {
         "className": "memo",
         "detail": "",
         "key": "error",
-        "label": "error",
+        "label": "ui:transactions.error",
       },
     ]
   }
   id="BoxDetails"
-  title="overview"
+  title="ui:transactions.overview"
 />
 `;

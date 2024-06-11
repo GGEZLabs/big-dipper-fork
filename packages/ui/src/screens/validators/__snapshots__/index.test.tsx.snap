@@ -12,13 +12,13 @@ exports[`screen: Validators matches snapshot 1`] = `
 }
 
 .emotion-0 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 <div
   className="emotion-0"
   id="Layout"
-  navTitle="validators"
+  navTitle="ui:validators.validators"
 >
   <div
     id="List"

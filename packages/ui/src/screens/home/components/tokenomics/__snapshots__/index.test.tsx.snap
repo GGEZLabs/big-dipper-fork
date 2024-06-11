@@ -20,7 +20,7 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
   margin: 0;
   font-size: 1.5rem;
   letter-spacing: 0;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 16px;
@@ -50,7 +50,7 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
   margin: 0;
   font-size: 1rem;
   letter-spacing: 0.15px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.235;
 }
@@ -59,7 +59,7 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
   margin: 0;
   font-size: 0.75rem;
   letter-spacing: 0.4px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.66;
 }
@@ -121,16 +121,16 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
   margin-right: 5px;
 }
 
-.emotion-8 .legends__item:first-of-type:before {
-  background: #2FB6E0;
+.emotion-8 .legends__item:first-child:before {
+  background: #0081C9;
 }
 
-.emotion-8 .legends__item:nth-of-type(2):before {
-  background: #FFC93D;
+.emotion-8 .legends__item:nth-child(2):before {
+  background: #5BC0F8;
 }
 
 .emotion-8 .legends__item:last-child:before {
-  background: #20D494;
+  background: #86E5FF;
 }
 
 .emotion-8 .legends__item .caption__percent {
@@ -144,7 +144,7 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
   <h2
     className="MuiTypography-root MuiTypography-h2 emotion-1"
   >
-    tokenomics
+    ui:home.tokenomics
   </h2>
   <div
     className="emotion-2"
@@ -155,13 +155,13 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 emotion-3"
       >
-        254,578,529,800
+        254,579
          
       </h4>
       <span
         className="MuiTypography-root MuiTypography-caption emotion-4"
       >
-        bondedPercent
+        ui:home.bondedPercent
       </span>
     </div>
     <div
@@ -170,13 +170,13 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 emotion-3"
       >
-        -459,465,964,998
+        -459,466
          
       </h4>
       <span
         className="MuiTypography-root MuiTypography-caption emotion-4"
       >
-        unbondedPercent
+        ui:home.unbondedPercent
       </span>
     </div>
   </div>
@@ -192,7 +192,7 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
         <span
           className="MuiTypography-root MuiTypography-caption emotion-4"
         >
-          bonded
+          ui:home.bonded
         </span>
       </div>
       <div
@@ -201,7 +201,7 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
         <span
           className="MuiTypography-root MuiTypography-caption emotion-4"
         >
-          unbonded
+          ui:home.unbonded
         </span>
       </div>
       <div
@@ -210,7 +210,7 @@ exports[`screen: Home/Tokenomics matches snapshot 1`] = `
         <span
           className="MuiTypography-root MuiTypography-caption emotion-4"
         >
-          unbonding
+          ui:home.unbonding
         </span>
       </div>
     </div>

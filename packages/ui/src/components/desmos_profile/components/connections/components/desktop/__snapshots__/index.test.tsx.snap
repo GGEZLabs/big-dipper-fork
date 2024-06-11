@@ -11,7 +11,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
 .emotion-0 caption {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   padding: 16px;
@@ -40,17 +40,17 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
 }
 
 .emotion-2.Mui-selected {
-  background-color: rgba(255, 131, 91, 0.08);
+  background-color: rgba(132, 0, 205, 0.08);
 }
 
 .emotion-2.Mui-selected:hover {
-  background-color: rgba(255, 131, 91, 0.12);
+  background-color: rgba(132, 0, 205, 0.12);
 }
 
 .emotion-3 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 500;
   line-height: 1.5rem;
   display: table-cell;
@@ -71,7 +71,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
 .emotion-5 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 500;
   line-height: 1.5rem;
   display: table-cell;
@@ -107,7 +107,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
 .emotion-8 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   display: table-cell;
@@ -128,7 +128,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
 .emotion-10 {
   font-size: 0.875rem;
   letter-spacing: 0.25px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.43;
   display: table-cell;
@@ -172,7 +172,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
             }
           }
         >
-          network
+          ui:accounts.network
         </th>
         <th
           aria-sort={null}
@@ -184,7 +184,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
             }
           }
         >
-          identifier
+          ui:accounts.identifier
         </th>
         <th
           aria-sort={null}
@@ -196,7 +196,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
             }
           }
         >
-          creationTime
+          ui:accounts.creationTime
         </th>
       </tr>
     </thead>

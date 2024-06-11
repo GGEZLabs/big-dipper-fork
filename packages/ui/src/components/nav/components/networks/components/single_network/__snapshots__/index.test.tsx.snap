@@ -34,7 +34,7 @@ exports[`screen: Nav/SingleNetwork it renders 1`] = `
   margin: 0;
   font-size: 0.75rem;
   letter-spacing: 0.4px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.66;
   padding: 4px 8px;
@@ -44,15 +44,15 @@ exports[`screen: Nav/SingleNetwork it renders 1`] = `
 }
 
 .emotion-2.retired {
-  background: #2FB6E0;
+  background: #00E7FF;
 }
 
 .emotion-2.testnet {
-  background: #20D494;
+  background: #00d5ff;
 }
 
 .emotion-2.mainnet {
-  background: #FF835B;
+  background: #8400CD;
 }
 
 <a

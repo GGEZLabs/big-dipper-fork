@@ -6,7 +6,7 @@ exports[`screen: TransactionDetails/CreatePeriodicVestingAccount matches snapsho
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -16,7 +16,12 @@ exports[`screen: TransactionDetails/CreatePeriodicVestingAccount matches snapsho
 >
   <span
     data-testid="Trans"
-    i18nKey="message_contents:MsgCreatePeriodicVestingAccount"
+    i18nKey={
+      [
+        "ui:message_contents.MsgCreatePeriodicVestingAccount",
+        "message_contents:MsgCreatePeriodicVestingAccount",
+      ]
+    }
   >
     <div
       address="toAddress"

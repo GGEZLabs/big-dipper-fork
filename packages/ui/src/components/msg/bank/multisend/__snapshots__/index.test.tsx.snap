@@ -6,7 +6,7 @@ exports[`screen: TransactionDetails/MsgMultiSend matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -21,7 +21,12 @@ exports[`screen: TransactionDetails/MsgMultiSend matches snapshot 1`] = `
   >
     <span
       data-testid="Trans"
-      i18nKey="message_contents:txMultisendContentOne"
+      i18nKey={
+        [
+          "ui:message_contents.txMultisendContentOne",
+          "message_contents:txMultisendContentOne",
+        ]
+      }
     >
       <div
         address="address"
@@ -40,7 +45,12 @@ exports[`screen: TransactionDetails/MsgMultiSend matches snapshot 1`] = `
     >
       <span
         data-testid="Trans"
-        i18nKey="message_contents:txMultisendContentTwo"
+        i18nKey={
+          [
+            "ui:message_contents.txMultisendContentTwo",
+            "message_contents:txMultisendContentTwo",
+          ]
+        }
       >
         <div
           address="output1"
@@ -56,7 +66,12 @@ exports[`screen: TransactionDetails/MsgMultiSend matches snapshot 1`] = `
     >
       <span
         data-testid="Trans"
-        i18nKey="message_contents:txMultisendContentTwo"
+        i18nKey={
+          [
+            "ui:message_contents.txMultisendContentTwo",
+            "message_contents:txMultisendContentTwo",
+          ]
+        }
       >
         <div
           address="output2"

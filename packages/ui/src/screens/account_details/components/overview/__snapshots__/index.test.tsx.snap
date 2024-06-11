@@ -75,7 +75,7 @@ exports[`screen: AccountDetails/Overview matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -106,7 +106,7 @@ exports[`screen: AccountDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-2"
     >
-      address
+      ui:accounts.address
     </p>
     <div
       className="detail"
@@ -141,7 +141,7 @@ exports[`screen: AccountDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-2"
     >
-      rewardAddress
+      ui:accounts.rewardAddress
     </p>
     <div
       className="detail"

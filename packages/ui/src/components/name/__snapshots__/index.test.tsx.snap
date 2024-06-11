@@ -2,7 +2,7 @@
 
 exports[`components: Name matches snapshot 1`] = `
 .emotion-0 {
-  color: #4092CD;
+  color: #1D86FF;
   word-break: break-all;
 }
 

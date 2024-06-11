@@ -17,7 +17,7 @@ exports[`components: SingleTransaction matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -57,7 +57,7 @@ exports[`components: SingleTransaction matches snapshot 1`] = `
 }
 
 .emotion-5 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 @media (min-width:768px) {
@@ -70,7 +70,7 @@ exports[`components: SingleTransaction matches snapshot 1`] = `
   margin: 0;
   font-size: 1rem;
   letter-spacing: 0.15px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.235;
 }
@@ -124,7 +124,7 @@ exports[`components: SingleTransaction matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 label emotion-6"
         >
-          block
+          ui:transactions.block
         </h4>
         <div>
           block
@@ -136,7 +136,7 @@ exports[`components: SingleTransaction matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 label emotion-6"
         >
-          type
+          ui:transactions.type
         </h4>
         <div>
           type
@@ -148,7 +148,7 @@ exports[`components: SingleTransaction matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 label emotion-6"
         >
-          time
+          ui:transactions.time
         </h4>
         <p
           className="MuiTypography-root MuiTypography-body1 value emotion-2"
@@ -162,7 +162,7 @@ exports[`components: SingleTransaction matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 label emotion-6"
         >
-          messages
+          ui:transactions.messages
         </h4>
         <p
           className="MuiTypography-root MuiTypography-body1 value emotion-2"
@@ -176,7 +176,7 @@ exports[`components: SingleTransaction matches snapshot 1`] = `
         <h4
           className="MuiTypography-root MuiTypography-h4 label emotion-6"
         >
-          result
+          ui:transactions.result
         </h4>
         <div>
           result

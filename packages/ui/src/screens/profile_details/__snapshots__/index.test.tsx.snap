@@ -15,7 +15,7 @@ exports[`screen: ProfileDetails matches snapshot 1`] = `
 }
 
 .emotion-0 a {
-  color: #4092CD;
+  color: #1D86FF;
 }
 
 @media (min-width:1280px) {
@@ -26,7 +26,7 @@ exports[`screen: ProfileDetails matches snapshot 1`] = `
 
 <div
   id="Layout"
-  navTitle="profileDetails"
+  navTitle="ui:profiles.profileDetails"
 >
   <div
     exists={true}
@@ -50,7 +50,7 @@ exports[`screen: ProfileDetails matches snapshot 1`] = `
           [
             {
               "creationTime": "2021-10-06T00:10:45.761731",
-              "identifier": "desmostest",
+              "identifier": "ggeztest",
               "network": "desmos",
             },
           ]

@@ -103,7 +103,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
   font-size: 1rem;
   white-space: pre-wrap;
   letter-spacing: 0.5px;
-  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "Hind Madurai",sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -126,7 +126,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      type
+      ui:proposals.type
     </p>
     <p
       className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -134,7 +134,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      proposer
+      ui:proposals.proposer
     </p>
     <div
       address=""
@@ -144,7 +144,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      submitTime
+      ui:proposals.submitTime
     </p>
     <p
       className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -154,7 +154,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      depositEndTime
+      ui:proposals.depositEndTime
     </p>
     <p
       className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -164,7 +164,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      description
+      ui:proposals.description
     </p>
     <div
       id="Markdown"
