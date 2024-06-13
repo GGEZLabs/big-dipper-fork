@@ -3,21 +3,28 @@ import { RecoilRoot } from 'recoil';
 import renderer from 'react-test-renderer';
 import { createMockClient, createMockSubscription } from 'mock-apollo-client';
 import { ApolloProvider } from '@apollo/client';
-import { MockTheme, wait } from '@/tests/utils';
-import { TransactionsListenerDocument, TransactionsDocument } from '@graphql/types/general_types';
+import MockTheme from '@/tests/mocks/MockTheme';
+import wait from '@/tests/utils/wait';
+import second from '@/components/load_and_exist';
+import { TransactionsListenerDocument, TransactionsDocument } from '@/graphql/types/general_types';
 import Transactions from '.';
 
 // ==================================
 // mocks
 // ==================================
-jest.mock('@components', () => ({
-  Layout: (props) => <div id="Layout" {...props} />,
-  TransactionsList: (props) => <div id="TransactionsList" {...props} />,
-  TransactionListDetails: (props) => <div id="TransactionListDetails" {...props} />,
-  Box: (props) => <div id="Box" {...props} />,
-  LoadAndExist: (props) => <div id="LoadAndExist" {...props} />,
-}));
+jest.mock('@/components/layout', () => (props: JSX.IntrinsicElements['div']) => (
+  <div id="Layout" {...props} />
+));
 
+jest.mock('@/components/holdings_list', () => (props: JSX.IntrinsicElements['div']) => (
+  <div id="HoldingsList" {...props} />
+));
+jest.mock('@/components/box', () => (props: JSX.IntrinsicElements['div']) => (
+  <div id="Box" {...props} />
+));
+jest.mock('@/components/load_and_exist', () => (props: JSX.IntrinsicElements['div']) => (
+  <div id="LoadAndExist" {...props} />
+));
 const mockTransactionsListenerDocument = {
   data: {
     transactions: [

@@ -156,12 +156,3 @@ const Desktop: React.FC<HoldingsListState> = ({ className, holdings }) => {
 };
 
 export default Desktop;
-
-/// ///
-/* 
-
- 
-
-
-
-*/

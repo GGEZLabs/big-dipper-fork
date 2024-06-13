@@ -56,51 +56,51 @@ const Desktop: React.FC<{
       fundName:
         // <Typography variant="body1" className="value">
         x.fund_name,
-        // </Typography>
+      // </Typography>
       type:
         // <Typography variant="body1" className="value">
         x.type,
-        // </Typography>
+      // </Typography>
       heldNoShares:
         // <Typography variant="body1" className="value">
         numeral(x.no_shares).format('0,0'),
-        // </Typography>
+      // </Typography>
       currency:
         // <Typography variant="body1" className="value">
         x.currency,
-        // </Typography>
+      // </Typography>
       price:
         // <Typography variant="body1" className="value">
         cur + numeral(x.price).format('0,0.00'),
-        // </Typography>
+      // </Typography>
       value:
         // <Typography variant="body1" className="value">
         cur + numeral(x.value).format('0,0.00'),
-        // </Typography>
+      // </Typography>
       fee:
         // <Typography variant="body1" className="value">
         cur + numeral(x.fee).format('0,0.00'),
-        // </Typography>
+      // </Typography>
       netValue:
         // <Typography variant="body1" className="value">
         cur + numeral(x.net_value).format('0,0.00'),
-        // </Typography>
+      // </Typography>
       netPrice:
         // <Typography variant="body1" className="value">
         cur + numeral(x.net_price).format('0,0.00'),
-        // </Typography>
+      // </Typography>
       issuedCoins:
         // <Typography variant="body1" className="value">
         numeral(x.issued_coins / 1000000).format('0,0.00'),
-        // </Typography>
+      // </Typography>
       coinMintingPrice:
         // <Typography variant="body1" className="value">
         cur + numeral(x.coin_minting_price * 1000000).format('0.0000'),
-        // </Typography>
+      // </Typography>
       time:
         // <Typography variant="body1" className="value">
         x.timestamp,
-        // </Typography>
+      // </Typography>
     };
   });
 
