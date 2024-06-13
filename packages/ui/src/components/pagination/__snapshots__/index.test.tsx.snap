@@ -151,7 +151,7 @@ exports[`components: Pagination matches snapshot 1`] = `
     <p
       className="MuiTablePagination-displayedRows emotion-3"
     >
-      ui:common.paginationLabelOne
+      paginationLabelOne
     </p>
     <div
       className="emotion-4"

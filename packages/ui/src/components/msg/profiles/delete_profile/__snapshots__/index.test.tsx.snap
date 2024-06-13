@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/DeleteProfile matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txDeleteProfileContent",
-        "message_contents:txDeleteProfileContent",
-      ]
-    }
+    i18nKey="message_contents:txDeleteProfileContent"
   >
     <div
       address="creator"

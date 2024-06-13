@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/IBCCreateClient matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txCreateClientContent",
-        "message_contents:txCreateClientContent",
-      ]
-    }
+    i18nKey="message_contents:txCreateClientContent"
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"

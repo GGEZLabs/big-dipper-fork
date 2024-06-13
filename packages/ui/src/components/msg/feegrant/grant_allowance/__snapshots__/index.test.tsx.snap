@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/Grant matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.MsgGrantAllowance",
-        "message_contents:MsgGrantAllowance",
-      ]
-    }
+    i18nKey="message_contents:MsgGrantAllowance"
   >
     <div
       address="sponderbob"

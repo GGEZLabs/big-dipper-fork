@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/WithdrawReward matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txWithdrawRewardContent",
-        "message_contents:txWithdrawRewardContent",
-      ]
-    }
+    i18nKey="message_contents:txWithdrawRewardContent"
   >
     <div
       address="delegatorAddress"

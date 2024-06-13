@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/CreateRelationship matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txCreateRelationshipContent",
-        "message_contents:txCreateRelationshipContent",
-      ]
-    }
+    i18nKey="message_contents:txCreateRelationshipContent"
   >
     <div
       address="sender"

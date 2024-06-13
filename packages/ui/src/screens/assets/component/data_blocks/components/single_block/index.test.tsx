@@ -1,7 +1,6 @@
-import React from 'react';
 import renderer from 'react-test-renderer';
-import { MockTheme } from '@tests/utils';
-import SingleBlock from '.';
+import SingleBlock from '@/screens/home/components/data_blocks/components/single_block';
+import MockTheme from '@/tests/mocks/MockTheme';
 
 // ==================================
 // unit tests
@@ -13,7 +12,7 @@ describe('screen: Home/SingleBlock', () => {
         <SingleBlock label="Price" value="$4.40" />
       </MockTheme>
     );
-    const tree = component.toJSON();
+    const tree = component?.toJSON();
     expect(tree).toMatchSnapshot();
   });
 

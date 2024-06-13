@@ -297,7 +297,7 @@ exports[`screen: Nav/ThemeToggle it renders 1`] = `
   <span
     className="MuiTypography-root MuiTypography-caption emotion-6"
   >
-    ui:common.light
+    light
   </span>
 </div>
 `;

@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/IBCChannelCloseInit matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txChannelCloseInitContent",
-        "message_contents:txChannelCloseInitContent",
-      ]
-    }
+    i18nKey="message_contents:txChannelCloseInitContent"
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"

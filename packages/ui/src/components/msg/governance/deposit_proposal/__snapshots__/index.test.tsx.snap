@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/DepositProposal matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txDepositContent",
-        "message_contents:txDepositContent",
-      ]
-    }
+    i18nKey="message_contents:txDepositContent"
   >
     <div
       address="depositor"

@@ -308,7 +308,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 label emotion-2"
     >
-      ui:home.latestBlock
+      latestBlock
     </p>
     <div
       className="content"
@@ -329,7 +329,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 label emotion-2"
     >
-      ui:home.averageBlockTime
+      averageBlockTime
     </p>
     <div
       className="content"
@@ -350,7 +350,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 label emotion-2"
     >
-      ui:home.price
+      price
     </p>
     <div
       className="content"
@@ -371,7 +371,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body2 label emotion-2"
     >
-      ui:home.activeValidators
+      activeValidators
     </p>
     <div
       className="content"
@@ -387,7 +387,7 @@ exports[`screen: Home/DataBlocks matches snapshot 1`] = `
         <span
           className="MuiTypography-root MuiTypography-caption description emotion-13"
         >
-          ui:home.outOfValidators
+          outOfValidators
         </span>
       </div>
     </div>

@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/Revoke matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.MsgRevokeAllowance",
-        "message_contents:MsgRevokeAllowance",
-      ]
-    }
+    i18nKey="message_contents:MsgRevokeAllowance"
   >
     <div
       address="sponderbob"

@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/MsgVerifyInvariant matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txVerifyInvariantContent",
-        "message_contents:txVerifyInvariantContent",
-      ]
-    }
+    i18nKey="message_contents:txVerifyInvariantContent"
   >
     <div
       address="sender"

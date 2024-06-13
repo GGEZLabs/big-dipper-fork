@@ -64,7 +64,7 @@ exports[`screen: BlockDetails/Transactions matches snapshot 1`] = `
     <h2
       className="MuiTypography-root MuiTypography-h2 emotion-2"
     >
-      ui:transactions.transactions
+      transactions
     </h2>
   </div>
   <div

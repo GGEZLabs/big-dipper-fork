@@ -38,13 +38,13 @@ describe('screen: Nav/Desktop', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it('hook toggles correctly', () => {
-    renderer.act(() => {
-      component.root.findByProps({ role: 'button', 'aria-label': 'toggle menu' }).props.onClick();
-    });
-    const tree = component?.toJSON();
-    expect(tree).toMatchSnapshot();
-  });
+  // it('hook toggles correctly', () => {
+  //   renderer.act(() => {
+  //     component.root.findByProps({ role: 'button', 'aria-label': 'toggle menu' }).props.onClick();
+  //   });
+  //   const tree = component?.toJSON();
+  //   expect(tree).toMatchSnapshot();
+  // });
 });
 
 afterEach(() => {

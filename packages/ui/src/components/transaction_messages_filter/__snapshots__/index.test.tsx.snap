@@ -78,7 +78,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.none
+      none
     </div>
   </div>
   <div
@@ -92,7 +92,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.bank
+      bank
     </div>
   </div>
   <div
@@ -106,7 +106,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.crisis
+      crisis
     </div>
   </div>
   <div
@@ -120,7 +120,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.distribution
+      distribution
     </div>
   </div>
   <div
@@ -134,7 +134,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.governance
+      governance
     </div>
   </div>
   <div
@@ -148,7 +148,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.slashing
+      slashing
     </div>
   </div>
   <div
@@ -162,7 +162,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.staking
+      staking
     </div>
   </div>
   <div
@@ -176,7 +176,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.authz
+      authz
     </div>
   </div>
   <div
@@ -190,7 +190,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.feegrant
+      feegrant
     </div>
   </div>
   <div
@@ -204,7 +204,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.vesting
+      vesting
     </div>
   </div>
   <div
@@ -218,7 +218,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.profiles
+      profiles
     </div>
   </div>
   <div
@@ -232,7 +232,7 @@ exports[`component: TransactionMessagesFilter it renders 1`] = `
       noWrap={true}
       variant="body1"
     >
-      ui:transactions.others
+      others
     </div>
   </div>
 </div>

@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/WithdrawCommission matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txWithdrawCommissionContent",
-        "message_contents:txWithdrawCommissionContent",
-      ]
-    }
+    i18nKey="message_contents:txWithdrawCommissionContent"
   >
     <div
       address="validatorAddress"

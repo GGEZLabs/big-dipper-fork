@@ -1,10 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`screen: Transactions matches snapshot 1`] = `
+exports[`screen: Trades matches snapshot 1`] = `
+.emotion-0 {
+  padding: 16px;
+}
+
+@media (min-width: 1280px) {
+  .emotion-0 {
+    padding: 16px 24px;
+  }
+}
+
+.emotion-0 a {
+  color: #1D86FF;
+}
+
+.emotion-1 {
+  min-height: 500px;
+  height: 50vh;
+}
+
+@media (min-width:1280px) {
+  .emotion-1 {
+    height: 100%;
+    min-height: 65vh;
+  }
+}
+
 <div
-  className="makeStyles-root"
+  className="emotion-0"
   id="Layout"
-  navTitle="transactions:transactions"
+  navTitle="trades"
 >
   <div
     exists={true}
@@ -12,65 +38,34 @@ exports[`screen: Transactions matches snapshot 1`] = `
     loading={false}
   >
     <div
-      className="makeStyles-box"
+      className="emotion-1"
       id="Box"
     >
       <div
         hasNextPage={false}
-        id="TransactionsList"
+        id="TradesList"
         isItemLoaded={[Function]}
         isNextPageLoading={false}
         itemCount={1}
         loadMoreItems={[Function]}
         loadNextPage={[Function]}
-        transactions={
-          Array [
-            Object {
-              "hash": "D223E2E4E4FD29868D1034EFE5FB162EAB78B4CCE1D53EFD4F34A40608FB6C4B",
-              "height": 432022,
-              "messages": Object {
-                "count": 2,
-                "items": Array [
-                  MsgWithdrawDelegatorReward {
-                    "amounts": Array [
-                      Object {
-                        "baseDenom": "udaric",
-                        "displayDenom": "daric",
-                        "exponent": 6,
-                        "value": "0.000000",
-                      },
-                    ],
-                    "category": "distribution",
-                    "delegatorAddress": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
-                    "json": Object {
-                      "@type": "/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
-                      "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
-                      "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
-                    },
-                    "type": "/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
-                    "validatorAddress": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
-                  },
-                  MsgWithdrawValidatorCommission {
-                    "amounts": Array [
-                      Object {
-                        "baseDenom": "udaric",
-                        "displayDenom": "daric",
-                        "exponent": 6,
-                        "value": "0.000000",
-                      },
-                    ],
-                    "category": "distribution",
-                    "json": Object {
-                      "@type": "/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
-                      "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
-                    },
-                    "type": "/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
-                    "validatorAddress": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
-                  },
-                ],
-              },
-              "success": true,
-              "timestamp": "2021-05-28T00:08:33.700487",
+        trades={
+          [
+            {
+              "asset_ticker": "CRBN",
+              "coin_minting_price": 1.0383e-8,
+              "currency": "USD",
+              "fee": 21.56,
+              "fund_name": "Low Carbon Target ETF",
+              "id": 9,
+              "issued_coins": 415371279977,
+              "net_price": 144.47866666666667,
+              "net_value": 4334.36,
+              "no_shares": 30,
+              "price": 143.76,
+              "timestamp": "2023-09-09T12:48:40.138522",
+              "type": "buy",
+              "value": 4312.799999999999,
             },
           ]
         }

@@ -30,7 +30,7 @@ exports[`screen: Blocks matches snapshot 1`] = `
 <div
   className="emotion-0"
   id="Layout"
-  navTitle="ui:blocks.blocks"
+  navTitle="blocks"
 >
   <div
     exists={true}

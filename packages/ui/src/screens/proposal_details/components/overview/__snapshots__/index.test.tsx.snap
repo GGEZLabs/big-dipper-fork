@@ -126,7 +126,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      ui:proposals.type
+      type
     </p>
     <p
       className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -134,7 +134,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      ui:proposals.proposer
+      proposer
     </p>
     <div
       address=""
@@ -144,7 +144,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      ui:proposals.submitTime
+      submitTime
     </p>
     <p
       className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -154,7 +154,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      ui:proposals.depositEndTime
+      depositEndTime
     </p>
     <p
       className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -164,7 +164,7 @@ exports[`screen: BlockDetails/Overview matches snapshot 1`] = `
     <p
       className="MuiTypography-root MuiTypography-body1 label emotion-3"
     >
-      ui:proposals.description
+      description
     </p>
     <div
       id="Markdown"

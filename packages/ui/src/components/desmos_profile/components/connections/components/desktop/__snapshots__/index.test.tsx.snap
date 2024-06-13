@@ -172,7 +172,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
             }
           }
         >
-          ui:accounts.network
+          network
         </th>
         <th
           aria-sort={null}
@@ -184,7 +184,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
             }
           }
         >
-          ui:accounts.identifier
+          identifier
         </th>
         <th
           aria-sort={null}
@@ -196,7 +196,7 @@ exports[`screen: DesmosProfile/Desktop it renders 1`] = `
             }
           }
         >
-          ui:accounts.creationTime
+          creationTime
         </th>
       </tr>
     </thead>

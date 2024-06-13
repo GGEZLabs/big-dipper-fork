@@ -182,35 +182,35 @@ exports[`screen: Home/Blocks/Desktop matches snapshot 1`] = `
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-4"
           scope="col"
         >
-          ui:blocks.height
+          height
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-4"
           scope="col"
         >
-          ui:blocks.proposer
+          proposer
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium emotion-4"
           scope="col"
         >
-          ui:blocks.hash
+          hash
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium emotion-7"
           scope="col"
         >
-          ui:blocks.txs
+          txs
         </th>
         <th
           aria-sort={null}
           className="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium emotion-7"
           scope="col"
         >
-          ui:blocks.time
+          time
         </th>
       </tr>
     </thead>

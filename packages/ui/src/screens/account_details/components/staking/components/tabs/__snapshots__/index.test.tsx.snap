@@ -230,7 +230,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={0}
           type="button"
         >
-          ui:accounts.key
+          key
           <span
             className="MuiTabs-indicator emotion-6"
             style={{}}

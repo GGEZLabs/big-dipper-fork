@@ -22,7 +22,7 @@ exports[`screen: Proposals matches snapshot 1`] = `
 <div
   className="emotion-0"
   id="Layout"
-  navTitle="ui:proposals.proposals"
+  navTitle="proposals"
 >
   <div
     className="emotion-1"

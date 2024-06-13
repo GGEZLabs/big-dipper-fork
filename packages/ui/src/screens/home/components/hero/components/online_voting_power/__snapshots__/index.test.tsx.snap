@@ -158,7 +158,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 1`] = `
   <h2
     className="MuiTypography-root MuiTypography-h2 emotion-1"
   >
-    ui:home.onlineVotingPower
+    onlineVotingPower
   </h2>
   <div
     className="emotion-2"
@@ -193,7 +193,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-9"
       >
-        ui:home.validators
+        validators
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-4"
@@ -207,7 +207,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-9"
       >
-        ui:home.votingPowerPercent
+        votingPowerPercent
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-4"
@@ -221,7 +221,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-9"
       >
-        ui:home.votingPower
+        votingPower
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-4"
@@ -235,7 +235,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-9"
       >
-        ui:home.totalVotingPower
+        totalVotingPower
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-4"
@@ -405,7 +405,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 2`] = `
   <h2
     className="MuiTypography-root MuiTypography-h2 emotion-1"
   >
-    ui:home.onlineVotingPower
+    onlineVotingPower
   </h2>
   <div
     className="emotion-2"
@@ -440,7 +440,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 2`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-9"
       >
-        ui:home.validators
+        validators
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-4"
@@ -454,7 +454,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 2`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-9"
       >
-        ui:home.votingPowerPercent
+        votingPowerPercent
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-4"
@@ -468,7 +468,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 2`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-9"
       >
-        ui:home.votingPower
+        votingPower
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-4"
@@ -482,7 +482,7 @@ exports[`screen: Home/OnlineVotingPower matches snapshot 2`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-9"
       >
-        ui:home.totalVotingPower
+        totalVotingPower
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-4"

@@ -439,7 +439,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
         <p
           className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          ui:common.GovernanceCoin
+          GovernanceCoin
         </p>
         <p
           className="MuiTypography-root MuiTypography-body1 data-left emotion-17"
@@ -453,7 +453,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
         <p
           className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          ui:common.marketCap
+          marketCap
         </p>
         <p
           className="MuiTypography-root MuiTypography-body1 data-left emotion-17"
@@ -467,7 +467,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
         <p
           className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          ui:common.supply
+          supply
         </p>
         <p
           className="MuiTypography-root MuiTypography-body1 data-left emotion-17"
@@ -481,7 +481,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
         <p
           className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          ui:common.price
+          price
         </p>
         <p
           className="MuiTypography-root MuiTypography-body1 data-left emotion-17"
@@ -504,7 +504,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
         <p
           className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          ui:common.StableCoin
+          StableCoin
         </p>
         <p
           className="MuiTypography-root MuiTypography-body1 data-right emotion-17"
@@ -518,7 +518,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
         <p
           className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          ui:common.marketCap
+          marketCap
         </p>
         <p
           className="MuiTypography-root MuiTypography-body1 data-right emotion-17"
@@ -532,7 +532,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
         <p
           className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          ui:common.supply
+          supply
         </p>
         <p
           className="MuiTypography-root MuiTypography-body1 data-right emotion-17"
@@ -546,7 +546,7 @@ exports[`screen: Nav/Mobile it renders 1`] = `
         <p
           className="MuiTypography-root MuiTypography-body1 label emotion-17"
         >
-          ui:common.price
+          price
         </p>
         <p
           className="MuiTypography-root MuiTypography-body1 data-right emotion-17"

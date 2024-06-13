@@ -268,7 +268,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={0}
           type="button"
         >
-          ui:validators.active
+          active
           <span
             className="MuiTabs-indicator emotion-6"
             style={{}}
@@ -297,7 +297,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={-1}
           type="button"
         >
-          ui:validators.inactive
+          inactive
         </button>
         <button
           aria-controls="simple-tabpanel-2"
@@ -322,7 +322,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={-1}
           type="button"
         >
-          ui:validators.allValidators
+          allValidators
         </button>
       </div>
     </div>
@@ -331,7 +331,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
     callback={[MockFunction]}
     className="emotion-9"
     id="Search"
-    placeholder="ui:validators.searchValidator"
+    placeholder="searchValidator"
   />
 </div>
 `;

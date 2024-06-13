@@ -257,7 +257,7 @@ exports[`screen: Proposals/List matches snapshot 1`] = `
                     <p
                       className="MuiTypography-root MuiTypography-body1 emotion-9"
                     >
-                      ui:proposals.passed
+                      passed
                     </p>
                   </div>
                 </span>
@@ -291,7 +291,7 @@ exports[`screen: Proposals/List matches snapshot 1`] = `
                   <p
                     className="MuiTypography-root MuiTypography-body1 emotion-9"
                   >
-                    ui:proposals.passed
+                    passed
                   </p>
                 </div>
               </span>
@@ -334,7 +334,7 @@ exports[`screen: Proposals/List matches snapshot 1`] = `
                     <p
                       className="MuiTypography-root MuiTypography-body1 emotion-9"
                     >
-                      ui:proposals.rejected
+                      rejected
                     </p>
                   </div>
                 </span>
@@ -368,7 +368,7 @@ exports[`screen: Proposals/List matches snapshot 1`] = `
                   <p
                     className="MuiTypography-root MuiTypography-body1 emotion-9"
                   >
-                    ui:proposals.rejected
+                    rejected
                   </p>
                 </div>
               </span>

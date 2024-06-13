@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/CreatePeriodicVestingAccount matches snapsho
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.MsgCreatePeriodicVestingAccount",
-        "message_contents:MsgCreatePeriodicVestingAccount",
-      ]
-    }
+    i18nKey="message_contents:MsgCreatePeriodicVestingAccount"
   >
     <div
       address="toAddress"

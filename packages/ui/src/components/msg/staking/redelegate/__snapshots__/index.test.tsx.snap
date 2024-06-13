@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/Redelegate matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txRedelegateContent",
-        "message_contents:txRedelegateContent",
-      ]
-    }
+    i18nKey="message_contents:txRedelegateContent"
   >
     <div
       address="delegatorAddress"

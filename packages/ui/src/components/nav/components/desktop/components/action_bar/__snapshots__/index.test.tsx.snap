@@ -549,14 +549,14 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
           </svg>
         </div>
         <input
-          aria-label="ui:common.searchBarPlaceholderDtag"
+          aria-label="searchBarPlaceholderDtag"
           className="MuiInputBase-input MuiInputBase-inputAdornedStart emotion-6"
           onAnimationStart={[Function]}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
-          placeholder="ui:common.searchBarPlaceholderDtag"
+          placeholder="searchBarPlaceholderDtag"
           type="text"
           value=""
         />
@@ -610,7 +610,7 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
       <span
         className="MuiTypography-root MuiTypography-caption emotion-15"
       >
-        ui:common.light
+        light
       </span>
     </div>
     <div
@@ -1157,14 +1157,14 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
           </svg>
         </div>
         <input
-          aria-label="ui:common.searchBarPlaceholderDtag"
+          aria-label="searchBarPlaceholderDtag"
           className="MuiInputBase-input MuiInputBase-inputAdornedStart emotion-6"
           onAnimationStart={[Function]}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
           onKeyDown={[Function]}
-          placeholder="ui:common.searchBarPlaceholderDtag"
+          placeholder="searchBarPlaceholderDtag"
           type="text"
           value=""
         />
@@ -1215,7 +1215,7 @@ label[data-shrink=false]+.MuiInputBase-formControl .emotion-6:focus::-ms-input-p
       <span
         className="MuiTypography-root MuiTypography-caption emotion-14"
       >
-        ui:common.light
+        light
       </span>
     </div>
     <div

@@ -69,7 +69,7 @@ exports[`component: SingleSlotMobile matches snapshot 1`] = `
     <h4
       className="MuiTypography-root MuiTypography-h4 label emotion-2"
     >
-      ui:blocks.height
+      height
     </h4>
     <div
       id="height"
@@ -81,7 +81,7 @@ exports[`component: SingleSlotMobile matches snapshot 1`] = `
     <h4
       className="MuiTypography-root MuiTypography-h4 label emotion-2"
     >
-      ui:blocks.proposer
+      proposer
     </h4>
     <div
       id="proposer"
@@ -93,7 +93,7 @@ exports[`component: SingleSlotMobile matches snapshot 1`] = `
     <h4
       className="MuiTypography-root MuiTypography-h4 label emotion-2"
     >
-      ui:blocks.hash
+      hash
     </h4>
     <p
       className="MuiTypography-root MuiTypography-body1 value emotion-7"
@@ -107,7 +107,7 @@ exports[`component: SingleSlotMobile matches snapshot 1`] = `
     <h4
       className="MuiTypography-root MuiTypography-h4 label emotion-2"
     >
-      ui:blocks.parentHash
+      parentHash
     </h4>
     <p
       className="MuiTypography-root MuiTypography-body1 value emotion-7"
@@ -124,7 +124,7 @@ exports[`component: SingleSlotMobile matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-2"
       >
-        ui:blocks.txs
+        txs
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-7"
@@ -138,7 +138,7 @@ exports[`component: SingleSlotMobile matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-2"
       >
-        ui:blocks.time
+        time
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-7"

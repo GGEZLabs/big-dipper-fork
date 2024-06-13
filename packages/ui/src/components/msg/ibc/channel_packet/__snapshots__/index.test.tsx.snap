@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/IBCMsgPacket matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txPacketContent",
-        "message_contents:txPacketContent",
-      ]
-    }
+    i18nKey="message_contents:txPacketContent"
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"

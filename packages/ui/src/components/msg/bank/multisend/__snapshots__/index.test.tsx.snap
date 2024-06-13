@@ -21,12 +21,7 @@ exports[`screen: TransactionDetails/MsgMultiSend matches snapshot 1`] = `
   >
     <span
       data-testid="Trans"
-      i18nKey={
-        [
-          "ui:message_contents.txMultisendContentOne",
-          "message_contents:txMultisendContentOne",
-        ]
-      }
+      i18nKey="message_contents:txMultisendContentOne"
     >
       <div
         address="address"
@@ -45,12 +40,7 @@ exports[`screen: TransactionDetails/MsgMultiSend matches snapshot 1`] = `
     >
       <span
         data-testid="Trans"
-        i18nKey={
-          [
-            "ui:message_contents.txMultisendContentTwo",
-            "message_contents:txMultisendContentTwo",
-          ]
-        }
+        i18nKey="message_contents:txMultisendContentTwo"
       >
         <div
           address="output1"
@@ -66,12 +56,7 @@ exports[`screen: TransactionDetails/MsgMultiSend matches snapshot 1`] = `
     >
       <span
         data-testid="Trans"
-        i18nKey={
-          [
-            "ui:message_contents.txMultisendContentTwo",
-            "message_contents:txMultisendContentTwo",
-          ]
-        }
+        i18nKey="message_contents:txMultisendContentTwo"
       >
         <div
           address="output2"

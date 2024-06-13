@@ -44,7 +44,7 @@ exports[`components: AvatarNameListMsg matches snapshot with multiple values 1`]
     name-1
   </a>,
   " ",
-  "ui:transactions.and",
+  "and",
   " ",
   .emotion-0 {
   color: #1D86FF;

@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/MsgVote matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txVoteContent",
-        "message_contents:txVoteContent",
-      ]
-    }
+    i18nKey="message_contents:txVoteContent"
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"
@@ -37,7 +32,7 @@ exports[`screen: TransactionDetails/MsgVote matches snapshot 1`] = `
     >
       #
     </a>
-    {"vote":"ui:transactions.no","proposal":""}
+    {"vote":"no","proposal":""}
   </span>
 </p>
 `;

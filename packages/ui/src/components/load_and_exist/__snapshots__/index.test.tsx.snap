@@ -211,7 +211,7 @@ exports[`components: LoadAndExist matches snapshot 1`] = `
       <p
         className="MuiTypography-root MuiTypography-body1 emotion-2"
       >
-        ui:common.notFound
+        notFound
       </p>
     </div>
   </div>,

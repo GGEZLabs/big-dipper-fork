@@ -197,7 +197,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             role="menuitem"
             tabIndex={-1}
           >
-            ui:common.zh
+            zh
             <span
               className="MuiTouchRipple-root emotion-2"
             />
@@ -395,7 +395,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
           role="menuitem"
           tabIndex={-1}
         >
-          ui:common.dark
+          dark
           <span
             className="MuiTouchRipple-root emotion-2"
           />
@@ -420,7 +420,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
           role="menuitem"
           tabIndex={-1}
         >
-          ui:common.deuteranopia
+          deuteranopia
           <span
             className="MuiTouchRipple-root emotion-2"
           />
@@ -445,7 +445,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
           role="menuitem"
           tabIndex={-1}
         >
-          ui:common.tritanopia
+          tritanopia
           <span
             className="MuiTouchRipple-root emotion-2"
           />
@@ -1030,7 +1030,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             <span
               className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-6"
             >
-              ui:common.overview
+              overview
             </span>
           </div>
           <span
@@ -1070,7 +1070,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             <span
               className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-6"
             >
-              ui:common.blocks
+              blocks
             </span>
           </div>
           <span
@@ -1110,7 +1110,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             <span
               className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-6"
             >
-              ui:common.validators
+              validators
             </span>
           </div>
           <span
@@ -1150,7 +1150,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             <span
               className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-6"
             >
-              ui:common.transactions
+              transactions
             </span>
           </div>
           <span
@@ -1190,7 +1190,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             <span
               className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-6"
             >
-              ui:common.tryout
+              tryout
             </span>
           </div>
           <span
@@ -1230,7 +1230,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             <span
               className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-6"
             >
-              ui:common.assets
+              assets
             </span>
           </div>
           <span
@@ -1270,7 +1270,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             <span
               className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-6"
             >
-              ui:common.proposals
+              proposals
             </span>
           </div>
           <span
@@ -1310,7 +1310,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
             <span
               className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-6"
             >
-              ui:common.params
+              params
             </span>
           </div>
           <span
@@ -1390,7 +1390,7 @@ exports[`screen: Nav/Menu it renders 1`] = `
         <span
           className="MuiTypography-root MuiTypography-caption emotion-54"
         >
-          ui:common.light
+          light
         </span>
       </div>
     </div>

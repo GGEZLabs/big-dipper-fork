@@ -62,7 +62,7 @@ exports[`components: ConditionExplanation matches snapshot 1`] = `
   <p
     className="MuiTypography-root MuiTypography-body1 emotion-1"
   >
-    ui:validators.conditionExplanation
+    conditionExplanation
   </p>
   <div
     className="emotion-2"

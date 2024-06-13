@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/MsgSend matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txSendContent",
-        "message_contents:txSendContent",
-      ]
-    }
+    i18nKey="message_contents:txSendContent"
   >
     <div
       address="fromAddress"

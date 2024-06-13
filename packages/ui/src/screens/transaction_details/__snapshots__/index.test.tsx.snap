@@ -39,7 +39,7 @@ exports[`screen: Blocks/List matches snapshot 1`] = `
 
 <div
   id="Layout"
-  navTitle="ui:transactions.transactionDetails"
+  navTitle="transactionDetails"
 >
   <div
     exists={true}

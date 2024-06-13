@@ -18,7 +18,7 @@ exports[`screen: Validators matches snapshot 1`] = `
 <div
   className="emotion-0"
   id="Layout"
-  navTitle="ui:validators.validators"
+  navTitle="validators"
 >
   <div
     id="List"

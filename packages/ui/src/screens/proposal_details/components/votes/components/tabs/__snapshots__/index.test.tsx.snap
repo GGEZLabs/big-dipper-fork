@@ -230,7 +230,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={0}
           type="button"
         >
-          ui:proposals.all (24)
+          all (24)
           <span
             className="MuiTabs-indicator emotion-6"
             style={{}}
@@ -259,7 +259,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={-1}
           type="button"
         >
-          ui:proposals.yes (10)
+          yes (10)
         </button>
         <button
           aria-controls="simple-tabpanel-2"
@@ -284,7 +284,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={-1}
           type="button"
         >
-          ui:proposals.no (4)
+          no (4)
         </button>
         <button
           aria-controls="simple-tabpanel-3"
@@ -309,7 +309,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={-1}
           type="button"
         >
-          ui:proposals.veto (10)
+          veto (10)
         </button>
         <button
           aria-controls="simple-tabpanel-4"
@@ -334,7 +334,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={-1}
           type="button"
         >
-          ui:proposals.abstain (0)
+          abstain (0)
         </button>
         <button
           aria-controls="simple-tabpanel-5"
@@ -359,7 +359,7 @@ exports[`screen: Validators/Tabs matches snapshot 1`] = `
           tabIndex={-1}
           type="button"
         >
-          ui:proposals.didNotVote (0)
+          didNotVote (0)
         </button>
       </div>
     </div>

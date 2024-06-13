@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/DtagTransferRequest matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txRequestDTagTransferContent",
-        "message_contents:txRequestDTagTransferContent",
-      ]
-    }
+    i18nKey="message_contents:txRequestDTagTransferContent"
   >
     <div
       address="sender"

@@ -63,7 +63,7 @@ exports[`screen: ProfileDetails/Connections/Mobile matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-2"
       >
-        ui:accounts.network
+        network
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -77,7 +77,7 @@ exports[`screen: ProfileDetails/Connections/Mobile matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-2"
       >
-        ui:accounts.identifier
+        identifier
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -91,7 +91,7 @@ exports[`screen: ProfileDetails/Connections/Mobile matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-2"
       >
-        ui:accounts.creationTime
+        creationTime
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -112,7 +112,7 @@ exports[`screen: ProfileDetails/Connections/Mobile matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-2"
       >
-        ui:accounts.network
+        network
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -126,7 +126,7 @@ exports[`screen: ProfileDetails/Connections/Mobile matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-2"
       >
-        ui:accounts.identifier
+        identifier
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-3"
@@ -140,7 +140,7 @@ exports[`screen: ProfileDetails/Connections/Mobile matches snapshot 1`] = `
       <h4
         className="MuiTypography-root MuiTypography-h4 label emotion-2"
       >
-        ui:accounts.creationTime
+        creationTime
       </h4>
       <p
         className="MuiTypography-root MuiTypography-body1 value emotion-3"

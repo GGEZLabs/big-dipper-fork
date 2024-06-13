@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/UnBlockUser matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txUnblockUserContent",
-        "message_contents:txUnblockUserContent",
-      ]
-    }
+    i18nKey="message_contents:txUnblockUserContent"
   >
     <div
       address="blocker"

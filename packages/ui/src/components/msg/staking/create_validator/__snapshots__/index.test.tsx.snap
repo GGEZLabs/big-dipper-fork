@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/CreateValidator matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txCreateValidatorContent",
-        "message_contents:txCreateValidatorContent",
-      ]
-    }
+    i18nKey="message_contents:txCreateValidatorContent"
   >
     <div
       address="delegatorAddress"

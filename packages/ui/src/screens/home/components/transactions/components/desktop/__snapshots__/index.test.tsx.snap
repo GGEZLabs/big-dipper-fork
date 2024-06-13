@@ -183,7 +183,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          ui:transactions.block
+          block
         </th>
         <th
           aria-sort={null}
@@ -195,7 +195,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          ui:transactions.hash
+          hash
         </th>
         <th
           aria-sort={null}
@@ -207,7 +207,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          ui:transactions.type
+          type
         </th>
         <th
           aria-sort={null}
@@ -219,7 +219,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          ui:transactions.result
+          result
         </th>
         <th
           aria-sort={null}
@@ -231,7 +231,7 @@ exports[`screen: Home/Transactions/Desktop matches snapshot 1`] = `
             }
           }
         >
-          ui:transactions.time
+          time
         </th>
       </tr>
     </thead>

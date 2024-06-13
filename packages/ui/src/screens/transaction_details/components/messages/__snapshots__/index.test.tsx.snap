@@ -389,7 +389,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
       <h2
         className="MuiTypography-root MuiTypography-h2 emotion-3"
       >
-        ui:transactions.messages
+        messages
       </h2>
       <label
         className="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd emotion-4"
@@ -431,7 +431,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
         <span
           className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label emotion-10"
         >
-          ui:transactions.raw
+          raw
         </span>
       </label>
     </div>
@@ -478,7 +478,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
         <span
           className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label emotion-10"
         >
-          ui:transactions.raw
+          raw
         </span>
       </label>
       <div
@@ -540,7 +540,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
                 <div
                   id="Tag"
                   theme="two"
-                  value="ui:message_labels.txSendLabel"
+                  value="message_labels:txSendLabel"
                 />
               </div>
               <span
@@ -551,12 +551,7 @@ exports[`screen: TransactionDetails/ Messages matches snapshot 1`] = `
                 >
                   <span
                     data-testid="Trans"
-                    i18nKey={
-                      [
-                        "ui:message_contents.txSendContent",
-                        "message_contents:txSendContent",
-                      ]
-                    }
+                    i18nKey="message_contents:txSendContent"
                   >
                     <a
                       className="emotion-25"

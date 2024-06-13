@@ -16,12 +16,7 @@ exports[`screen: TransactionDetails/IBCVersion matches snapshot 1`] = `
 >
   <span
     data-testid="Trans"
-    i18nKey={
-      [
-        "ui:message_contents.txVersionContent",
-        "message_contents:txVersionContent",
-      ]
-    }
+    i18nKey="message_contents:txVersionContent"
   >
     <div
       address="desmos1jrld5g998gqm4yx26l6cvhxz7y5adgxquy94nz"

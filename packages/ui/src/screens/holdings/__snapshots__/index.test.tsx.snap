@@ -1,10 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`screen: Transactions matches snapshot 1`] = `
+exports[`screen: Holdings matches snapshot 1`] = `
+.emotion-0 {
+  padding: 16px;
+}
+
+@media (min-width: 1280px) {
+  .emotion-0 {
+    padding: 16px 24px;
+  }
+}
+
+.emotion-0 a {
+  color: #1D86FF;
+}
+
+.emotion-1 {
+  min-height: 500px;
+  height: 50vh;
+}
+
+@media (min-width:1280px) {
+  .emotion-1 {
+    height: 100%;
+    min-height: 65vh;
+  }
+}
+
 <div
-  className="makeStyles-root"
+  className="emotion-0"
   id="Layout"
-  navTitle="transactions:transactions"
+  navTitle="holding"
 >
   <div
     exists={true}
@@ -12,68 +38,45 @@ exports[`screen: Transactions matches snapshot 1`] = `
     loading={false}
   >
     <div
-      className="makeStyles-box"
+      className="emotion-1"
       id="Box"
     >
       <div
         hasNextPage={false}
-        id="TransactionsList"
+        holdings={
+          [
+            {
+              "asset_ticker": "REET",
+              "aum": "3.08B",
+              "avg_price": 24.08,
+              "current_value": 2322,
+              "expense_ratio": "0.14%",
+              "five_yr_tr": 0,
+              "fund_name": "iShares Global REIT ETF",
+              "held_no_shares": 100,
+              "holder_country": "US",
+              "holder_name": "Interactive Brokers LLC",
+              "holder_type": "Brokerage Firm",
+              "issued_coins": 226722180167,
+              "issuer": "Blackrock",
+              "last_trade_price": 23.22,
+              "one_yr_tr": 2.03,
+              "percent_of_total_supply": 14.18,
+              "purchase_value": 2408,
+              "return_amount": -86,
+              "return_percent": -3.57,
+              "segment": "Equity: Global REITs",
+              "three_yr_tr": 0,
+              "two_yr_tr": 0,
+            },
+          ]
+        }
+        id="HoldingsList"
         isItemLoaded={[Function]}
         isNextPageLoading={false}
         itemCount={1}
         loadMoreItems={[Function]}
         loadNextPage={[Function]}
-        transactions={
-          Array [
-            Object {
-              "hash": "D223E2E4E4FD29868D1034EFE5FB162EAB78B4CCE1D53EFD4F34A40608FB6C4B",
-              "height": 432022,
-              "messages": Object {
-                "count": 2,
-                "items": Array [
-                  MsgWithdrawDelegatorReward {
-                    "amounts": Array [
-                      Object {
-                        "baseDenom": "udaric",
-                        "displayDenom": "daric",
-                        "exponent": 6,
-                        "value": "0.000000",
-                      },
-                    ],
-                    "category": "distribution",
-                    "delegatorAddress": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
-                    "json": Object {
-                      "@type": "/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
-                      "delegator_address": "desmos18kvwy5hzcu3ss08lcfcnx0eajuecg69ujmkwjr",
-                      "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
-                    },
-                    "type": "/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward",
-                    "validatorAddress": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
-                  },
-                  MsgWithdrawValidatorCommission {
-                    "amounts": Array [
-                      Object {
-                        "baseDenom": "udaric",
-                        "displayDenom": "daric",
-                        "exponent": 6,
-                        "value": "0.000000",
-                      },
-                    ],
-                    "category": "distribution",
-                    "json": Object {
-                      "@type": "/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
-                      "validator_address": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
-                    },
-                    "type": "/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission",
-                    "validatorAddress": "desmosvaloper18kvwy5hzcu3ss08lcfcnx0eajuecg69uvk76c3",
-                  },
-                ],
-              },
-              "success": true,
-              "timestamp": "2021-05-28T00:08:33.700487",
-            },
-          ]
-        }
       />
     </div>
   </div>

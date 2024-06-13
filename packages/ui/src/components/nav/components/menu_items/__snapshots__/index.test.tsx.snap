@@ -225,7 +225,7 @@ exports[`screen: Nav/MenuItems it renders 1`] = `
       <span
         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-4"
       >
-        ui:common.overview
+        overview
       </span>
     </div>
   </a>
@@ -262,7 +262,7 @@ exports[`screen: Nav/MenuItems it renders 1`] = `
       <span
         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-4"
       >
-        ui:common.blocks
+        blocks
       </span>
     </div>
   </a>
@@ -299,7 +299,7 @@ exports[`screen: Nav/MenuItems it renders 1`] = `
       <span
         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-4"
       >
-        ui:common.validators
+        validators
       </span>
     </div>
   </a>
@@ -336,7 +336,7 @@ exports[`screen: Nav/MenuItems it renders 1`] = `
       <span
         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-4"
       >
-        ui:common.transactions
+        transactions
       </span>
     </div>
   </a>
@@ -373,7 +373,7 @@ exports[`screen: Nav/MenuItems it renders 1`] = `
       <span
         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-4"
       >
-        ui:common.tryout
+        tryout
       </span>
     </div>
   </a>
@@ -410,7 +410,7 @@ exports[`screen: Nav/MenuItems it renders 1`] = `
       <span
         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-4"
       >
-        ui:common.assets
+        assets
       </span>
     </div>
   </a>
@@ -447,7 +447,7 @@ exports[`screen: Nav/MenuItems it renders 1`] = `
       <span
         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-4"
       >
-        ui:common.proposals
+        proposals
       </span>
     </div>
   </a>
@@ -484,7 +484,7 @@ exports[`screen: Nav/MenuItems it renders 1`] = `
       <span
         className="MuiTypography-root MuiTypography-body1 MuiListItemText-primary emotion-4"
       >
-        ui:common.params
+        params
       </span>
     </div>
   </a>

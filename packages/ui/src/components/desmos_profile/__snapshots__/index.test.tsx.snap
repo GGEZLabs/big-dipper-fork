@@ -232,7 +232,7 @@ exports[`component: DesmosProfile matches snapshot 1`] = `
       onClick={[Function]}
       role="button"
     >
-      ui:accounts.connections
+      connections
     </p>
   </div>
   <div

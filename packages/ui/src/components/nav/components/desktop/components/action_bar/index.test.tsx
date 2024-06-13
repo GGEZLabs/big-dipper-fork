@@ -51,7 +51,7 @@ describe('screen: Nav/ActionBar', () => {
   beforeEach(() => {
     component = renderer.create(
       <MockTheme>
-        <ActionBar isNetwork={isNetwork} toggleNetwork={toggleNetwork} />
+        <ActionBar isNetwork={isNetwork} />
       </MockTheme>
     );
   });
@@ -65,7 +65,7 @@ describe('screen: Nav/ActionBar', () => {
     isNetwork = true;
     component.update(
       <MockTheme>
-        <ActionBar isNetwork={isNetwork} toggleNetwork={toggleNetwork} />
+        <ActionBar isNetwork={isNetwork} />
       </MockTheme>
     );
     const tree = component?.toJSON();

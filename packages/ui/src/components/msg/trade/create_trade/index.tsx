@@ -7,8 +7,9 @@ import { FC } from 'react';
 
 const CreateTrade: FC<{ message: MsgCreateTrade }> = (props) => {
   const { message } = props;
+  console.log('message :>> ', message);
   const creator = useProfileRecoil(message.creator);
-  const jsonData = JSON.parse(message.json.tradeData);
+  const jsonData = JSON.parse(message?.json?.tradeData || '');
   const tradeRequestId = jsonData?.TradeData?.tradeRequestID;
   const creatorMoniker = creator ? creator?.name : message.creator;
   //   "txCreateTradeContent": "<0>{{user}}</0> Created New Trade",

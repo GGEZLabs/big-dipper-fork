@@ -218,56 +218,56 @@ exports[`component: layout/footer matches snapshot 1`] = `
         className="company links__group"
       >
         <h3>
-          ui:common.company
+          common:company
         </h3>
         <a
           href="https://ggez.one"
           rel="noreferrer"
           target="_blank"
         >
-          ui:common.contact
+          common:contact
         </a>
       </div>
       <div
         className="bigDipper links__group"
       >
         <h3>
-          ui:common.bigDipper
+          common:bigDipper
         </h3>
         <a
           href="https://ggez.one"
           rel="noreferrer"
           target="_blank"
         >
-          ui:common.about
+          common:about
         </a>
         <a
           href="https://ggez.one"
           rel="noreferrer"
           target="_blank"
         >
-          ui:common.faq
+          common:faq
         </a>
         <a
           href="https://ggez.one/legal/terms"
           rel="noreferrer"
           target="_blank"
         >
-          ui:common.termsAndConditions
+          common:termsAndConditions
         </a>
         <a
           href="https://ggez.one/legal/privacy"
           rel="noreferrer"
           target="_blank"
         >
-          ui:common.privacyPolicy
+          common:privacyPolicy
         </a>
       </div>
       <div
         className="footer__social"
       >
         <h3>
-          ui:common.community
+          common:community
         </h3>
         <div
           className=" emotion-1 social-media"
@@ -363,12 +363,7 @@ exports[`component: layout/footer matches snapshot 1`] = `
     >
       <span
         data-testid="Trans"
-        i18nKey={
-          [
-            "ui:common.copyright",
-            "common:copyright",
-          ]
-        }
+        i18nKey="common:copyright"
       >
         <a
           href="https://ggez.one/legal/terms"
@@ -385,12 +380,7 @@ exports[`component: layout/footer matches snapshot 1`] = `
     >
       <span
         data-testid="Trans"
-        i18nKey={
-          [
-            "ui:common.maintainBy",
-            "common:maintainBy",
-          ]
-        }
+        i18nKey="common:maintainBy"
       >
         <a
           href="https://ggez.one"
